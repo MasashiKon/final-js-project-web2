@@ -1,4 +1,4 @@
-const path = "./assets";
+const path = "../assets";
 const cardWidth = 100;
 const cardHeight = 150;
 
