@@ -5,13 +5,95 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  body {
+    position: relative;
+  }
   a {
     text-decoration: underline !important;
   }
 }
+header {
+  position: sticky;
+  top: 0;
+}
+.navbar-container {
+  background-color: rgba(64, 66, 88, 0.509);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
 
-section {
-  margin-top: 4rem;
+  width: 100%;
+  z-index: 999;
+
+  .navbar-logo {
+    padding: 20px;
+
+    .logo {
+      color: white;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      padding: 30px 0;
+      text-decoration: none;
+    }
+  }
+  .navbar-ticket {
+    padding: 20px;
+
+    .ticket {
+      width: 200px;
+      height: 40px;
+      border: 0.5px solid black;
+      border-radius: 5px;
+      background-color: white;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      .fa-ticket {
+        padding: 0 5px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .navbar-container2-change {
+    display: none;
+
+    .navbar-item {
+      .home:hover {
+        display: block;
+        color: red;
+      }
+    }
+  }
+  .navbar-container2 {
+    padding: 20px 0;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    list-style-type: none;
+    width: 55%;
+
+    .navbar-item {
+      padding: 5px 0;
+
+      .navbar-link {
+        color: white;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        text-decoration: none;
+      }
+
+      .navbar-link:hover {
+        color: #000000;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
 }
 //card container general
 .card-container {
@@ -92,7 +174,7 @@ section {
     background-color: white;
     font-family: "Secular One", sans-serif;
     font-size: 0.9rem;
-    color: var.$fontcolor;
+    color: black;
     border-radius: 10px;
     box-shadow: 3px 3px 10px 0px rgba(128, 128, 128, 0.53);
   }
@@ -111,5 +193,99 @@ section {
   button {
     background-color: #006aff !important;
     color: white;
+  }
+}
+
+.footer-container {
+  width: 100%;
+  height: 25rem;
+  background-color: var.$footer-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+
+  .about-section,
+  .opening-section,
+  .socialmedia-navigation-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+    text-align: center;
+    width: 20rem;
+
+    .header-text {
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      padding: 30px 0;
+    }
+    .about-navbar,
+    .opening-navbar,
+    .socialmedia-navbar,
+    .app-navbar {
+      .socialmedia-navbar-elements,
+      .app-navbar-elements {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .navbar-links {
+          padding: 6px 0;
+
+          .text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+          }
+        }
+
+        .app-navbar-links {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          justify-items: center;
+          background-color: #6b728e;
+          border: 0.5px solid black;
+          width: 100px;
+          height: 40px;
+          margin: 0 10px;
+          .app-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .navbar-elements {
+        list-style-type: none;
+
+        .navbar-links {
+          padding: 8px 0;
+
+          .text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 1px;
+          }
+
+          .about-text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+          }
+
+          .about-text-links:hover {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+          }
+        }
+      }
+    }
   }
 }
