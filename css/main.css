@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #DDDDDD;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  position: sticky;
+  z-index: 999;
+}
+.nav-container .zoo-logo .Zoo-name {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+.nav-container .nav-bar {
+  width: 50%;
+}
+.nav-container .nav-bar .nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  list-style-type: none;
+}
+.nav-container .nav-bar .nav-menu .nav-list {
+  padding: 10px 0;
+  margin: auto;
+}
+.nav-container .nav-bar .nav-menu .nav-list .nav-link {
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: lighter;
+  font-size: 1rem;
+  color: black;
+}
+.nav-container .nav-bar .nav-menu .nav-list .nav-link:hover {
+  color: #E7B10A;
+  transition: 0.5s ease-in-out all;
+}
+.nav-container .tickets-container .ticket-btn {
+  width: 200px;
+  height: 40px;
+  font-weight: lighter;
+  font-size: 1rem;
+  background-color: #61876E;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+.nav-container .tickets-container .ticket-btn .bi-ticket-detailed {
+  font-size: 1rem;
+  padding: 0 5px;
+}
+.nav-container .tickets-container .ticket-btn:hover {
+  box-shadow: 0px 10px 20px #7B8FA1;
+  transition: 0.5s ease-in-out all;
+  color: white;
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+}
+.image-container .image-text {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  font-size: 6rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 3px;
+  z-index: 99;
+}
+.image-container .border {
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  width: 700px;
+  height: 3px;
+  border-bottom: 1.5px solid rgb(0, 0, 0);
+}
+.image-container .info-btn {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 200px;
+  height: 40px;
+  font-weight: lighter;
+  font-size: 1rem;
+  background-color: rgba(97, 135, 110, 0.8);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  border: 0.5px solid black;
+}
+.image-container .info-btn:hover {
+  box-shadow: 0px 10px 20px #7B8FA1;
+  transition: 0.5s ease-in-out all;
+  color: #ffffff;
+}
+.image-container .image-discount {
+  position: absolute;
+  top: 800px;
+  left: 50px;
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.about {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 30px 40px;
+  border-radius: 5px;
+  background-color: #7B8FA1;
+  box-shadow: 0 10px 20px #B2B2B2;
+}
+.about .img {
+  width: 600px;
+  display: flex;
+  padding: 20px;
+}
+.about .img .zoo-kepper {
+  margin: 5px 0;
+}
+.about .about-zoo {
+  width: 800px;
+  text-align: center;
+  overflow: hidden;
+  margin: 20px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  padding-right: 50px;
+}
+.about .about-zoo h3 {
+  padding-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.subscribe-gift-container {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: 30px 40px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+.subscribe-gift-container .subscribe-section {
+  margin-right: 50px;
+  width: 600px;
+  border: 2px solid black;
+  box-shadow: 0 10px 20px #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  justify-items: center;
+  position: relative;
+  background-image: url("/Assets/images/cover/subscribe.svg");
+}
+.subscribe-gift-container .subscribe-section .header-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+.subscribe-gift-container .subscribe-section .Email #email-input {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  width: 400px;
+  height: 30px;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+.subscribe-gift-container .subscribe-section .button .subscribe {
+  width: 200px;
+  height: 40px;
+  font-weight: lighter;
+  font-size: 1rem;
+  background-color: #61876E;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border-radius: 5px;
+}
+.subscribe-gift-container .gift-section {
+  border: 2px solid black;
+  width: 800px;
+  box-shadow: 0 10px 20px #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */
