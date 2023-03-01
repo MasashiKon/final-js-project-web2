@@ -1,24 +1,63 @@
 const path = "../assets";
-const cardWidth = 100;
-const cardHeight = 150;
+let cardWidth = 100;
+let cardHeight = 150;
+const padding = 20;
+const defaultGap = 20;
+const headerHeight = document.querySelector("header").getBoundingClientRect().height;
 const frameThickness = 10;
+let numOfAnimals = 5;
+let patternIndex = "1";
 
 const animals = [
     {
         name: 'elephant',
-        image: `https://source.unsplash.com/ylL764BIYgk/${cardWidth}x${cardHeight}`
+        image: `https://source.unsplash.com/ylL764BIYgk`
     },
     {
         name: 'lion',
-        image: `https://source.unsplash.com/7HKdb6i3afk/${cardWidth}x${cardHeight}`
-    }
+        image: `https://source.unsplash.com/7HKdb6i3afk`
+    },
+    {
+        name: 'orange-chinned parakeet',
+        image: `https://source.unsplash.com/OlKkCmToXEs`
+    },
+    {
+        name: 'wombat',
+        image: `https://source.unsplash.com/BFErhnRu188`
+    },
+    {
+        name: 'tule elk',
+        image: `https://source.unsplash.com/aJuv14zf-ZY`
+    },
+    {
+        name: 'crocodile',
+        image: `https://source.unsplash.com/qdg2Hxyjz4M`
+    },
+    {
+        name: 'turtle',
+        image: `https://source.unsplash.com/N5ByCirHVqw`
+    },
+    {
+        name: 'baboon',
+        image: `https://source.unsplash.com/daC7ji1EMHM`
+    },
+    {
+        name: 'carpet python',
+        image: `https://source.unsplash.com/Ws6Tb1cI0co`
+    },
+    {
+        name: 'red wolf',
+        image: `https://source.unsplash.com/iUA1cea8QiY`
+    },
 ]
 
+const cardBacks = ["/card-jacket1.png", "/card-jacket2.png"]
+
 class Card {
-    constructor(name, face) {
+    constructor(name, face, backId) {
         this.name = name;
-        this.jacket = `${path}/temp-jacket.png`;
         this.face = face;
+        this.jacket = `${path}/card-jacket${backId}.png`;
     }
 }
 
@@ -30,28 +69,87 @@ const gameState = {
     selectedCards: [],
     matchedPair: 0,
     flipedCards: [],
-    isEvaluating: false
+    isEvaluating: false,
+    pickedAnimals: []
 }
 
 window.addEventListener('DOMContentLoaded',function () {
+
+    const rangeInput = document.querySelector("#numOfAnimals");
+    const patternInput = document.querySelector("#backPattern");
+
+    console.log();
+    
+    rangeInput.addEventListener("change", changeNumOfAnimals);
+    patternInput.addEventListener("change", changeBackPattern);
+
+
+    pickupAnimals();
     setGame();
 });
 
 function setGame() {
 
+    const [col, row, numOfCol, numOfRow] = calcGrid();
+    playField.style.gridTemplateColumns = col;
+    playField.style.gridTemplateRows = row;
+
+    let neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+    let neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+
+    if(neededWidth > window.innerWidth) {
+        const gap = (numOfCol - 1) * 5;
+
+        cardWidth = 80;
+        cardHeight = 120;
+
+        playField.style.columnGap = "5px";
+        playField.style.rowGap = "5px";
+
+        neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+        neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+    }
+
+    if(neededHeight > window.innerHeight - headerHeight - cardHeight - 20) {
+        const gap = (numOfRow - 1) * 5;
+
+        cardWidth = 80;
+        cardHeight = 120;
+
+        playField.style.columnGap = "5px";
+        playField.style.rowGap = "5px";
+
+        neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+        neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+    }
+
+    if(numOfAnimals < 8) {
+        cardWidth = 100;
+        cardHeight = 150;
+
+        playField.style.columnGap = "15px";
+        playField.style.rowGap = "15px";
+
+        neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+        neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+    }
+
+    playField.style.width = `${neededWidth}px`;
+    playField.style.height = `${neededHeight}px`;
+
     const deck = [];
         
-    for(let i = 0; i < animals.length; i ++) {
+    for(let i = 0; i < gameState.pickedAnimals.length; i ++) {
         for(let j = 0; j < 2; j++) {
             const index = Math.floor(Math.random() * deck.length);
-            deck.splice(index, 0, new Card(animals[i].name, animals[i].image));
+            deck.splice(index, 0, new Card(gameState.pickedAnimals[i].name, `${gameState.pickedAnimals[i].image}/${cardWidth}x${cardHeight}`, patternIndex));
         }
 
         const dummyImg = document.createElement("div");
         dummyImg.style.width = `${cardWidth}px`;
         dummyImg.style.height = `${cardHeight}px`;
         dummyImg.style.className = 'dummy'
-        dummyImg.style.border = 'solid black';
+        // dummyImg.style.border = 'solid black';
 
         matchedCardsField.appendChild(dummyImg);
     }
@@ -116,13 +214,13 @@ function setGame() {
     for(let i = 0; i < cardElements.length; i++) {
         cardDealTimeline.fromTo(`#card${i + 1}`, 
         {
-            left: containerWidth / 2 - cardWidth / 2,
-            top: containerHeight / 2 - cardHeight / 2,
+            left: window.innerWidth / 2 - cardWidth / 2,
+            top: headerHeight + containerHeight / 2 - cardHeight / 4,
         },
         {
             left: cardsPositions[i].left,
             top: cardsPositions[i].top,
-        }, `<${i * 0.05}`);
+        }, i * 0.05);
     }
 
     function dealCard() {
@@ -130,6 +228,7 @@ function setGame() {
     }
 
     function cardFlip(e) {
+
         e.stopPropagation();
         e.preventDefault();
 
@@ -198,14 +297,15 @@ function setGame() {
                                     top: distDummyTop
                                 })
                                 .then(() => {
-                                    if(gameState.matchedPair === animals.length) {
+                                    if(gameState.matchedPair === gameState.pickedAnimals.length) {
+                                        gameState.isStart = false;
                                         const resetButton = document.createElement("button");
                                         resetButton.innerText = "Restart";
                                         resetButton.style.display = "block";
                                         resetButton.style.position = 'absolute';
                                         resetButton.style.transform = 'translate(-50%, -50%)';
-                                        resetButton.style.left = `${containerWidth / 2}px`;
-                                        resetButton.style.top = `${containerHeight / 2}px`;
+                                        resetButton.style.left = `${window.innerWidth / 2}px`;
+                                        resetButton.style.top = `${headerHeight + containerHeight / 2 + resetButton.innerHeight}px`;
                                         resetButton.addEventListener('click', resetGame);
 
                                         playField.appendChild(resetButton);
@@ -269,7 +369,66 @@ function resetGame() {
     gameState.matchedPair = 0;
     gameState.flipedCards = [];
     gameState.isEvaluating = false;
+    gameState.pickedAnimals = [];
 
+    pickupAnimals();
     setGame();
 }
 
+function calcGrid() {
+    const numOfCards = gameState.pickedAnimals.length * 2;
+    const factors = [];
+    let col, row;
+
+    for(let i = 1; i <= numOfCards; i++) {
+        if(numOfCards % i === 0) {
+            factors.push(i);
+        }
+    }
+
+    let halfOfFactors;
+
+    if(factors.length % 2 === 0) {
+        halfOfFactors = factors.length / 2;
+        col = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+        row = new Array(factors[halfOfFactors - 1]).fill("1fr").join(" ");
+
+        return [col, row, factors[halfOfFactors], factors[halfOfFactors - 1]];
+    } else {
+        halfOfFactors = Math.floor(factors.length / 2);
+        col = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+        row = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+
+        return [col, row, factors[halfOfFactors], factors[halfOfFactors]];
+    }
+}
+
+function changeNumOfAnimals() {
+    if(!gameState.isStart) {
+        numOfAnimals = Number(this.value);
+        resetGame();
+    }
+}
+
+function changeBackPattern() {
+    if(!gameState.isStart) {
+        patternIndex = document.querySelector('input[name="pattern"]:checked').value;
+        resetGame();
+    }
+}
+
+function pickupAnimals() {
+    const maxNum = animals.length;
+    const numArr = [];
+
+    for(let i = 0; i < maxNum; i++) {
+        numArr.push(i);
+    }
+
+    for(let i = 0; i < numOfAnimals; i++) {
+        const randomNum = Math.floor(Math.random() * numArr.length);
+        const removedNum = numArr.splice(randomNum, 1);
+
+        gameState.pickedAnimals.push(animals[removedNum]);
+    }
+}
