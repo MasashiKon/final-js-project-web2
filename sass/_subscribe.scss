@@ -1,72 +1,133 @@
-.subscribe-gift-container {
-    height: 500px;
+.subscribe-giftcard-container {
+    height: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-   justify-items: center;
-    margin: 30px 40px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    
+    justify-items: center;
+    margin: 20px 10px;
 
-    .subscribe-section {
-        margin-right: 50px;
-        width: 600px;
-        border: 2px solid black;
-        box-shadow:  0 10px 20px #ffffff;
+    .subscribe-container,.giftcard-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        justify-items: center;
-        position: relative;
-        background-image: url("/Assets/images/cover/subscribe.svg");
-
+        justify-content: center;
+        justify-items: flex-end;
+        width: 50%;
+        text-align: center;
+        margin: 0 20px;
+        border-radius: 5px;
+        background-color: rgb(255, 255, 255);
+        
         .header-text {
-            font-weight: 600;
+            color: rgb(0, 0, 0);
             font-size: 1.5rem;
-            position: absolute;
-            top: 10%;
-            left: 20%;
+            letter-spacing: 1px;
+            padding: 30px 0 ;
         }
 
-        .Email {
-            
-            #email-input {
+        .email-input-subscribe {
+            padding: 30px 0 ;
+
+            input {
+                width: 30rem;
+                height: 2rem;
                 border: 0.5px solid black;
-                border-radius: 10px;
-                width: 400px;
-                height: 30px;
-                font-weight: lighter;
+                border-radius: 20px;
+                text-align: left;
                 font-size: 0.8rem;
-                padding-left: 10px;
-                position: absolute;
-                top: 35%;
-                left: 15%;
+                font-weight:200;
+                padding: 0 10px;
+                
             }
         }
 
-        .button {
+        .button-subscribe {
+            padding: 30px 0 ;
 
-            .subscribe {
-
+            button {
                 width: 200px;
                 height: 40px;
-                font-weight: lighter;
-                font-size: 1rem;
-                background-color: #61876E;
-                border: none;
-                cursor: pointer;
-                letter-spacing: 2px;
+                border: 0.5px solid black;
                 border-radius: 5px;
+                background-color: white;
+                letter-spacing: 1px;
+                cursor: pointer;
+                
+
             }
         }
 
+        .giftcard-header-text {
+            color: #6B728E;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            padding: 20px 0 ;
+        }
+
+        .giftcard-body-text,.giftcard-details-text {
+            color: #6B728E;
+            font-size: 1rem;
+            letter-spacing: 1px;
+
+            .fa-gift {
+                font-size: 5rem;
+                padding: 20px 0;
+            }
+        }  
+
+        .giftcard-buy {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+
+
+            .giftcard-amount,.giftcard-minus,.giftcard-plus{
+                padding: 20px 10px;
+                
+                input {
+                    width: 40px;
+                    height: 20px;
+                    border: none;
+                    border-radius: 5px;
+                    text-align: center;
+                    border: 0.5px solid black;
+
+                }
+
+                .fa-square-minus,.fa-square-plus{
+                    font-size: 1.2rem;
+                    
+                }
+            }
+        }
+
+
+        .giftcard-button {
+                padding: 10px 0;
+
+            button {
+                width: 200px;
+                height: 40px;
+                border: 0.5px solid black;
+                border-radius: 5px;
+                background-color: white;
+                letter-spacing: 1px;
+                cursor: pointer;
+
+            }
+        }
+
+        .giftcard-container-details {
+            padding: 10px 0;
+            color: #6B728E;
+            font-size: 1rem;
+            letter-spacing: 1px;
+        }
     }
 
-    .gift-section {
-        border: 2px solid black;
-        width: 800px;
-        box-shadow:  0 10px 20px #ffffff;
+    .subscribe-container:hover,.giftcard-container:hover {
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 15px 25px #404258;
+
     }
 }
