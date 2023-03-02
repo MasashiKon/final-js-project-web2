@@ -94,7 +94,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({ scrub: 1 });
 
-tl.from(".hours,.rate", {
+tl.from(".hoursandRate", {
   // y: 50,
   // autoAlpha: 0,
   scrollTrigger: {
@@ -103,20 +103,20 @@ tl.from(".hours,.rate", {
     end: "bottom 70%",
   },
 })
-  .from(".FQ,.address", {
+  .from(".addressAndFQ", {
     scrollTrigger: {
       trigger: ".FQ",
 
       end: "bottom 80%",
     },
   })
-  .from(".by-car,.by-public-transportation", {
+  .from(".how-to-get", {
     scrollTrigger: {
       trigger: ".by-car",
       end: "bottom 80%",
     },
   })
-  .from("#map", {
+  .from(".parking-info", {
     scrollTrigger: {
       trigger: "#map",
       end: "bottom 80%",

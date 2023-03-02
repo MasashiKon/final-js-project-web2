@@ -100,8 +100,9 @@
     font-family: var.$titlefont;
 
     font-size: 8rem;
+
     position: absolute;
-    top: 50%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -55%);
     color: rgba(255, 255, 255, 0.668);
@@ -161,19 +162,19 @@
   }
 }
 .eventDetails {
-  height: 900px;
   width: 80%;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: black;
     text-align: center;
     margin-bottom: 3rem;
   }
   p {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .hostEvent {
     border-radius: 20px;

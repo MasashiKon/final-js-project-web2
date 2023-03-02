@@ -9,10 +9,6 @@ tl.from(".two", { xPercent: -100 })
   .from(".four", {
     yPercent: -100,
   })
-  .from(".detailsTitle", {
-    autoAlpha: 0,
-    yPercent: 10,
-  })
   .to(
     ".eventTitle",
     {
@@ -32,5 +28,16 @@ ScrollTrigger.create({
   end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 6,
   scrub: 1,
   pin: true,
+  snap: 1 / 4,
   anticipatePin: 1,
 });
+
+const header = document.querySelector(".navbar-container");
+let scrollTrigger = document.querySelector(".eventHero").offsetHeight * 7;
+window.onscroll = function () {
+  if (scrollTrigger >= window.scrollY || scrollTrigger >= window.pageYOffset) {
+    header.style.backgroundColor = "rgb(64, 66, 88,0.5)";
+  } else {
+    header.style.backgroundColor = "rgb(64, 66, 88)";
+  }
+};
