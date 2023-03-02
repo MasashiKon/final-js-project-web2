@@ -11,23 +11,130 @@
 </head>
 <body>
     <header>
-
+        <nav class="navbar-container">
+          <div class="navbar-logo"><a class="logo" href="#">Vancouver Zoo</a></div>
+          <ul class="navbar-container2">
+            <li class="navbar-item"><a href="" class="navbar-link home">Home</a></li>
+            <li class="navbar-item visit"><a href="" class="navbar-link">Visit</a></li>
+            <li class="navbar-item games"><a href="" class="navbar-link">Games</a></li>
+            <li class="navbar-item gallery"><a href="" class="navbar-link">Gallery</a></li>
+            <li class="navbar-item information"><a href="" class="navbar-link">Information</a></li>
+            <li class="navbar-item contact"><a href="" class="navbar-link">Contact</a></li>
+          </ul>
+          <div class="navbar-ticket">
+            <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
+          </div>
+        </nav>
     </header>
+    <h1 id="game-regend">Let's play with our animals</h1>
     <div id="game-container">
         <div id="play-field"></div>
+        <div id="start-timebar">
+            <button id="startBtn">Start</button>
+            <div id="timebar"></div>
+            <div id="numOfAnimalsWrapper">
+                <div>Number of Animals</div>
+                <input id="numOfAnimals" type="range" max="10" min="2" value="5">
+            </div>
+            
+            <fieldset id="backPattern">
+                <div>
+                    <input type="radio" id="camera" name="pattern" value="1" checked>
+                    <label for="camera">Camera</label>
+                </div>
+                <div>
+                    <input type="radio" id="tree" name="pattern" value="2">
+                    <label for="tree">Tree</label>
+                </div>
+            </fieldset>
+        </div>
         <div id="matched-cards-field"></div>
     </div>
-    <input id="numOfAnimals" type="range" max="10" min="1" value="5">
-    <fieldset id="backPattern">
-        <div>
-          <input type="radio" id="camera" name="drone" value="1" checked>
-          <label for="camera">Camera</label>
+    <br>
+    <footer>
+        <div class="footer-container">
+          <div class="about-section">
+            <div class="header-text"><h3>About</h3></div>
+            <div class="about-navbar">
+              <ul class="navbar-elements">
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">About The Zoo</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">Zoo Map</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">Q&A</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">Career</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">Contact</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="about-text-links">Terms&Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="opening-section">
+            <div class="header-text"><h3>Opening Hours</h3></div>
+            <div class="opening-navbar">
+              <ul class="navbar-elements">
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Sunday: 08:00 - 20:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Monday: 10:00 - 19:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Tuesday : 09:00 - 19:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Wednesday : 10:00 - 19:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Thursday : 09:00 - 19:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Friday : 09:00 - 18:00</a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links">Saturday : 08:00 - 20:00</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="socialmedia-navigation-section">
+            <div class="header-text"><h3>Social Media</h3></div>
+            <div class="socialmedia-navbar">
+              <ul class="socialmedia-navbar-elements">
+                <li class="navbar-links">
+                  <a href="#" class="text-links"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li class="navbar-links">
+                  <a href="#" class="text-links"><i class="bi bi-twitter"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-text"><h3>Download Our App</h3></div>
+            <div class="app-navbar">
+              <ul class="app-navbar-elements">
+                <li class="app-navbar-links">
+                  <a href="#" class="app-links"><i class="fa-brands fa-app-store-ios"></i></a>
+                </li>
+                <li class="app-navbar-links">
+                  <a href="#" class="app-links"><i class="fa-brands fa-google-play"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
         </div>
-    
-        <div>
-          <input type="radio" id="tree" name="drone" value="2">
-          <label for="tree">Tree</label>
-        </div>
-    </fieldset>
+      </footer>
 </body>
 </html>

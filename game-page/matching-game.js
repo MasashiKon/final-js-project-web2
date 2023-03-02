@@ -1,4 +1,4 @@
-const path = "../assets";
+const path = "./assets";
 let cardWidth = 100;
 let cardHeight = 150;
 const padding = 20;
@@ -7,6 +7,7 @@ const headerHeight = document.querySelector("header").getBoundingClientRect().he
 const frameThickness = 10;
 let numOfAnimals = 5;
 let patternIndex = "1";
+let cardDealTimeline = null;
 
 const animals = [
     {
@@ -63,6 +64,15 @@ class Card {
 
 const playField = document.querySelector("#play-field");
 const matchedCardsField = document.querySelector("#matched-cards-field");
+const startBtn = document.querySelector("#startBtn");
+const timebar = document.querySelector("#timebar");
+const rangeInputWrapper = document.querySelector("#numOfAnimalsWrapper");
+const rangeInput = document.querySelector("#numOfAnimals");
+const patternInput = document.querySelector("#backPattern");
+const startTimebar = document.querySelector("#start-timebar");
+
+playField.style.backgroundImage = `url("${path}/whitescreen50.png"), url("${path}/chris-abney-qLW70Aoo8BE-unsplash.jpg")`;
+matchedCardsField.style.backgroundImage = `url("${path}/whitescreen50.png"), url("${path}/ermelinda-martin-Bu_9GlQe8uI-unsplash.jpg")`;
 
 const gameState = {
     isStart: false,
@@ -70,18 +80,19 @@ const gameState = {
     matchedPair: 0,
     flipedCards: [],
     isEvaluating: false,
-    pickedAnimals: []
+    pickedAnimals: [],
+    timer: 100,
+    addedGameOverAnim: false
 }
 
+let timerFunc;
+
 window.addEventListener('DOMContentLoaded',function () {
-
-    const rangeInput = document.querySelector("#numOfAnimals");
-    const patternInput = document.querySelector("#backPattern");
-
-    console.log();
     
     rangeInput.addEventListener("change", changeNumOfAnimals);
     patternInput.addEventListener("change", changeBackPattern);
+
+    startBtn.addEventListener("click", startBtnFunc);
 
 
     pickupAnimals();
@@ -100,8 +111,10 @@ function setGame() {
     if(neededWidth > window.innerWidth) {
         const gap = (numOfCol - 1) * 5;
 
-        cardWidth = 80;
-        cardHeight = 120;
+        cardWidth = 60;
+        cardHeight = 90;
+
+        matchedCardsField.style.height = `${cardHeight}px`;
 
         playField.style.columnGap = "5px";
         playField.style.rowGap = "5px";
@@ -113,8 +126,10 @@ function setGame() {
     if(neededHeight > window.innerHeight - headerHeight - cardHeight - 20) {
         const gap = (numOfRow - 1) * 5;
 
-        cardWidth = 80;
-        cardHeight = 120;
+        cardWidth = 60;
+        cardHeight = 90;
+
+        matchedCardsField.style.height = `${cardHeight}px`;
 
         playField.style.columnGap = "5px";
         playField.style.rowGap = "5px";
@@ -124,9 +139,17 @@ function setGame() {
     }
 
     if(numOfAnimals < 8) {
-        cardWidth = 100;
-        cardHeight = 150;
 
+        if(numOfAnimals === 6) {
+            cardWidth = 80;
+            cardHeight = 120;
+            matchedCardsField.style.height = `${cardHeight}px`;
+        } else {
+            cardWidth = 100;
+            cardHeight = 150;
+            matchedCardsField.style.height = `${cardHeight}px`;
+        }
+ 
         playField.style.columnGap = "15px";
         playField.style.rowGap = "15px";
 
@@ -136,6 +159,13 @@ function setGame() {
 
     playField.style.width = `${neededWidth}px`;
     playField.style.height = `${neededHeight}px`;
+
+    cardDealTimeline = gsap.timeline({
+        paused: true,
+        onComplete: () => {
+            gameState.isStart = true;
+        }
+    });
 
     const deck = [];
         
@@ -150,6 +180,7 @@ function setGame() {
         dummyImg.style.height = `${cardHeight}px`;
         dummyImg.style.className = 'dummy'
         // dummyImg.style.border = 'solid black';
+        dummyImg.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
 
         matchedCardsField.appendChild(dummyImg);
     }
@@ -193,13 +224,6 @@ function setGame() {
 
     const cardsPositions = [];
 
-    const cardDealTimeline = gsap.timeline({
-        paused: true,
-        onComplete: () => {
-            gameState.isStart = true;
-        }
-    });
-
     for(let ele of cardElements) {
         const cardPosition = ele.getBoundingClientRect();
         cardsPositions.push({left: cardPosition.left, top: cardPosition.top});
@@ -223,10 +247,6 @@ function setGame() {
         }, i * 0.05);
     }
 
-    function dealCard() {
-        cardDealTimeline.resume();
-    }
-
     function cardFlip(e) {
 
         e.stopPropagation();
@@ -239,9 +259,7 @@ function setGame() {
                 cardsPositions.push({left: cardPosition.left, top: cardPosition.top});
             }
             
-            if(!gameState.isStart) {
-                dealCard();
-            } else {
+            if(gameState.isStart) {
                 const targetDiv = e.target.parentElement;
 
                 if(!gameState.flipedCards.some(cardId => cardId === targetDiv.id) && !gameState.isEvaluating) {
@@ -299,16 +317,34 @@ function setGame() {
                                 .then(() => {
                                     if(gameState.matchedPair === gameState.pickedAnimals.length) {
                                         gameState.isStart = false;
-                                        const resetButton = document.createElement("button");
-                                        resetButton.innerText = "Restart";
-                                        resetButton.style.display = "block";
-                                        resetButton.style.position = 'absolute';
-                                        resetButton.style.transform = 'translate(-50%, -50%)';
-                                        resetButton.style.left = `${window.innerWidth / 2}px`;
-                                        resetButton.style.top = `${headerHeight + containerHeight / 2 + resetButton.innerHeight}px`;
-                                        resetButton.addEventListener('click', resetGame);
+                                        const compText = document.createElement("div");
+                                        compText.innerText = "COMPLETE!";
+                                        compText.style.position = 'absolute';
+                                        compText.style.transform = 'translate(-50%, -50%)';
+                                        compText.style.left = `${window.innerWidth / 2}px`;
+                                        compText.style.top = `${headerHeight + containerHeight / 2 + compText.innerHeight}px`;
+                                        compText.id = "compText"
 
-                                        playField.appendChild(resetButton);
+                                        playField.appendChild(compText);
+
+                                        gsap.from(playField.querySelector("#compText"), {
+                                            autoAlpha: 0,
+                                        });
+
+                                        startBtn.innerText = "Reset";
+                                        startBtn.removeEventListener('click', startBtnFunc);
+                                        startBtn.addEventListener('click', resetBtnFunc);
+                        
+                                        timebar.style.display = "none";
+                                        startBtn.style.display = "block";
+                                        rangeInputWrapper.style.display = "block";
+                                        patternInput.style.display = "block";
+                                        startTimebar.style.display = "grid";
+                        
+                                        gameState.isStart = false;
+                        
+                                        clearInterval(timerFunc);
+                                        timerFunc = null;
                                     }
                                 })
 
@@ -356,6 +392,10 @@ function setGame() {
     }
 }
 
+function dealCard() {
+    cardDealTimeline.resume();
+}
+
 function resetGame() {
     while (playField.firstChild) {
         playField.removeChild(playField.lastChild);
@@ -370,6 +410,10 @@ function resetGame() {
     gameState.flipedCards = [];
     gameState.isEvaluating = false;
     gameState.pickedAnimals = [];
+    gameState.timer = 100,
+    gameState.addedGameOverAnim = false;
+
+    timebar.style.width = "100%";
 
     pickupAnimals();
     setGame();
@@ -395,11 +439,18 @@ function calcGrid() {
 
         return [col, row, factors[halfOfFactors], factors[halfOfFactors - 1]];
     } else {
+        if(numOfCards === 4) {
+            halfOfFactors = Math.floor(factors.length / 2);
+            col = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+            row = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+    
+            return [col, row, factors[halfOfFactors], factors[halfOfFactors]];
+        }
         halfOfFactors = Math.floor(factors.length / 2);
-        col = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
-        row = new Array(factors[halfOfFactors]).fill("1fr").join(" ");
+        col = new Array(factors[halfOfFactors + 1]).fill("1fr").join(" ");
+        row = new Array(factors[halfOfFactors - 1]).fill("1fr").join(" ");
 
-        return [col, row, factors[halfOfFactors], factors[halfOfFactors]];
+        return [col, row, factors[halfOfFactors + 1], factors[halfOfFactors - 1]];
     }
 }
 
@@ -431,4 +482,69 @@ function pickupAnimals() {
 
         gameState.pickedAnimals.push(animals[removedNum]);
     }
+}
+
+function startBtnFunc() {
+    if(!gameState.isStart) {
+        startBtn.style.display = "none";
+        rangeInputWrapper.style.display = "none";
+        patternInput.style.display = "none";
+        startTimebar.style.display = "block";
+        timebar.style.backgroundColor = "#80F280";
+        timebar.style.display = "block";
+        dealCard();
+
+        timerFunc = setInterval(() => {
+            gameState.timer -= 0.005;
+            timebar.style.width = `${gameState.timer}%`
+
+            if(gameState.timer < 5) {
+                timebar.style.backgroundColor = "#F29480";
+            } else if(gameState.timer < 20) {
+                timebar.style.backgroundColor = "#F2EF80";
+            }
+
+            if(gameState.timer <= 0) {
+                gameState.isStart = false;
+
+                const cardElements = document.getElementsByClassName('card');
+
+                for(let card of cardElements) {
+                    if(gameState.flipedCards.every(cardId => cardId !== card.id) && !gameState.addedGameOverAnim) {
+
+                        const flipTimeline = gsap.timeline();
+                        flipTimeline
+                            .to(card, {transform: 'rotateY(90deg)'})
+                            .to(card.querySelector(".jacket"), {duration: 0, autoAlpha: 0})
+                            .to(card, {transform: 'rotateY(0deg)'});
+                    }
+                }
+
+                gameState.addedGameOverAnim = true;
+
+                startBtn.innerText = "Reset";
+                startBtn.removeEventListener('click', startBtnFunc);
+                startBtn.addEventListener('click', resetBtnFunc);
+
+                timebar.style.display = "none";
+                startBtn.style.display = "block";
+                rangeInputWrapper.style.display = "block";
+                patternInput.style.display = "block";
+                startTimebar.style.display = "grid";
+
+                gameState.isStart = false;
+
+                clearInterval(timerFunc);
+                timerFunc = null;
+            }
+        }, 1)
+    }
+}
+
+function resetBtnFunc() {
+    resetGame();
+
+    startBtn.innerText = "Start";
+    startBtn.removeEventListener('click', resetBtnFunc);
+    startBtn.addEventListener('click', startBtnFunc);
 }
