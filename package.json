@@ -1,9 +1,10 @@
 {
-  "name": "final-project",
+  "name": "final-js-project-web2",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "home-page/index.html",
   "scripts": {
-    "dev": "sass sass:css -w"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -11,6 +12,5 @@
   "dependencies": {
     "bootstrap": "^5.3.0-alpha1",
     "sass": "^1.58.3"
-  },
-  "description": ""
+  }
 }
