@@ -93,10 +93,14 @@ body.modal-open {
 }
 .gallery .main .container .item .content p {
   font-size: 2rem;
+  color: orange;
 }
 .gallery .main .container .item:hover {
   top: -3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+.gallery .main .container .details {
+  text-decoration: none;
 }
 .gallery .main .container #modal {
   position: fixed;
@@ -122,6 +126,14 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 40%;
+  height: 50%;
+}
+.gallery .main .container #modal-image {
+  height: 250px;
+}
+.gallery .main .container #modal-description {
+  width: 500px;
 }
 .gallery .main .container #modal-close {
   position: absolute;
