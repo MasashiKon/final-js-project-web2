@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>information page</title>
+    <!--bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <!-- font-family from google -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/infoPage-style.css" />
+    <!--google map-->
+
+    <script
+      defer
+      src="http://maps.google.com/maps/api/js?key=AIzaSyCidoSPNN5_JdllQdgpRKAOcHl5EvHuSPg&language=en"
+    ></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind css -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/58f4189fbb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript -->
+    <script defer src="infoPage-script.js"></script>
+  </head>
+  <body>
+    <!-- header section -->
+    <section class="hero">
+      <h1>Information</h1>
+    </section>
+
+    <section class="hoursandRate">
+      <h1 class="title">Hours and Rate</h1>
+      <div class="card-container">
+        <div class="card hours">
+          <h1 class="subtitle">Hours</h1>
+          <p class="card-contents">
+            <strong>Daily 9:00am - 5:00pm</strong><br />
+            Last entrance is 4pm, gates are closed at 5pm.
+            <br />
+            Starting November 1st the Zoo will be closed on Tuesdays &
+            Wednesdays weekly until Family Day.
+          </p>
+        </div>
+        <div class="card rate">
+          <h1 class="subtitle">Rate</h1>
+          <p class="card-contents">
+            Adult (18-64) <strong>$33.00</strong> <br />Senior (65+)
+            <strong>$25.00 </strong>/<br />Student (18+ with ID)<strong
+              >$27.00</strong
+            >
+            <br />Child (3-17) <strong>$25.00</strong> <br />Child (2 and under)
+            Free Train <strong>$6.00</strong> per rider
+          </p>
+        </div>
+      </div>
+      <!--card-container-->
+    </section>
+    <section class="AddressAndFQ">
+      <h1 class="title">Address and F&Q</h1>
+
+      <div class="card-container">
+        <div class="card address">
+          <h1 class="subtitle">Address</h1>
+          <p class="card-contents">5048 264th Street in Aldergrove BC.</p>
+        </div>
+        <div class="card FQ">
+          <h1 class="subtitle">F&Q</h1>
+          <!--padding top -->
+          <div class="card-contents">
+            <details
+              close
+              class="bg-white p-3 group mx-auto overflow-hidden max-h-[56px] open:!max-h-[400px] transition-[max-height] duration-500 overflow-hidden"
+            >
+              <summary
+                class="outline-grey cursor-pointer focus:underline focus:text-orange-600 font-semibold marker:text-transparent group-open:before:rotate-90 before:origin-center relative before:w-[18px] before:h-[18px] before:transition-transform before:duration-200 before:-left-1 before:top-2/4 before:-translate-y-2/4 before:absolute before:bg-no-repeat before:bg-[length:18px_18px] before:bg-center before:bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22h-6%20w-6%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%0A%20%20%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M9%205l7%207-7%207%22%20%2F%3E%0A%3C%2Fsvg%3E')]"
+              >
+                What are your hours?
+              </summary>
+
+              <hr class="my-2 scale-x-150" />
+              <ul>
+                <li class="text-sm -m-4 -mt-2 p-4 bg-gray-50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  pretium nisi at turpis euismod malesuada. Nulla ultrices
+                  ullamcorper justo, ut aliquet purus lacinia vitae. Nunc vitae
+                  tempus odio, nec molestie magna. Proin non tortor enim. Fusce
+                  eget dui enim. Phasellus tristique vitae arcu molestie porta.
+                  Etiam vitae dui sed lorem viverra pulvinar ac sed ligula.
+                  Etiam hendrerit felis risus, in laoreet dui viverra eget. Nunc
+                  lobortis turpis tellus, ac dignissim felis suscipit sed. Cras
+                  consequat, erat eget lobortis vehicula, velit justo
+                  consectetur dolor, sit amet pretium elit tortor eget est.
+                  Phasellus ut laoreet lacus, ut tincidunt sem.
+                </li>
+              </ul>
+            </details>
+            <details
+              close
+              class="bg-white p-3 group mx-auto overflow-hidden max-h-[56px] open:!max-h-[400px] transition-[max-height] duration-500 overflow-hidden"
+            >
+              <summary
+                class="outline-none cursor-pointer focus:underline focus:text-orange-600 font-semibold marker:text-transparent group-open:before:rotate-90 before:origin-center relative before:w-[18px] before:h-[18px] before:transition-transform before:duration-200 before:-left-1 before:top-2/4 before:-translate-y-2/4 before:absolute before:bg-no-repeat before:bg-[length:18px_18px] before:bg-center before:bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22h-6%20w-6%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%0A%20%20%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M9%205l7%207-7%207%22%20%2F%3E%0A%3C%2Fsvg%3E')]"
+              >
+                How do you get to the zoo?
+              </summary>
+
+              <hr class="my-2 scale-x-150" />
+              <ul>
+                <li class="text-sm -m-4 -mt-2 p-4 bg-gray-50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  pretium nisi at turpis euismod malesuada. Nulla ultrices
+                  ullamcorper justo, ut aliquet purus lacinia vitae. Nunc vitae
+                  tempus odio, nec molestie magna. Proin non tortor enim. Fusce
+                  eget dui enim. Phasellus tristique vitae arcu molestie porta.
+                  Etiam vitae dui sed lorem viverra pulvinar ac sed ligula.
+                  Etiam hendrerit felis risus, in laoreet dui viverra eget. Nunc
+                  lobortis turpis tellus, ac dignissim felis suscipit sed. Cras
+                  consequat, erat eget lobortis vehicula, velit justo
+                  consectetur dolor, sit amet pretium elit tortor eget est.
+                  Phasellus ut laoreet lacus, ut tincidunt sem.
+                </li>
+              </ul>
+            </details>
+            <details
+              close
+              class="bg-white p-3 group mx-auto overflow-hidden max-h-[56px] open:!max-h-[400px] transition-[max-height] duration-500 overflow-hidden"
+            >
+              <summary
+                class="outline-none cursor-pointer focus:underline focus:text-orange-600 font-semibold marker:text-transparent group-open:before:rotate-90 before:origin-center relative before:w-[18px] before:h-[18px] before:transition-transform before:duration-200 before:-left-1 before:top-2/4 before:-translate-y-2/4 before:absolute before:bg-no-repeat before:bg-[length:18px_18px] before:bg-center before:bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22h-6%20w-6%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%0A%20%20%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M9%205l7%207-7%207%22%20%2F%3E%0A%3C%2Fsvg%3E')]"
+              >
+                Do you have to pay for parking?
+              </summary>
+
+              <hr class="my-2 scale-x-150" />
+              <ul>
+                <li class="text-sm -m-4 -mt-2 p-4 bg-gray-50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  pretium nisi at turpis euismod malesuada. Nulla ultrices
+                  ullamcorper justo, ut aliquet purus lacinia vitae. Nunc vitae
+                  tempus odio, nec molestie magna. Proin non tortor enim. Fusce
+                  eget dui enim. Phasellus tristique vitae arcu molestie porta.
+                  Etiam vitae dui sed lorem viverra pulvinar ac sed ligula.
+                  Etiam hendrerit felis risus, in laoreet dui viverra eget. Nunc
+                  lobortis turpis tellus, ac dignissim felis suscipit sed. Cras
+                  consequat, erat eget lobortis vehicula, velit justo
+                  consectetur dolor, sit amet pretium elit tortor eget est.
+                  Phasellus ut laoreet lacus, ut tincidunt sem.
+                </li>
+              </ul>
+            </details>
+            <details
+              close
+              class="bg-white p-3 group mx-auto overflow-hidden max-h-[56px] open:!max-h-[400px] transition-[max-height] duration-500 overflow-hidden"
+            >
+              <summary
+                class="outline-none cursor-pointer focus:underline focus:text-orange-600 font-semibold marker:text-transparent group-open:before:rotate-90 before:origin-center relative before:w-[18px] before:h-[18px] before:transition-transform before:duration-200 before:-left-1 before:top-2/4 before:-translate-y-2/4 before:absolute before:bg-no-repeat before:bg-[length:18px_18px] before:bg-center before:bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20class%3D%22h-6%20w-6%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%0A%20%20%3Cpath%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20d%3D%22M9%205l7%207-7%207%22%20%2F%3E%0A%3C%2Fsvg%3E')]"
+              >
+                Do you have to pay for parking?
+              </summary>
+
+              <hr class="my-2 scale-x-150" />
+              <ul>
+                <li class="text-sm -m-4 -mt-2 p-4 bg-gray-50">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                  pretium nisi at turpis euismod malesuada. Nulla ultrices
+                  ullamcorper justo, ut aliquet purus lacinia vitae. Nunc vitae
+                  tempus odio, nec molestie magna. Proin non tortor enim. Fusce
+                  eget dui enim. Phasellus tristique vitae arcu molestie porta.
+                  Etiam vitae dui sed lorem viverra pulvinar ac sed ligula.
+                  Etiam hendrerit felis risus, in laoreet dui viverra eget. Nunc
+                  lobortis turpis tellus, ac dignissim felis suscipit sed. Cras
+                  consequat, erat eget lobortis vehicula, velit justo
+                  consectetur dolor, sit amet pretium elit tortor eget est.
+                  Phasellus ut laoreet lacus, ut tincidunt sem.
+                </li>
+              </ul>
+            </details>
+          </div>
+          <!-- /.card-contents -->
+        </div>
+      </div>
+      <!--card-container-->
+    </section>
+    <!--general info-->
+
+    <section class="how-to-get">
+      <h1 class="title">Getting to the Zoo</h1>
+      <div class="card-container">
+        <div class="card by-car">
+          <h1 class="subtitle">Car</h1>
+          <p class="card-contents">
+            If taking <strong>Highway 1</strong>, take Exit #73. We are 1.4km
+            south on the left side.
+            <br />
+            <br />
+            If taking <strong>Fraser Highway</strong>, we are 3.7km north on
+            264th Street (Aldergrove-Bellingham Highway 13) on the right side.
+          </p>
+        </div>
+
+        <div class="card by-public-transportation">
+          <h1 class="subtitle">Public Transportation</h1>
+          <p class="card-contents">
+            <strong>Bus</strong> (from Zoo keeper station)<br />
+            #022 &nbsp; #303 &nbsp; #404
+
+            <br /><br />
+            <strong>Shuttle Bus</strong> (from Downtown)<br />
+            <a href="#">Shuttle Bus schedule</a>
+          </p>
+        </div>
+      </div>
+      <!--card-container-->
+    </section>
+    <!-- /.how-to-get -->
+
+    <section class="parking-info">
+      <h1 class="title">Parking Info</h1>
+      <div id="map"></div>
+    </section>
+    <section class="form-section">
+      <h1 class="title">Contact Us</h1>
+      <form>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fullname"
+            placeholder="Full Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="emailinput">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailinput"
+            placeholder="vancouver_zoo@animal.com"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="contents">Message</label>
+          <textarea
+            type="textarea"
+            class="form-control"
+            id="contents"
+            placeholder="Your Inquiry"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
