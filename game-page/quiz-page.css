@@ -1,14 +1,16 @@
+header {
+    background-color: cadetblue;
+    height: 80px;
+}
+
 #play-field {
+    margin: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     column-gap: 15px;
     row-gap: 15px;
     align-items: center;
     justify-items: center;
     border: solid;
-    width: 612px;
-    height: 400px;
 }
 
 #matched-cards-field {
