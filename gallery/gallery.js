@@ -9,11 +9,45 @@ const getAnimalData = async () => {
   return animals;
 };
 
-const gridAnimals = async () => {
+const changeCategory = async () => {
+  let newAnimals = [];
   const animals = await getAnimalData();
+  const container = document.getElementById("container");
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  console.log(animals);
+  const category = document.getElementById("select");
+  console.log(category.value);
+
+  if (category.value === "all") {
+    newAnimals = animals;
+  } else {
+    newAnimals = animals.filter(function (animal) {
+      return animal.category === category.value;
+    });
+  }
+
+  gridAnimals(newAnimals);
+};
+
+const category = document.getElementById("select");
+category.addEventListener("change", changeCategory);
+
+const gridAnimals = async (newAnimals) => {
+  let animals = [];
+  console.log(newAnimals);
+  if (!newAnimals) {
+    animals = await getAnimalData();
+  } else {
+    animals = newAnimals;
+  }
+
+  console.log(animals);
   animals.forEach(addGrid);
 
   const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
   const modalTitle = document.getElementById("modal-title");
   const modalDescription = document.getElementById("modal-description");
   const closeButton = document.getElementById("modal-close");
@@ -28,6 +62,8 @@ const gridAnimals = async () => {
     const animalId = tile.dataset.animalId;
     const animal = animals.find((animal) => animal.id === parseInt(animalId));
 
+    modalImage.src = `./images/${animal.name}.jpg`;
+    modalImage.alt = animal.name;
     modalTitle.textContent = animal.name;
     modalDescription.textContent = animal.comment;
 
@@ -40,7 +76,6 @@ const gridAnimals = async () => {
   modal.addEventListener("click", hideModal);
 
   const tiles = document.querySelectorAll(".tile");
-  console.log(tiles);
   tiles.forEach((tile) => {
     tile.addEventListener("click", () => {
       showModal(tile);
@@ -75,6 +110,9 @@ function addGrid(animal) {
   const modal_content = document.createElement("div");
   modal_content.classList.add("modal-content");
 
+  const modal_image = document.createElement("img");
+  modal_image.setAttribute("id", "modal-image");
+
   const h2 = document.createElement("h2");
   h2.setAttribute("id", "modal-title");
   h2.innerHTML = animal.name;
@@ -89,6 +127,7 @@ function addGrid(animal) {
   content.appendChild(img);
   content.appendChild(p);
   a.appendChild(content);
+  modal_content.appendChild(modal_image);
   modal_content.appendChild(h2);
   modal_content.appendChild(desc);
   modal_content.appendChild(close);
