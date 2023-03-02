@@ -1,5 +1,5 @@
 .navbar-container {
-    background-color: rgb(64, 66, 88,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -13,11 +13,17 @@
         padding: 20px;
         
         .logo {
-            color: white;
+            color: rgb(0, 0, 0);
             font-size: 2rem;
             letter-spacing: 1px;
             padding: 30px 0;
             text-decoration: none;
+
+            span {
+                color:#FDD36A;
+                font-size: 2.5rem;
+                
+            }
         }
     }
     .navbar-ticket {
@@ -28,7 +34,7 @@
             height: 40px;
             border: 0.5px solid black;
             border-radius: 5px;
-            background-color: white;
+            background-color: #FDD36A;
             letter-spacing: 1px;
             cursor: pointer;
 
@@ -38,23 +44,16 @@
                     transform: rotate(-45deg);
             }
         }
-    }
 
-    .navbar-container2-change {
-        display: none;
+        .ticket:hover {
+            background-color: #c5a553;
+            transition: 0.5s ease-in-out all;
+            cursor: pointer;
+            color: white;
 
-        .navbar-item {
-
-            .home:hover {
-          
-                display: block;
-                color: red;
-            }
-            .home2 {
-     
-            }
         }
     }
+
     .navbar-container2 {
         padding: 20px 0 ;
         position: relative;
@@ -70,17 +69,15 @@
             padding: 5px 0 ;
 
             .navbar-link {
-                color: white;
+                color: rgb(0, 0, 0);
                 font-size: 1.2rem;
                 letter-spacing: 1px;
                 font-weight: lighter;
                 text-decoration: none;
             }
 
-
-            
             .navbar-link:hover {
-                color: #000000;
+                color: #FDD36A;
                 transition: all 0.5s ease-in-out;
   
             }

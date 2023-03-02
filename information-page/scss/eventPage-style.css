@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* a {
+  text-decoration: underline !important;
+}
+
+.eventHero {
+  height: 100vh;
+  width: 100%;
+}
+.eventHero .eventTitle {
+  font-family: "Secular One", sans-serif;
+  font-size: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: rgba(255, 255, 255, 0.668);
+  z-index: 3;
+}
+.eventHero .detailsTitle {
+  font-family: "Secular One", sans-serif;
+  font-size: 7.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: rgba(255, 255, 255, 0.668);
+  z-index: 3;
+}
+.eventHero .scrolldown {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  opacity: 0.5;
+  height: 20vh;
+  animation: flash 1.5s linear infinite;
+  transition: 10s;
+}
+@keyframes flash {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.eventHero .hidden {
+  animation: disappear 2s;
+  opacity: 0;
+  pointer-events: none !important;
+}
+@keyframes disappear {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.eventHero .popin-pic {
+  position: absolute;
+  width: 100vw;
+}/*# sourceMappingURL=eventPage-style.css.map */
