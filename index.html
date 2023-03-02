@@ -8,104 +8,150 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+      
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+      <script defer src="/javaScript/index.js"></script>
     <title>World Zoo</title>
   </head>
   <body>
     <header>
-      <!-- Header - NavBar -->
-      <nav class="nav-container">
-        <div class="zoo-logo">
-          <a href="index.html" class="Zoo-name">World Zoo</a>
-        </div>
-        <div class="nav-bar">
-          <ul class="nav-menu">
-            <li class="nav-list"><a href="#" class="nav-link">News</a></li>
-            <li class="nav-list">
-              <a href="#" class="nav-link">Matching game</a>
-            </li>
-            <li class="nav-list">
-              <a href="#" class="nav-link">Gallery</a>
-            </li>
-            <li class="nav-list"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-list"><a href="#" class="nav-link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="tickets-container">
-          <button class="ticket-btn">
-            <i class="bi bi-ticket-detailed"></i> Buy Tickets
-          </button>
+      <nav class="navbar-container">
+        <div class="navbar-logo"><a class="logo" href="#">Vancouver Zoo</a></div>
+        <ul class="navbar-container2">
+          <li class="navbar-item"><a href="" class="navbar-link home">Home</a></li>
+          <li class="navbar-item visit"><a href="" class="navbar-link">Visit</a></li>
+          <li class="navbar-item games"><a href="" class="navbar-link">Games</a></li>
+          <li class="navbar-item gallery"><a href="" class="navbar-link">Gallery</a></li>
+          <li class="navbar-item information"><a href="" class="navbar-link">Information</a></li>
+          <li class="navbar-item contact"><a href="" class="navbar-link">Contact</a></li>
+        </ul>
+        <div class="navbar-ticket">
+          <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
         </div>
       </nav>
     </header>
-    <!-- Image -->
-    <div class="image-container">
-      <img
-        src="/Assets/images/animal-images/michael-payne-a9NQ6z1zqro-unsplash.jpg"
-        width="100%"
-        height="100%"
-        alt="" />
-      <div class="image-text">
-        <p class="text">Free To Explore</p>
-      </div>
-      <div class="border"></div>
-      <button class="info-btn">Find More</button>
-      <div class="image-discount">
-        <p>10% Off For Citizens With ID</p>
-      </div>
+    <div class="video-container">
+      <video autoplay loop muted playsinline class="video-clip" >
+        <source src="" type="video/mp4">
+      </video>
     </div>
- 
-    <div class="subscribe-gift-container">
-        <div class="subscribe-section">
-          <div class="header-text">
-            <h3>News,Promotions and Deals</h3>
+    <div class="subscribe-giftcard-container">
+      <div class="subscribe-container">
+        <div class="header-text"><h3>News Letter</h3></div>
+        <div class="email-input-subscribe"><input type="email" placeholder="Email@example.com"></div>
+        <div class="header-text"><h3>News,Promotions,Deals</h3></div>
+        <div class="button-subscribe"><button>Join Now</button></div>
+      </div>
+      <div class="giftcard-container">
+        <div class="giftcard-header-text"></i><h3>Gift Card</h3></div>
+        <div class="giftcard-body-text"><h4>Surprise you love ones with amazing gift!</h4><i class="fa-solid fa-gift"></i></div>
+        <div class="giftcard-details-text">
+          <p>Price: $50</p>
+        </div>
+        <div class="giftcard-buy">
+          <div class="giftcard-plus">
+            <i class="fa-solid fa-square-plus"></i>
           </div>
-          <div class="Email">
-            <input type="email" name="email" id="email-input" placeholder="Email@Example.com">
-          </div>
-          <div class="button">
-            <button class="subscribe">Subscribe</button>
+          <div class="giftcard-amount"><input type="number" value="1" min="1" max="10"></div>
+          <div class="giftcard-minus">
+            <i class="fa-solid fa-square-minus"></i>
           </div>
         </div>
-        <div class="gift-section">
-          <h3>gift Card</h3>
-
+        <div class="giftcard-button"><button>Add To Cart</button></div>
+        <div class="giftcard-container-details">
+          <p>Get gift card by email today!</p>
         </div>
-        </div>
-           <!-- About Section-->
-    <div class="about">
-      <div class="img">
-        <img
-          src="/Assets/images/animal-images/michael-payne-a9NQ6z1zqro-unsplash.jpg"
-          alt="Zoo Worker"
-          width="450px"
-          height="350px"
-          class="zoo-kepper" />
-      </div>
-      <div class="about-zoo">
-        <h3>World Zoo</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
-          similique porro. Deleniti, dolorum aliquam autem cupiditate ut
-          suscipit atque id tempore nostrum consequuntur vero ipsum rerum, nihil
-          corporis reprehenderit minus. Perferendis accusantium quis voluptates
-          provident optio modi voluptate sunt quibusdam in, porro libero
-          recusandae nemo dolores veritatis ut laboriosam excepturi quas
-          obcaecati blanditiis possimus tempora nisi delectus. Tempore,
-          distinctio quos! Earum eum deleniti magni tenetur molestiae nulla
-          quaerat distinctio cupiditate iure vel! Qui omnis aspernatur veniam
-          sint itaque eligendi numquam expedita blanditiis, laboriosam ad, odit
-          aut ducimus id totam quas. Quaerat corrupti error harum consequatur,
-          consequuntur quidem ex voluptatem fuga quis eligendi, eum praesentium
-          temporibus delectus. Eum vel tenetur laboriosam sequi neque expedita
-          deserunt, consequuntur nobis debitis inventore impedit eligendi? Enim
-          iste voluptatem id doloribus dignissimos dicta deleniti, cum
-          assumenda. Explicabo blanditiis labore libero nam doloremque
-          laboriosam, aliquid tenetur repudiandae, ut quo, perferendis
-          repellendus dolorum voluptate recusandae? Voluptate, quod incidunt!
-        </p>
       </div>
     </div>
-      </div>
+    <div class="chat-container">
+      <i class="bi bi-whatsapp"></i>
     </div>
+    <footer>
+      <div class="footer-container">
+        <div class="about-section">
+          <div class="header-text"><h3>About</h3></div>
+          <div class="about-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">About The Zoo</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Zoo Map</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Q&A</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Career</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Contact</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Terms&Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="opening-section">
+          <div class="header-text"><h3>Opening Hours</h3></div>
+          <div class="opening-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links">Sunday: 08:00 - 20:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Monday: 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Tuesday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Wednesday : 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Thursday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Friday : 09:00 - 18:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Saturday : 08:00 - 20:00</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="socialmedia-navigation-section">
+          <div class="header-text"><h3>Social Media</h3></div>
+          <div class="socialmedia-navbar">
+            <ul class="socialmedia-navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-text"><h3>Download Our App</h3></div>
+          <div class="app-navbar">
+            <ul class="app-navbar-elements">
+              <li class="app-navbar-links">
+                <a href="#" class="app-links"><i class="fa-brands fa-app-store-ios"></i></a>
+              </li>
+              <li class="app-navbar-links">
+                <a href="#" class="app-links"><i class="fa-brands fa-google-play"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
