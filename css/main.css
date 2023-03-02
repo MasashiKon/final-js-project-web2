@@ -9,7 +9,7 @@ body {
 }
 
 .navbar-container {
-  background-color: rgba(64, 66, 88, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,11 +23,15 @@ body {
   padding: 20px;
 }
 .navbar-container .navbar-logo .logo {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 2rem;
   letter-spacing: 1px;
   padding: 30px 0;
   text-decoration: none;
+}
+.navbar-container .navbar-logo .logo span {
+  color: #FDD36A;
+  font-size: 2.5rem;
 }
 .navbar-container .navbar-ticket {
   padding: 20px;
@@ -37,7 +41,7 @@ body {
   height: 40px;
   border: 0.5px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #FDD36A;
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -45,12 +49,11 @@ body {
   padding: 0 5px;
   transform: rotate(-45deg);
 }
-.navbar-container .navbar-container2-change {
-  display: none;
-}
-.navbar-container .navbar-container2-change .navbar-item .home:hover {
-  display: block;
-  color: red;
+.navbar-container .navbar-ticket .ticket:hover {
+  background-color: #c5a553;
+  transition: 0.5s ease-in-out all;
+  cursor: pointer;
+  color: white;
 }
 .navbar-container .navbar-container2 {
   padding: 20px 0;
@@ -67,14 +70,14 @@ body {
   padding: 5px 0;
 }
 .navbar-container .navbar-container2 .navbar-item .navbar-link {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: lighter;
   text-decoration: none;
 }
 .navbar-container .navbar-container2 .navbar-item .navbar-link:hover {
-  color: #000000;
+  color: #FDD36A;
   transition: all 0.5s ease-in-out;
 }
 
@@ -86,8 +89,35 @@ body {
   justify-content: center;
   justify-items: center;
   overflow: hidden;
-  background-color: #647E68;
   box-shadow: 0 15px 25px #404258;
+}
+.video-container .left-btn {
+  position: absolute;
+  top: 40%;
+  left: 1%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.video-container .left-btn .bi-chevron-left {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+.video-container .right-btn {
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.video-container .right-btn .bi-chevron-right {
+  font-size: 1.2rem;
+  color: white;
 }
 
 .subscribe-giftcard-container {
@@ -115,14 +145,14 @@ body {
   letter-spacing: 1px;
   padding: 30px 0;
 }
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe, .subscribe-giftcard-container .giftcard-container .email-input-subscribe {
-  padding: 30px 0;
+.subscribe-giftcard-container .subscribe-container .email-input-subscribe, .subscribe-giftcard-container .subscribe-container .name-input-subscribe, .subscribe-giftcard-container .giftcard-container .email-input-subscribe, .subscribe-giftcard-container .giftcard-container .name-input-subscribe {
+  padding: 5px 0;
 }
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe input, .subscribe-giftcard-container .giftcard-container .email-input-subscribe input {
+.subscribe-giftcard-container .subscribe-container .email-input-subscribe input, .subscribe-giftcard-container .subscribe-container .name-input-subscribe input, .subscribe-giftcard-container .giftcard-container .email-input-subscribe input, .subscribe-giftcard-container .giftcard-container .name-input-subscribe input {
   width: 30rem;
   height: 2rem;
   border: 0.5px solid black;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: left;
   font-size: 0.8rem;
   font-weight: 200;
@@ -136,9 +166,14 @@ body {
   height: 40px;
   border: 0.5px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #FDD36A;
   letter-spacing: 1px;
   cursor: pointer;
+}
+.subscribe-giftcard-container .subscribe-container .button-subscribe button:hover, .subscribe-giftcard-container .giftcard-container .button-subscribe button:hover {
+  background-color: #c5a553;
+  transition: all 0.5s ease-in-out;
+  color: white;
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-header-text, .subscribe-giftcard-container .giftcard-container .giftcard-header-text {
   color: #6B728E;
@@ -183,9 +218,14 @@ body {
   height: 40px;
   border: 0.5px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #FDD36A;
   letter-spacing: 1px;
   cursor: pointer;
+}
+.subscribe-giftcard-container .subscribe-container .giftcard-button button:hover, .subscribe-giftcard-container .giftcard-container .giftcard-button button:hover {
+  background-color: #c5a553;
+  transition: all 0.5s ease-in-out;
+  color: white;
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-container-details, .subscribe-giftcard-container .giftcard-container .giftcard-container-details {
   padding: 10px 0;
@@ -196,6 +236,32 @@ body {
 .subscribe-giftcard-container .subscribe-container:hover, .subscribe-giftcard-container .giftcard-container:hover {
   transition: all 0.5s ease-in-out;
   box-shadow: 0 15px 25px #404258;
+}
+
+.events-nightTour-competition-container {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: 20px 10px;
+}
+.events-nightTour-competition-container .events-container, .events-nightTour-competition-container .nightTour-container, .events-nightTour-competition-container .competition-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: flex-end;
+  width: 30%;
+  text-align: center;
+  margin: 0 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.events-nightTour-competition-container .events-container .header-text, .events-nightTour-competition-container .nightTour-container .header-text, .events-nightTour-competition-container .competition-container .header-text {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  padding: 30px 0;
 }
 
 .chat-container {
@@ -271,7 +337,7 @@ body {
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .app-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .app-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .app-navbar-links .app-links {
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
 }
 .footer-container .about-section .about-navbar .navbar-elements, .footer-container .about-section .opening-navbar .navbar-elements, .footer-container .about-section .socialmedia-navbar .navbar-elements, .footer-container .about-section .app-navbar .navbar-elements, .footer-container .opening-section .about-navbar .navbar-elements, .footer-container .opening-section .opening-navbar .navbar-elements, .footer-container .opening-section .socialmedia-navbar .navbar-elements, .footer-container .opening-section .app-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements {
   list-style-type: none;
@@ -292,7 +358,7 @@ body {
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover {
   text-decoration: none;
-  color: white;
+  color: #FDD36A;
   font-weight: 600;
 }
 

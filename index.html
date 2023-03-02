@@ -13,19 +13,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
       <script defer src="/javaScript/index.js"></script>
-    <title>World Zoo</title>
+    <title>Vancouver Zoo</title>
   </head>
   <body>
     <header>
       <nav class="navbar-container">
-        <div class="navbar-logo"><a class="logo" href="#">Vancouver Zoo</a></div>
+        <div class="navbar-logo"><a class="logo" href="#">Vancouver <span>Zoo</span></a></div>
         <ul class="navbar-container2">
-          <li class="navbar-item"><a href="" class="navbar-link home">Home</a></li>
-          <li class="navbar-item visit"><a href="" class="navbar-link">Visit</a></li>
-          <li class="navbar-item games"><a href="" class="navbar-link">Games</a></li>
-          <li class="navbar-item gallery"><a href="" class="navbar-link">Gallery</a></li>
-          <li class="navbar-item information"><a href="" class="navbar-link">Information</a></li>
-          <li class="navbar-item contact"><a href="" class="navbar-link">Contact</a></li>
+          <li class="navbar-item"><a href="" class="navbar-link home" id="home">Home</a></li>
+          <li class="navbar-item visit"><a href="" class="navbar-link visit" id="visit">Visit</a></li>
+          <li class="navbar-item games"><a href="" class="navbar-link games">Games</a></li>
+          <li class="navbar-item gallery"><a href="" class="navbar-link gallery">Gallery</a></li>
+          <li class="navbar-item information"><a href="" class="navbar-link information">Information</a></li>
+          <li class="navbar-item contact"><a href="" class="navbar-link contact">Contact</a></li>
         </ul>
         <div class="navbar-ticket">
           <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
@@ -33,15 +33,51 @@
       </nav>
     </header>
     <div class="video-container">
-      <video autoplay loop muted playsinline class="video-clip" >
-        <source src="" type="video/mp4">
-      </video>
+      <video autoplay muted class="video-clip" src="" type="video/mp4"></video>
+      <button class="right-btn"><i class="bi bi-chevron-right"></i></button>
+      <button class="left-btn"><i class="bi bi-chevron-left"></i></button>
+    </div>
+    <div class="events-nightTour-competition-container">
+      <div class="events-container">
+        <div class="header-text"><h3>Events</h3></div>
+        <i class="fa-solid fa-calendar-days"></i>
+        <div class="header-text"><h4>Vancouver zoo invite Everybody to enjoy weekends and holidays with Us </h4></div>
+        <div class="button-subscribe"><button>Add to Calendar</button></div>
+      </div>
+      <div class="nightTour-container">
+        <div class="header-text"><h3>Subscribe To Our News Letter</h3></div>
+        <div class="email-input-subscribe"><input type="email" placeholder="Email@example.com"></div>
+        <div class="name-input-subscribe"><input type="text" placeholder="Full name"></div>
+        <div class="header-text"><h4>News,Events,Promotions,Deals</h4></div>
+        <div class="button-subscribe"><button>Join Now</button></div>
+      </div>
+      <div class="competition-container">
+        <div class="giftcard-header-text"></i><h3>Gift Card</h3></div>
+        <div class="giftcard-body-text"><h4>Surprise you love ones with amazing gift!</h4><i class="fa-solid fa-gift"></i></div>
+        <div class="giftcard-details-text">
+          <p>Price: $50</p>
+        </div>
+        <div class="giftcard-buy">
+          <div class="giftcard-plus">
+            <i class="fa-solid fa-square-plus"></i>
+          </div>
+          <div class="giftcard-amount"><input type="number" value="1" min="1" max="10"></div>
+          <div class="giftcard-minus">
+            <i class="fa-solid fa-square-minus"></i>
+          </div>
+        </div>
+        <div class="giftcard-button"><button>Add To Cart</button></div>
+        <div class="giftcard-container-details">
+          <p>Get gift card by email today!</p>
+        </div>
+      </div>
     </div>
     <div class="subscribe-giftcard-container">
       <div class="subscribe-container">
-        <div class="header-text"><h3>News Letter</h3></div>
+        <div class="header-text"><h3>Subscribe To Our News Letter</h3></div>
         <div class="email-input-subscribe"><input type="email" placeholder="Email@example.com"></div>
-        <div class="header-text"><h3>News,Promotions,Deals</h3></div>
+        <div class="name-input-subscribe"><input type="text" placeholder="Full name"></div>
+        <div class="header-text"><h4>News,Events,Promotions,Deals</h4></div>
         <div class="button-subscribe"><button>Join Now</button></div>
       </div>
       <div class="giftcard-container">
@@ -142,10 +178,10 @@
           <div class="app-navbar">
             <ul class="app-navbar-elements">
               <li class="app-navbar-links">
-                <a href="#" class="app-links"><i class="fa-brands fa-app-store-ios"></i></a>
+                <a href="#" class="app-links apple">App Store <i class="fa-brands fa-app-store-ios"></i></a>
               </li>
               <li class="app-navbar-links">
-                <a href="#" class="app-links"><i class="fa-brands fa-google-play"></i></a>
+                <a href="#" class="app-links google">Google Play <i class="fa-brands fa-google-play"></i></a>
               </li>
             </ul>
           </div>

@@ -6,6 +6,38 @@ display: flex;
 justify-content: center;
 justify-items: center;
 overflow: hidden;
-background-color: #647E68;
 box-shadow: 0 15px 25px #404258;
+
+.left-btn {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(0, 0, 0,0.3);
+
+    .bi-chevron-left {
+        font-size: 1.2rem;
+        color: rgb(255, 255, 255);
+    }
+} 
+
+.right-btn {
+    position: absolute;
+    top: 40%;
+    right: 1%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(0, 0, 0,0.3);
+
+    .bi-chevron-right {
+        font-size: 1.2rem;
+        color: white;
+    }
+} 
+
 }
