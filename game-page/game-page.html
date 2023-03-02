@@ -10,9 +10,24 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+
+    </header>
     <div id="game-container">
         <div id="play-field"></div>
         <div id="matched-cards-field"></div>
     </div>
+    <input id="numOfAnimals" type="range" max="10" min="1" value="5">
+    <fieldset id="backPattern">
+        <div>
+          <input type="radio" id="camera" name="drone" value="1" checked>
+          <label for="camera">Camera</label>
+        </div>
+    
+        <div>
+          <input type="radio" id="tree" name="drone" value="2">
+          <label for="tree">Tree</label>
+        </div>
+    </fieldset>
 </body>
 </html>
