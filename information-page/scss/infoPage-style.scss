@@ -9,7 +9,7 @@
     position: relative;
   }
   a {
-    text-decoration: underline !important;
+    text-decoration: underline;
   }
 }
 header {
@@ -102,7 +102,7 @@ header {
   max-width: 1000px;
   justify-content: center;
   margin: 0 auto;
-  gap: 3%;
+  gap: 4%;
   .address {
     max-height: 400px;
   }
@@ -120,18 +120,25 @@ header {
       padding: 1rem;
     }
   }
+  .address {
+    width: 100%;
+  }
 
   .card-contents {
     padding: 1.5rem 2rem 2rem;
     line-height: 2rem;
+    margin: 0;
   }
 }
 
 //title general
 .title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-bottom: 2rem;
+}
+.subtitle {
+  font-size: 1.4rem;
 }
 
 //hero section
@@ -150,12 +157,23 @@ header {
     line-height: 20rem;
   }
 }
-.addressAndFQ {
-  margin-top: 4rem;
+.addresscontainer {
+  margin-top: 5rem;
 }
 .hoursandRate {
-  margin-top: 4rem;
+  margin-top: 5rem;
   width: 100%;
+  .buyticketsBtn {
+    background-color: rgb(64, 66, 88);
+    color: white;
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+  }
 }
 
 .how-to-get {
@@ -163,8 +181,9 @@ header {
 }
 
 .parking-info {
+  max-width: 1000px;
   width: 80%;
-  margin: 3rem auto 5rem;
+  margin: 5rem auto 5rem;
   #map {
     height: 300px;
     width: 100%;
@@ -174,7 +193,7 @@ header {
     margin-top: 0.5rem;
     padding: 0.7rem;
     background-color: white;
-    font-family: "Secular One", sans-serif;
+
     font-size: 0.9rem;
     color: black;
     border-radius: 10px;
@@ -185,16 +204,37 @@ header {
     border-radius: 10px;
   }
 }
+.FQ {
+  .card-contents {
+    border: 1px solid grey;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    font-weight: 400;
+  }
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+
+  font-size: 1.2rem;
+}
 
 .form-section {
+  max-width: 1000px;
   width: 80%;
-  margin: 0 auto 3rem;
+  margin: 5rem auto 5rem;
   form {
     margin-top: -1rem;
   }
   button {
-    background-color: #006aff !important;
+    background-color: rgb(64, 66, 88) !important;
+    border: none;
     color: white;
+    border-radius: 8px;
+  }
+  .form-control {
+    border: 1px solid grey;
+    border-radius: 10px;
   }
 }
 

@@ -95,30 +95,23 @@
 
 .eventHero {
   height: 100vh;
-  width: 100%;
+  overflow: hidden;
+
   .eventTitle {
+    width: 100%;
+    text-align: center;
     font-family: var.$titlefont;
 
-    font-size: 8rem;
+    font-size: 6rem;
 
     position: absolute;
-    top: 52%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -55%);
     color: rgba(255, 255, 255, 0.668);
     z-index: 3;
   }
-  .detailsTitle {
-    font-family: var.$titlefont;
 
-    font-size: 7.5rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    color: rgba(255, 255, 255, 0.668);
-    z-index: 3;
-  }
   .scrolldown {
     border-radius: 50%;
     position: absolute;
@@ -158,7 +151,9 @@
 
   .popin-pic {
     position: absolute;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+    min-width: 600px;
   }
 }
 .eventDetails {
@@ -180,6 +175,8 @@
     border-radius: 20px;
     width: 100%;
     height: 200px;
+    max-width: 1000px;
+    margin: 0 auto;
     background: url("../imgs/whitetiger.jpg") no-repeat center/cover;
 
     display: flex;

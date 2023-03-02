@@ -1,5 +1,5 @@
 let targetLatLng = [49.09231942317087, -122.4919778153591]; // LIG
-let goalMarkerImg = "../imgs/lion.png";
+let goalMarkerImg = "./imgs/lion.png";
 let map;
 
 //ボタンの追加
@@ -100,12 +100,12 @@ tl.from(".hoursandRate", {
   scrollTrigger: {
     trigger: ".card",
     start: "top center+=30%",
-    end: "bottom 70%",
+    end: "bottom 80%",
   },
 })
-  .from(".addressAndFQ", {
+  .from(".addresscontainer", {
     scrollTrigger: {
-      trigger: ".FQ",
+      trigger: ".address",
 
       end: "bottom 80%",
     },
@@ -119,6 +119,12 @@ tl.from(".hoursandRate", {
   .from(".parking-info", {
     scrollTrigger: {
       trigger: "#map",
+      end: "bottom 80%",
+    },
+  })
+  .from(".FQ", {
+    scrollTrigger: {
+      trigger: ".fq",
       end: "bottom 80%",
     },
   })

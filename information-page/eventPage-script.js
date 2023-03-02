@@ -25,11 +25,9 @@ ScrollTrigger.create({
   animation: tl,
   trigger: ".eventHero",
   start: "top, top",
-  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 6,
+  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 5,
   scrub: 1,
   pin: true,
-  snap: 1 / 4,
-  anticipatePin: 1,
 });
 
 const header = document.querySelector(".navbar-container");
