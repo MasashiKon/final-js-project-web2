@@ -1,0 +1,14 @@
+@use "../variable/variable.scss" as var;
+
+.btn{
+    display: block;
+    margin: auto;
+    width:40%;
+    height:auto;
+    padding: 10px 15px;
+    background-color: var.$important;
+    color: var.$text-white;
+    font-size: 2rem;
+    font-family: inherit;
+
+}
