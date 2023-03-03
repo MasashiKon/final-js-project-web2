@@ -11,11 +11,12 @@ const getAnimalData = async () => {
 
 const changeCategory = async () => {
   let newAnimals = [];
-  const animals = await getAnimalData();
   const container = document.getElementById("container");
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
+  const animals = await getAnimalData();
+
   console.log(animals);
   const category = document.getElementById("select");
   console.log(category.value);
@@ -29,6 +30,8 @@ const changeCategory = async () => {
   }
 
   gridAnimals(newAnimals);
+  showFirstItem();
+  fadeInItem();
 };
 
 const category = document.getElementById("select");
@@ -36,14 +39,12 @@ category.addEventListener("change", changeCategory);
 
 const gridAnimals = async (newAnimals) => {
   let animals = [];
-  console.log(newAnimals);
   if (!newAnimals) {
     animals = await getAnimalData();
   } else {
     animals = newAnimals;
   }
 
-  console.log(animals);
   animals.forEach(addGrid);
 
   const modal = document.getElementById("modal");
@@ -137,4 +138,27 @@ function addGrid(animal) {
   container[0].appendChild(modal);
 }
 
-window.onload = gridAnimals();
+function showFirstItem() {
+  const items = document.querySelectorAll(".item");
+  console.log(items);
+  items[0].style.display = "block";
+}
+
+function fadeInItem() {
+  const items = document.querySelectorAll(".item");
+  let index = 0;
+  const intervalId = setInterval(() => {
+    items[index].style.opacity = 1;
+    index++;
+    if (index === items.length) {
+      clearInterval(intervalId);
+    }
+  }, 250);
+}
+
+const initialize = async () => {
+  await gridAnimals();
+  showFirstItem();
+  fadeInItem();
+};
+window.onload = initialize();
