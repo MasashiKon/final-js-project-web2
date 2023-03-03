@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* a {
+  text-decoration: underline !important;
+}
+
+section {
+  margin-top: 4rem;
+}
+
+.card-container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 3%;
+}
+.card-container .address {
+  max-height: 400px;
+}
+.card-container .card {
+  width: 48%;
+  border: 1px solid grey;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-container .card h1 {
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 1rem;
+}
+.card-container .card-contents {
+  padding: 1.5rem 2rem 2rem;
+  line-height: 2rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero {
+  background: url("../imgs/zdenek-machacek-eqXiLNfZDc0-unsplash.jpg") no-repeat center/cover;
+  background-position: 100% 20%;
+  height: 20rem;
+  width: 100%;
+}
+.hero h1 {
+  text-align: center;
+  font-family: "Secular One", sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
+  color: white;
+  line-height: 20rem;
+}
+
+.hoursandRate {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.how-to-get {
+  margin-top: 4rem;
+}
+
+.parking-info {
+  width: 80%;
+  margin: 3rem auto 5rem;
+}
+.parking-info #map {
+  height: 300px;
+  width: 100%;
+}
+.parking-info .custom-map-control-button {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  background-color: white;
+  font-family: "Secular One", sans-serif;
+  font-size: 0.9rem;
+  color: rgb(69, 32, 32);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px 0px rgba(128, 128, 128, 0.53);
+}
+.parking-info #map {
+  border-radius: 10px;
+}
+
+.form-section {
+  width: 80%;
+  margin: 0 auto 3rem;
+}
+.form-section form {
+  margin-top: -1rem;
+}
+.form-section button {
+  background-color: #006aff !important;
+  color: white;
+}/*# sourceMappingURL=infoPage-style.css.map */

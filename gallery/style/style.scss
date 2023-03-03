@@ -1,6 +1,14 @@
+// @import "../../sass/html";
+// @import "../../sass/header";
+// @import "../../sass/footer";
+
 body {
   margin: 0;
   padding: 0;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .gallery {
@@ -51,9 +59,11 @@ body {
 
   .search {
     display: flex;
-    margin-left: 300px;
+    width: 100%;
+    background-color: #e6e6e6;
 
     .search-form {
+      margin-left: 300px;
       width: 500px;
 
       .search-select {
@@ -65,7 +75,6 @@ body {
   }
 
   .main {
-    // border: 1px solid blue;
     height: 50vh;
 
     .container {
@@ -73,9 +82,10 @@ body {
       margin-top: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 20px;
+      grid-gap: 10px 8%;
 
       .item {
+        opacity: 0;
         border: 1px solid gainsboro;
         text-align: center;
         justify-content: center;
@@ -96,12 +106,66 @@ body {
 
           p {
             font-size: 2rem;
+            color: orange;
           }
         }
         &:hover {
           top: -3px;
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
         }
+      }
+
+      .details {
+        text-decoration: none;
+      }
+
+      #modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 9999;
+        display: none;
+      }
+
+      .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: 50%;
+      }
+
+      #modal-image {
+        height: 250px;
+      }
+
+      #modal-description {
+        width: 500px;
+      }
+
+      #modal-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+
+      #modal-close:before {
+        content: "\00d7";
+        font-size: 24px;
       }
     }
   }
