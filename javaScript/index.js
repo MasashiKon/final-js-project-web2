@@ -74,3 +74,37 @@ prevBtn.addEventListener("click", () => {
 });
 
 // Slider Clip End
+
+// Animation
+// gsap.registerPlugin(scrollTrigger);
+let Animation = gsap.timeline({ repeatDelay: 1 });
+Animation.from(".navbar-logo", { x: -200, duration: 2, autoAlpha: 0 });
+Animation.from(".navbar-container2", { x: -200, duration: 1, autoAlpha: 0 });
+Animation.from(".navbar-item", {
+  x: -200,
+  duration: 1,
+  autoAlpha: 0,
+  stagger: { each: 0.3 },
+});
+Animation.from(".navbar-ticket", {
+  x: 200,
+  duration: 1,
+  autoAlpha: 0,
+});
+Animation.from(".ticket", { scale: 1.2 });
+
+gsap.from(".video-container", { y: -200, duration: 3, autoAlpha: 0 });
+
+gsap.from(".events-nightTour-competition-container", {
+  scrollTrigger: {
+    trigger: ".events-nightTour-competition-container",
+    each: 0.5,
+    start: "top center",
+    toggleAction: "restart pause reverse pause",
+    
+  },
+  y: 400,
+  duration: 5,
+  autoAlpha: 0,
+  scale: 0.5,
+});
