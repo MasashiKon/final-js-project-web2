@@ -52,9 +52,11 @@ body.modal-open {
 }
 .gallery .search {
   display: flex;
-  margin-left: 300px;
+  width: 100%;
+  background-color: #e6e6e6;
 }
 .gallery .search .search-form {
+  margin-left: 300px;
   width: 500px;
 }
 .gallery .search .search-form .search-select {
@@ -70,9 +72,10 @@ body.modal-open {
   margin-top: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 20px;
+  grid-gap: 10px 8%;
 }
 .gallery .main .container .item {
+  opacity: 0;
   border: 1px solid gainsboro;
   text-align: center;
   justify-content: center;
