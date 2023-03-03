@@ -1,10 +1,10 @@
 .events-nightTour-competition-container {
-    height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     justify-items: center;
-    margin: 20px 10px;
+    margin: 30px 0;
 
     .events-container, .nightTour-container, .competition-container {
         display: flex;
@@ -13,15 +13,80 @@
         justify-items: flex-end;
         width: 30%;
         text-align: center;
-        margin: 0 20px;
         border-radius: 5px;
         background-color: rgb(255, 255, 255);
 
-        .header-text {
-            color: rgb(0, 0, 0);
-            font-size: 1.5rem;
+        .events-text, .nightTour-text,.giftcard-text {
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+            letter-spacing: 3px;
+            margin-bottom: 60%;
+            text-align: center;
+            font-family: 'Courgette', cursive;
+        }
+        .body-text,.slogen-text {
+            color: rgb(255, 255, 255);
+            font-size: 1.2rem;
+            font-weight: bold;
             letter-spacing: 1px;
-            padding: 30px 0 ;
+            padding: 10px 0 ;
+            text-align: center;
+            font-family: 'Courgette', cursive;
+
+            
+        }
+        .fa-calendar-days {
+            font-size: 3rem;
+            color: #FDD36A;
+        }
+
+        .button-events,.button-nightTour ,.giftcard-button{
+            
+
+            button {
+
+                width: 200px;
+                height: 40px;
+                border: 0.5px solid black;
+                border-radius: 5px;
+                background-color: #FDD36A;
+                letter-spacing: 1px;
+                cursor: pointer;
+    
+            }
+
+            button:hover {
+                background-color: #c5a553;
+                transition: all 0.5s ease-in-out;
+                color: white;
+            }
         }
     }
+
+    .events-container {
+        background-image: url("/Assets/images/events.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .nightTour-container {
+        background-image: url("/Assets/images/night-tour.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .competition-container{
+        background-image: url("/Assets/images/competition.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .events-container:hover, .nightTour-container:hover, .competition-container:hover {
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 15px 25px #404258;
+        transform: scale(1.10);
+
+    } 
 }
