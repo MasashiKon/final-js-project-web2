@@ -32,6 +32,7 @@ body {
 .navbar-container .navbar-logo .logo span {
   color: #FDD36A;
   font-size: 2.5rem;
+  font-family: "Courgette", cursive;
 }
 .navbar-container .navbar-ticket {
   padding: 20px;
@@ -75,6 +76,7 @@ body {
   letter-spacing: 1px;
   font-weight: lighter;
   text-decoration: none;
+  font-family: "Courgette", cursive;
 }
 .navbar-container .navbar-container2 .navbar-item .navbar-link:hover {
   color: #FDD36A;
@@ -128,11 +130,17 @@ body {
   justify-items: center;
   margin: 20px 10px;
 }
+.subscribe-giftcard-container .giftcard-container {
+  background-image: url("/Assets/images/giftShop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .subscribe-giftcard-container .subscribe-container, .subscribe-giftcard-container .giftcard-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-items: flex-end;
+  justify-items: center;
   width: 50%;
   text-align: center;
   margin: 0 20px;
@@ -144,6 +152,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 30px 0;
+  font-family: "Courgette", cursive;
 }
 .subscribe-giftcard-container .subscribe-container .email-input-subscribe, .subscribe-giftcard-container .subscribe-container .name-input-subscribe, .subscribe-giftcard-container .giftcard-container .email-input-subscribe, .subscribe-giftcard-container .giftcard-container .name-input-subscribe {
   padding: 5px 0;
@@ -176,15 +185,17 @@ body {
   color: white;
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-header-text, .subscribe-giftcard-container .giftcard-container .giftcard-header-text {
-  color: #6B728E;
-  font-size: 1.5rem;
+  color: #ffffff;
+  font-size: 2rem;
   letter-spacing: 1px;
   padding: 20px 0;
+  font-family: "Courgette", cursive;
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-body-text, .subscribe-giftcard-container .subscribe-container .giftcard-details-text, .subscribe-giftcard-container .giftcard-container .giftcard-body-text, .subscribe-giftcard-container .giftcard-container .giftcard-details-text {
-  color: #6B728E;
-  font-size: 1rem;
+  color: #ffffff;
+  font-size: 1.2rem;
   letter-spacing: 1px;
+  font-family: "Courgette", cursive;
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .subscribe-container .giftcard-details-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-details-text .fa-gift {
   font-size: 5rem;
@@ -229,9 +240,10 @@ body {
 }
 .subscribe-giftcard-container .subscribe-container .giftcard-container-details, .subscribe-giftcard-container .giftcard-container .giftcard-container-details {
   padding: 10px 0;
-  color: #6B728E;
+  color: #ffffff;
   font-size: 1rem;
   letter-spacing: 1px;
+  font-family: "Courgette", cursive;
 }
 .subscribe-giftcard-container .subscribe-container:hover, .subscribe-giftcard-container .giftcard-container:hover {
   transition: all 0.5s ease-in-out;
@@ -239,12 +251,12 @@ body {
 }
 
 .events-nightTour-competition-container {
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   justify-items: center;
-  margin: 20px 10px;
+  margin: 30px 0;
 }
 .events-nightTour-competition-container .events-container, .events-nightTour-competition-container .nightTour-container, .events-nightTour-competition-container .competition-container {
   display: flex;
@@ -253,15 +265,66 @@ body {
   justify-items: flex-end;
   width: 30%;
   text-align: center;
-  margin: 0 20px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
-.events-nightTour-competition-container .events-container .header-text, .events-nightTour-competition-container .nightTour-container .header-text, .events-nightTour-competition-container .competition-container .header-text {
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
+.events-nightTour-competition-container .events-container .events-text, .events-nightTour-competition-container .events-container .nightTour-text, .events-nightTour-competition-container .events-container .giftcard-text, .events-nightTour-competition-container .nightTour-container .events-text, .events-nightTour-competition-container .nightTour-container .nightTour-text, .events-nightTour-competition-container .nightTour-container .giftcard-text, .events-nightTour-competition-container .competition-container .events-text, .events-nightTour-competition-container .competition-container .nightTour-text, .events-nightTour-competition-container .competition-container .giftcard-text {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-bottom: 60%;
+  text-align: center;
+  font-family: "Courgette", cursive;
+}
+.events-nightTour-competition-container .events-container .body-text, .events-nightTour-competition-container .events-container .slogen-text, .events-nightTour-competition-container .nightTour-container .body-text, .events-nightTour-competition-container .nightTour-container .slogen-text, .events-nightTour-competition-container .competition-container .body-text, .events-nightTour-competition-container .competition-container .slogen-text {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: bold;
   letter-spacing: 1px;
-  padding: 30px 0;
+  padding: 10px 0;
+  text-align: center;
+  font-family: "Courgette", cursive;
+}
+.events-nightTour-competition-container .events-container .fa-calendar-days, .events-nightTour-competition-container .nightTour-container .fa-calendar-days, .events-nightTour-competition-container .competition-container .fa-calendar-days {
+  font-size: 3rem;
+  color: #FDD36A;
+}
+.events-nightTour-competition-container .events-container .button-events button, .events-nightTour-competition-container .events-container .button-nightTour button, .events-nightTour-competition-container .events-container .giftcard-button button, .events-nightTour-competition-container .nightTour-container .button-events button, .events-nightTour-competition-container .nightTour-container .button-nightTour button, .events-nightTour-competition-container .nightTour-container .giftcard-button button, .events-nightTour-competition-container .competition-container .button-events button, .events-nightTour-competition-container .competition-container .button-nightTour button, .events-nightTour-competition-container .competition-container .giftcard-button button {
+  width: 200px;
+  height: 40px;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  background-color: #FDD36A;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.events-nightTour-competition-container .events-container .button-events button:hover, .events-nightTour-competition-container .events-container .button-nightTour button:hover, .events-nightTour-competition-container .events-container .giftcard-button button:hover, .events-nightTour-competition-container .nightTour-container .button-events button:hover, .events-nightTour-competition-container .nightTour-container .button-nightTour button:hover, .events-nightTour-competition-container .nightTour-container .giftcard-button button:hover, .events-nightTour-competition-container .competition-container .button-events button:hover, .events-nightTour-competition-container .competition-container .button-nightTour button:hover, .events-nightTour-competition-container .competition-container .giftcard-button button:hover {
+  background-color: #c5a553;
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+.events-nightTour-competition-container .events-container {
+  background-image: url("/Assets/images/events.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.events-nightTour-competition-container .nightTour-container {
+  background-image: url("/Assets/images/night-tour.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.events-nightTour-competition-container .competition-container {
+  background-image: url("/Assets/images/competition.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.events-nightTour-competition-container .events-container:hover, .events-nightTour-competition-container .nightTour-container:hover, .events-nightTour-competition-container .competition-container:hover {
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 15px 25px #404258;
+  transform: scale(1.1);
 }
 
 .chat-container {
@@ -308,6 +371,7 @@ body {
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 30px 0;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements, .footer-container .about-section .about-navbar .app-navbar-elements, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements, .footer-container .about-section .opening-navbar .app-navbar-elements, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .about-section .socialmedia-navbar .app-navbar-elements, .footer-container .about-section .app-navbar .socialmedia-navbar-elements, .footer-container .about-section .app-navbar .app-navbar-elements, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements, .footer-container .opening-section .about-navbar .app-navbar-elements, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements, .footer-container .opening-section .opening-navbar .app-navbar-elements, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements, .footer-container .opening-section .app-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements {
   list-style-type: none;
@@ -350,11 +414,13 @@ body {
   color: white;
   font-size: 1rem;
   letter-spacing: 1px;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .about-text-links {
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover {
   text-decoration: none;

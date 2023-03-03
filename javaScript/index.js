@@ -2,7 +2,6 @@ window.addEventListener("DOMContentLoaded", () => {
   video.src = videos[0];
   // Header visibility Start
   const header = document.querySelector(".navbar-container");
-  const headerText = document.querySelectorAll("navbar-links");
 
   let scrollTrigger = 100;
   window.onscroll = function () {
@@ -36,13 +35,14 @@ function videoClips() {
 }
 // Animals
 const videos = [
-  "/Assets/video/bear.mp4",
-  "/Assets/video/zebra.mp4",
-  "/Assets/video/flamingo.mp4",
-  "/Assets/video/rhino.mp4",
-  "/Assets/video/penguins.mp4",
-  "/Assets/video/croco.mp4",
-  "/Assets/video/giraffe.mp4",
+  "/Assets/video1/bear.mp4",
+  "/Assets/video1/flamingo.mp4",
+  "/Assets/video2/zebra.mp4",
+  "/Assets/video1/penguins.mp4",
+  "/Assets/video2/rhino.mp4",
+  "/Assets/video1/barbary-macaque.mp4",
+  "/Assets/video2/croco.mp4",
+  "/Assets/video2/giraffe.mp4",
 ];
 
 const video = document.querySelector(".video-clip");

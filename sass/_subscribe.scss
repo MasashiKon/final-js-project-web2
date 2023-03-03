@@ -6,11 +6,20 @@
     justify-items: center;
     margin: 20px 10px;
 
+    .giftcard-container {
+        background-image: url("/Assets/images/giftShop.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+
+    }
+    
     .subscribe-container,.giftcard-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        justify-items: flex-end;
+        justify-items: center;
         width: 50%;
         text-align: center;
         margin: 0 20px;
@@ -22,6 +31,7 @@
             font-size: 1.5rem;
             letter-spacing: 1px;
             padding: 30px 0 ;
+            font-family: 'Courgette', cursive;
         }
 
         .email-input-subscribe,.name-input-subscribe {
@@ -60,17 +70,18 @@
         }
 
         .giftcard-header-text {
-            color: #6B728E;
-            font-size: 1.5rem;
+            color: #ffffff;
+            font-size: 2rem;
             letter-spacing: 1px;
             padding: 20px 0 ;
+            font-family: 'Courgette', cursive;
         }
 
         .giftcard-body-text,.giftcard-details-text {
-            color: #6B728E;
-            font-size: 1rem;
+            color: #ffffff;
+            font-size: 1.2rem;
             letter-spacing: 1px;
-
+            font-family: 'Courgette', cursive;
             .fa-gift {
                 font-size: 5rem;
                 padding: 20px 0;
@@ -130,9 +141,10 @@
 
         .giftcard-container-details {
             padding: 10px 0;
-            color: #6B728E;
+            color: #ffffff;
             font-size: 1rem;
             letter-spacing: 1px;
+            font-family: 'Courgette', cursive;
         }
     }
 
