@@ -2,8 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Times New Roman", Times, serif;
 }
-* body {
+* .body2 {
   position: relative;
 }
 * a {
@@ -14,25 +15,30 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
+  max-width: 100%;
 }
 
 .navbar-container {
-  background-color: rgb(64, 66, 88);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  justify-items: center;
-  width: 100%;
+  align-items: center;
+  color: black;
 }
 .navbar-container .navbar-logo {
   padding: 20px;
 }
 .navbar-container .navbar-logo .logo {
-  color: white;
+  color: black;
   font-size: 2rem;
   letter-spacing: 1px;
   padding: 30px 0;
   text-decoration: none;
+}
+.navbar-container .navbar-logo .logo span {
+  color: #fdd36a;
+  font-size: 2.5rem;
 }
 .navbar-container .navbar-ticket {
   padding: 20px;
@@ -42,8 +48,14 @@ header {
   height: 40px;
   border: 0.5px solid black;
   border-radius: 5px;
-  background-color: white;
+  background-color: #fdd36a;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+.navbar-container .navbar-ticket .ticket:hover {
+  background-color: #c5a553;
+  transition: all 0.5s ease-in-out;
+  color: white;
   cursor: pointer;
 }
 .navbar-container .navbar-ticket .ticket .fa-ticket {
@@ -72,14 +84,15 @@ header {
   padding: 5px 0;
 }
 .navbar-container .navbar-container2 .navbar-item .navbar-link {
-  color: white;
+  color: black;
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: lighter;
   text-decoration: none;
 }
 .navbar-container .navbar-container2 .navbar-item .navbar-link:hover {
-  color: #000000;
+  color: white;
+  text-shadow: 2px 2px 5px black;
   transition: all 0.5s ease-in-out;
 }
 
@@ -93,6 +106,9 @@ header {
 }
 .card-container .address {
   max-height: 400px;
+}
+.card-container .address p {
+  font-size: 1.1rem;
 }
 .card-container .card {
   width: 48%;
@@ -148,8 +164,8 @@ header {
   width: 100%;
 }
 .hoursandRate .buyticketsBtn {
-  background-color: rgb(64, 66, 88);
-  color: white;
+  background-color: #fdd36a;
+  color: black;
   display: inline-block;
   width: 80%;
   margin: 0 auto 2rem;
@@ -157,6 +173,12 @@ header {
   padding: 1rem;
   text-decoration: none;
   border-radius: 10px;
+}
+.hoursandRate .buyticketsBtn:hover {
+  background-color: #c5a553;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
 }
 
 .how-to-get {
@@ -208,10 +230,16 @@ header {
   margin-top: -1rem;
 }
 .form-section button {
-  background-color: rgb(64, 66, 88) !important;
+  background-color: #fdd36a !important;
   border: none;
-  color: white;
+  color: black;
   border-radius: 8px;
+}
+.form-section button:hover {
+  background-color: #c5a553 !important;
+  transition: all 0.5s ease-in-out;
+  color: white;
+  cursor: pointer;
 }
 .form-section .form-control {
   border: 1px solid grey;

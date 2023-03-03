@@ -1,91 +1,82 @@
 .navbar-container {
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .navbar-logo {
+    padding: 20px;
+
+    .logo {
+      color: rgb(0, 0, 0);
+      font-size: 2rem;
+      letter-spacing: 1px;
+      padding: 30px 0;
+      text-decoration: none;
+
+      span {
+        color: #fdd36a;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .navbar-ticket {
+    padding: 20px;
+
+    .ticket {
+      width: 200px;
+      height: 40px;
+      border: 0.5px solid black;
+      border-radius: 5px;
+      background-color: #fdd36a;
+      letter-spacing: 1px;
+      cursor: pointer;
+
+      .fa-ticket {
+        padding: 0 5px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .ticket:hover {
+      background-color: #c5a553;
+      transition: 0.5s ease-in-out all;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  .navbar-container2 {
+    padding: 20px 0;
+    position: relative;
+    list-style-type: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     justify-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    
-    .navbar-logo {
-        padding: 20px;
-        
-        .logo {
-            color: rgb(0, 0, 0);
-            font-size: 2rem;
-            letter-spacing: 1px;
-            padding: 30px 0;
-            text-decoration: none;
+    list-style-type: none;
+    width: 55%;
 
-            span {
-                color:#FDD36A;
-                font-size: 2.5rem;
-                
-            }
-        }
+    .navbar-item {
+      padding: 5px 0;
+
+      .navbar-link {
+        color: rgb(0, 0, 0);
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        text-decoration: none;
+      }
+
+      .navbar-link:hover {
+        color: #fdd36a;
+        transition: all 0.5s ease-in-out;
+      }
     }
-    .navbar-ticket {
-        padding: 20px;
-        
-        .ticket {
-            width: 200px;
-            height: 40px;
-            border: 0.5px solid black;
-            border-radius: 5px;
-            background-color: #FDD36A;
-            letter-spacing: 1px;
-            cursor: pointer;
-
-            
-            .fa-ticket {
-                    padding: 0 5px;
-                    transform: rotate(-45deg);
-            }
-        }
-
-        .ticket:hover {
-            background-color: #c5a553;
-            transition: 0.5s ease-in-out all;
-            cursor: pointer;
-            color: white;
-
-        }
-    }
-
-    .navbar-container2 {
-        padding: 20px 0 ;
-        position: relative;
-        list-style-type: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        justify-items: center;
-        list-style-type: none;
-        width: 55%;
-
-        .navbar-item {
-            padding: 5px 0 ;
-
-            .navbar-link {
-                color: rgb(0, 0, 0);
-                font-size: 1.2rem;
-                letter-spacing: 1px;
-                font-weight: lighter;
-                text-decoration: none;
-            }
-
-            .navbar-link:hover {
-                color: #FDD36A;
-                transition: all 0.5s ease-in-out;
-  
-            }
-
-
-        }
-
-        
-
-    }
+  }
 }

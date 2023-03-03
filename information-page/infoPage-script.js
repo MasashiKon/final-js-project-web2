@@ -99,7 +99,7 @@ tl.from(".hoursandRate", {
   // autoAlpha: 0,
   scrollTrigger: {
     trigger: ".card",
-    start: "top center+=30%",
+    start: "top center+=28%",
     end: "bottom 80%",
   },
 })

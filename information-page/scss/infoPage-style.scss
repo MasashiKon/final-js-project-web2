@@ -5,36 +5,41 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  body {
+  .body2 {
     position: relative;
   }
   a {
     text-decoration: underline;
   }
+  font-family: "Times New Roman", Times, serif;
 }
 header {
   position: sticky;
   top: 0;
   z-index: 999;
+  max-width: 100%;
 }
 .navbar-container {
-  background-color: rgb(64, 66, 88);
+  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  justify-items: center;
-
-  width: 100%;
+  align-items: center;
+  color: black;
 
   .navbar-logo {
     padding: 20px;
 
     .logo {
-      color: white;
+      color: black;
       font-size: 2rem;
       letter-spacing: 1px;
       padding: 30px 0;
       text-decoration: none;
+      span {
+        color: #fdd36a;
+        font-size: 2.5rem;
+      }
     }
   }
   .navbar-ticket {
@@ -45,9 +50,15 @@ header {
       height: 40px;
       border: 0.5px solid black;
       border-radius: 5px;
-      background-color: white;
+      background-color: #fdd36a;
       letter-spacing: 1px;
       cursor: pointer;
+      &:hover {
+        background-color: #c5a553;
+        transition: all 0.5s ease-in-out;
+        color: white;
+        cursor: pointer;
+      }
 
       .fa-ticket {
         padding: 0 5px;
@@ -81,7 +92,7 @@ header {
       padding: 5px 0;
 
       .navbar-link {
-        color: white;
+        color: black;
         font-size: 1.2rem;
         letter-spacing: 1px;
         font-weight: lighter;
@@ -89,7 +100,8 @@ header {
       }
 
       .navbar-link:hover {
-        color: #000000;
+        color: white;
+        text-shadow: 2px 2px 5px black;
         transition: all 0.5s ease-in-out;
       }
     }
@@ -105,6 +117,9 @@ header {
   gap: 4%;
   .address {
     max-height: 400px;
+    p {
+      font-size: 1.1rem;
+    }
   }
 
   .card {
@@ -164,8 +179,8 @@ header {
   margin-top: 5rem;
   width: 100%;
   .buyticketsBtn {
-    background-color: rgb(64, 66, 88);
-    color: white;
+    background-color: #fdd36a;
+    color: black;
     display: inline-block;
     width: 80%;
     margin: 0 auto 2rem;
@@ -173,6 +188,12 @@ header {
     padding: 1rem;
     text-decoration: none;
     border-radius: 10px;
+    &:hover {
+      background-color: #c5a553;
+      transition: all 0.5s ease-in-out;
+      color: white;
+      cursor: pointer;
+    }
   }
 }
 
@@ -227,10 +248,16 @@ header {
     margin-top: -1rem;
   }
   button {
-    background-color: rgb(64, 66, 88) !important;
+    background-color: #fdd36a !important;
     border: none;
-    color: white;
+    color: black;
     border-radius: 8px;
+    &:hover {
+      background-color: #c5a553 !important;
+      transition: all 0.5s ease-in-out;
+      color: white;
+      cursor: pointer;
+    }
   }
   .form-control {
     border: 1px solid grey;

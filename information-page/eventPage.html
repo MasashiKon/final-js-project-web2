@@ -31,11 +31,15 @@
     <!-- javascript -->
     <script defer src="eventPage-script.js"></script>
   </head>
+  
   <body>
+    <div class="body2">
+      
+   
     <header>
       <nav class="navbar-container">
         <div class="navbar-logo">
-          <a class="logo" href="#">Vancouver Zoo</a>
+          <a class="logo" href="#">Vancouver <span>Zoo</span></a>
         </div>
         <ul class="navbar-container2">
           <li class="navbar-item">
@@ -76,8 +80,23 @@
 
     <section class="eventDetails">
       <h1>What is happening at the Zoo</h1>
-      <p>No event is happening at the moment</p>
+      <div class="eventCardsContainer">
+          <template>
+          <div class="eventCard">
+            <div class="imgContainer">
+             
+            </div><!-- /.imgcontainer -->
+            <div class="eDetailsContainer">
+              <h2 class="eTitle"></h2>
+              <p class="eDetails"></p>
+              <a>Learn more</a>
+            </div><!-- /.eventdetails -->   
 
+          </div>
+          
+          </template>
+        </div><!-- /.eventCardsContainer -->
+  
       <div class="hostEvent">
         <div class="hostdetails">
           <h2>Want to host an Event?</h2>
@@ -173,5 +192,6 @@
         </div>
       </div>
     </footer>
+  </div><!-- /.body2 -->
   </body>
 </html>

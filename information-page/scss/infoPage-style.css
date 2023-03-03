@@ -45,7 +45,8 @@ section {
 }
 
 .hero {
-  background: url("../imgs/zdenek-machacek-eqXiLNfZDc0-unsplash.jpg") no-repeat center/cover;
+  background: url("../imgs/zdenek-machacek-eqXiLNfZDc0-unsplash.jpg") no-repeat
+    center/cover;
   background-position: 100% 20%;
   height: 20rem;
   width: 100%;
@@ -82,7 +83,7 @@ section {
   background-color: white;
   font-family: "Secular One", sans-serif;
   font-size: 0.9rem;
-  color: rgb(69, 32, 32);
+  color: black;
   border-radius: 10px;
   box-shadow: 3px 3px 10px 0px rgba(128, 128, 128, 0.53);
 }
@@ -98,6 +99,6 @@ section {
   margin-top: -1rem;
 }
 .form-section button {
-  background-color: #006aff !important;
+  background-color: #fdd36a !important;
   color: white;
-}/*# sourceMappingURL=infoPage-style.css.map */
+} /*# sourceMappingURL=infoPage-style.css.map */

@@ -1,13 +1,15 @@
-const tl = gsap.timeline();
+const eventCard = document.querySelector("template");
+
+const tl = gsap.timeline({ defaults: { autoAlpha: 0 } });
 tl.from(".two", { xPercent: -100 })
   .from(".three", {
+    yPercent: -100,
+  })
+  .from(".four", {
     xPercent: 100,
     onComplete: () => {
       document.querySelector(".scrolldown").classList.add("hidden");
     },
-  })
-  .from(".four", {
-    yPercent: -100,
   })
   .to(
     ".eventTitle",
@@ -23,19 +25,52 @@ gsap.defaults({ ease: "none", duration: 3 });
 
 ScrollTrigger.create({
   animation: tl,
-  trigger: ".eventHero",
+  trigger: ".body2",
   start: "top, top",
-  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 5,
+  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 4,
   scrub: 1,
+
   pin: true,
+  anticipatePin: 1,
+  snap: 1 / 4,
 });
 
-const header = document.querySelector(".navbar-container");
-let scrollTrigger = document.querySelector(".eventHero").offsetHeight * 7;
+const nav = document.querySelector("header");
+let scrollTrigger = document.querySelector(".eventHero").offsetHeight * 5;
 window.onscroll = function () {
   if (scrollTrigger >= window.scrollY || scrollTrigger >= window.pageYOffset) {
-    header.style.backgroundColor = "rgb(64, 66, 88,0.5)";
+    nav.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
   } else {
-    header.style.backgroundColor = "rgb(64, 66, 88)";
+    nav.style.backgroundColor = "rgb(255, 255, 255)";
   }
 };
+
+// const renderEvent()=function(data){
+
+// }
+async function getEventData() {
+  const res = await fetch(
+    "https://run.mocky.io/v3/45e15324-bb03-4d63-8a63-f184214fd47d"
+  );
+  const json = await res.json();
+  // 処理 json.xxxx〜
+  console.log(json);
+
+  json.forEach((event) => {
+    const eventCardClone = document.importNode(eventCard.content, true);
+    eventCardClone.querySelector(".eTitle").textContent = event.eventtitle;
+    eventCardClone.querySelector(
+      ".imgContainer"
+    ).style.background = `url(${event.image}) no-repeat center/cover`;
+    eventCardClone.querySelector(".eDetails").textContent = event.eventdetails;
+
+    document.querySelector(".eventCardsContainer").append(eventCardClone);
+  });
+}
+
+getEventData();
+
+const header = document.querySelector("header");
+const body = document.querySelector("body");
+
+body.prepend(header);
