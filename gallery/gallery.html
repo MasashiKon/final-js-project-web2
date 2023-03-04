@@ -6,9 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css" />
     <link rel="stylesheet" type="text/css" href="./style/style.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="../javaScript/index.js"></script>
+    <title>Vancouver Zoo</title>
   </head>
   <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <a class="logo" href="#">Vancouver <span>Zoo</span></a>
+        </div>
+        <ul class="navbar-container2">
+          <li class="navbar-item"><a href="" class="navbar-link home" id="home">Home</a></li>
+          <li class="navbar-item visit"><a href="" class="navbar-link visit" id="visit">Visit</a></li>
+          <li class="navbar-item games"><a href="" class="navbar-link games">Games</a></li>
+          <li class="navbar-item gallery"><a href="" class="navbar-link gallery">Gallery</a></li>
+          <li class="navbar-item gallery"><a href="" class="navbar-link pricing">Pricing</a></li>
+          <li class="navbar-item information"><a href="" class="navbar-link information">Information</a></li>
+          <li class="navbar-item contact"><a href="" class="navbar-link contact">Contact</a></li>
+        </ul>
+        <div class="navbar-ticket">
+          <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
+        </div>
+      </nav>
+    </header>
     <div class="gallery">
       <section class="hero">
         <div class="hero-image">
@@ -41,6 +69,90 @@
         <div id="container" class="container"></div>
       </section>
     </div>
+    <footer>
+      <div class="footer-container">
+        <div class="about-section">
+          <div class="header-text"><h3>About</h3></div>
+          <div class="about-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">About The Zoo</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Zoo Map</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Q&A</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Career</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Contact</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Terms&Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="opening-section">
+          <div class="header-text"><h3>Opening Hours</h3></div>
+          <div class="opening-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links">Sunday: 08:00 - 20:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Monday: 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Tuesday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Wednesday : 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Thursday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Friday : 09:00 - 18:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Saturday : 08:00 - 20:00</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="socialmedia-navigation-section">
+          <div class="header-text"><h3>Social Media</h3></div>
+          <div class="socialmedia-navbar">
+            <ul class="socialmedia-navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-text"><h3>Download Our App</h3></div>
+          <div class="app-navbar">
+            <ul class="app-navbar-elements">
+              <li class="app-navbar-links">
+                <a href="#" class="app-links apple">App Store <i class="fa-brands fa-app-store-ios"></i></a>
+              </li>
+              <li class="app-navbar-links">
+                <a href="#" class="app-links google">Google Play <i class="fa-brands fa-google-play"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
