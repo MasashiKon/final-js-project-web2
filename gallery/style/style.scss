@@ -1,3 +1,7 @@
+// @import "../../sass/html";
+// @import "../../sass/header";
+// @import "../../sass/footer";
+
 body {
   margin: 0;
   padding: 0;
@@ -55,9 +59,11 @@ body.modal-open {
 
   .search {
     display: flex;
-    margin-left: 300px;
+    width: 100%;
+    background-color: #e6e6e6;
 
     .search-form {
+      margin-left: 300px;
       width: 500px;
 
       .search-select {
@@ -76,9 +82,10 @@ body.modal-open {
       margin-top: 50px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 20px;
+      grid-gap: 10px 8%;
 
       .item {
+        opacity: 0;
         border: 1px solid gainsboro;
         text-align: center;
         justify-content: center;

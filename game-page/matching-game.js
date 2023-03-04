@@ -8,6 +8,9 @@ const frameThickness = 10;
 let numOfAnimals = 5;
 let patternIndex = "1";
 let cardDealTimeline = null;
+let easy = "#317714";
+let medium = "#967D00";
+let hard = "#BB3318";
 
 const animals = [
     {
@@ -88,6 +91,20 @@ const gameState = {
 let timerFunc;
 
 window.addEventListener('DOMContentLoaded',function () {
+
+    const header = document.querySelector(".navbar-container");
+  
+    let scrollTrigger = 100;
+    window.onscroll = function () {
+      if (
+        scrollTrigger >= window.scrollY ||
+        scrollTrigger >= window.pageYOffset
+      ) {
+        header.style.backgroundColor = "rgba(255, 255,255, 0.5)";
+      } else {
+        header.style.backgroundColor = "rgba(255, 255, 255)";
+      }
+    };
     
     rangeInput.addEventListener("change", changeNumOfAnimals);
     patternInput.addEventListener("change", changeBackPattern);
@@ -457,6 +474,13 @@ function calcGrid() {
 function changeNumOfAnimals() {
     if(!gameState.isStart) {
         numOfAnimals = Number(this.value);
+        if(numOfAnimals < 5) {
+            this.style.accentColor = easy;
+        } else if (numOfAnimals < 8) {
+            this.style.accentColor = medium;
+        } else {
+            this.style.accentColor = hard;
+        }
         resetGame();
     }
 }
@@ -490,7 +514,7 @@ function startBtnFunc() {
         rangeInputWrapper.style.display = "none";
         patternInput.style.display = "none";
         startTimebar.style.display = "block";
-        timebar.style.backgroundColor = "#80F280";
+        timebar.style.backgroundColor = easy;
         timebar.style.display = "block";
         dealCard();
 
@@ -499,9 +523,9 @@ function startBtnFunc() {
             timebar.style.width = `${gameState.timer}%`
 
             if(gameState.timer < 5) {
-                timebar.style.backgroundColor = "#F29480";
+                timebar.style.backgroundColor = hard;
             } else if(gameState.timer < 20) {
-                timebar.style.backgroundColor = "#F2EF80";
+                timebar.style.backgroundColor = medium;
             }
 
             if(gameState.timer <= 0) {
