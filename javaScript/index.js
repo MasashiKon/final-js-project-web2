@@ -37,10 +37,10 @@ function videoClips() {
 // Animals
 const videos = [
   "/Assets/video1/bear.mp4",
-  "/Assets/video1/flamingo.mp4",
-  "/Assets/video2/zebra.mp4",
-  "/Assets/video1/penguins.mp4",
-  "/Assets/video2/rhino.mp4",
+  "/Assets/video3/flamingo.mp4",
+  "/Assets/video4/zebra.mp4",
+  "/Assets/video3/penguins.mp4",
+  "/Assets/video4/rhino.mp4",
   "/Assets/video1/barbary-macaque.mp4",
   "/Assets/video2/croco.mp4",
   "/Assets/video2/giraffe.mp4",
@@ -95,9 +95,9 @@ AnimationHeader.from(".ticket", { scale: 1.2 });
 
 let AnimationBody = gsap.timeline({ repeatDelay: 1 });
 AnimationBody.from(".video-container", { y: -200, duration: 4, autoAlpha: 0 });
-AnimationBody.from(".events-container", {x:-200,duration:1,autoAlpha:0,scale:1.10, })
-AnimationBody.from(".nightTour-container", {y:200,duration:1,autoAlpha:0,scale:1.10, })
-AnimationBody.from(".competition-container", {x:200,duration:1,autoAlpha:0,scale:1.10, })
+AnimationBody.from(".events-container", {x:-200,duration:1,autoAlpha:0, })
+AnimationBody.from(".nightTour-container", {y:200,duration:1,autoAlpha:0, })
+AnimationBody.from(".competition-container", {x:200,duration:1,autoAlpha:0, })
 AnimationBody.from(".subscribe-container", {x:-200,duration:1,autoAlpha:0,scale:1.10, })
 AnimationBody.from(".giftcard-container", {x:200,duration:1,autoAlpha:0,scale:1.10, })
 AnimationBody.from(".footer-container", {y:200,duration:1,autoAlpha:0,scale:1.10, })
