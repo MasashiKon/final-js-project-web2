@@ -1,5 +1,5 @@
 let targetLatLng = [49.09231942317087, -122.4919778153591]; // LIG
-let goalMarkerImg = "../imgs/lion.png";
+let goalMarkerImg = "./imgs/lion.png";
 let map;
 
 //ボタンの追加
@@ -94,31 +94,37 @@ gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.defaults({ scrub: 1 });
 
-tl.from(".hours,.rate", {
+tl.from(".hoursandRate", {
   // y: 50,
   // autoAlpha: 0,
   scrollTrigger: {
     trigger: ".card",
-    start: "top center+=30%",
-    end: "bottom 70%",
+    start: "top center+=28%",
+    end: "bottom 80%",
   },
 })
-  .from(".FQ,.address", {
+  .from(".addresscontainer", {
     scrollTrigger: {
-      trigger: ".FQ",
+      trigger: ".address",
 
       end: "bottom 80%",
     },
   })
-  .from(".by-car,.by-public-transportation", {
+  .from(".how-to-get", {
     scrollTrigger: {
       trigger: ".by-car",
       end: "bottom 80%",
     },
   })
-  .from("#map", {
+  .from(".parking-info", {
     scrollTrigger: {
       trigger: "#map",
+      end: "bottom 80%",
+    },
+  })
+  .from(".FQ", {
+    scrollTrigger: {
+      trigger: ".fq",
       end: "bottom 80%",
     },
   })

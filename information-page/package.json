@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.58.3",
+    "scss": "^0.2.4"
+  },
+  "name": "js-finalproject",
+  "version": "1.0.0",
+  "main": "infoPage-script.js",
+  "scripts": {
+    "start": "sass scss:css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
