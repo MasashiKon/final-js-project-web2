@@ -1,0 +1,110 @@
+@use "../variable/variable.scss" as var;
+
+    .ticket-container{
+    
+        margin: 4rem auto;
+        width: 90%;
+        height: auto;
+        border: 1px solid var.$frame;
+        h2{
+            background-color: var.$accent;
+            color: var.$text-white;
+            text-align: center;
+            padding: 1rem;
+            
+        }
+        .tickts-list{
+            list-style: none;
+        }
+       
+        .ticket-item{
+            margin: 0;
+            padding: 0.5rem 1rem;
+            border-bottom: 1px solid var.$frame;
+            display: flex;
+           flex-direction: row;
+           .age-grouping{
+            width: 60%;
+            
+            p{
+                text-align: center;
+            }
+           }
+           .price{
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+
+           
+            .choice{
+                padding: 10px;
+                width: 100%;
+                label{
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                input{
+                    font-size: 1rem;
+                    height: auto;
+                    margin: 1rem;
+                }
+    
+                
+            }
+            .discount{
+                color: var.$important;
+                label{
+                    font-size: 1rem;
+                }
+            }
+    
+           }
+        }
+
+      
+        
+    }
+    .orderDetail{
+        margin: 4rem auto;
+        width: 90%;
+        height: auto;
+        border: 1px solid var.$frame;
+        .detail-title{
+            background-color: var.$accent;
+            color: var.$text-white;
+        }
+        .cart-list{
+            list-style:none;
+            .cart-item{
+                background-color: white;
+                color: var.$text-black;
+                margin: 0;
+                padding: 0.5rem 1rem;
+                border-bottom: 1px solid var.$frame;
+                display: flex;
+               flex-direction: row;
+               label{
+                font-size: 1.5rem;
+                font-weight: bold;
+                .tickets-citizen{
+                    font-size: 1rem;
+                }
+               }
+
+                .incart-citizen{
+                    color: var.$important;
+                }
+                .cart-delete{
+                    display: block;
+                }
+            }
+        }
+
+        
+    }
+    .subtotal, .toInfo{
+            margin: 1rem auto;
+            width: 75%;
+            text-align: center;
+        }
+

@@ -1,0 +1,360 @@
+@use "variable" as var;
+
+//general
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  .body2 {
+    position: relative;
+  }
+  a {
+    text-decoration: underline;
+  }
+  font-family: "Times New Roman", Times, serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  max-width: 100%;
+}
+.navbar-container {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+
+  .navbar-logo {
+    padding: 20px;
+
+    .logo {
+      color: black;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      padding: 30px 0;
+      text-decoration: none;
+      span {
+        color: #fdd36a;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  .navbar-ticket {
+    padding: 20px;
+
+    .ticket {
+      width: 200px;
+      height: 40px;
+      border: 0.5px solid black;
+      border-radius: 5px;
+      background-color: #fdd36a;
+      letter-spacing: 1px;
+      cursor: pointer;
+      &:hover {
+        background-color: #c5a553;
+        transition: all 0.5s ease-in-out;
+        color: white;
+        cursor: pointer;
+      }
+
+      .fa-ticket {
+        padding: 0 5px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .navbar-container2-change {
+    display: none;
+
+    .navbar-item {
+      .home:hover {
+        display: block;
+        color: red;
+      }
+    }
+  }
+  .navbar-container2 {
+    padding: 20px 0;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    justify-items: center;
+    list-style-type: none;
+    width: 55%;
+
+    .navbar-item {
+      padding: 5px 0;
+
+      .navbar-link {
+        color: black;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight: lighter;
+        text-decoration: none;
+      }
+
+      .navbar-link:hover {
+        color: white;
+        text-shadow: 2px 2px 5px black;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+//card container general
+.card-container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 4%;
+  .address {
+    max-height: 400px;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .card {
+    width: 48%;
+
+    border: 1px solid grey;
+    border-radius: 20px;
+    overflow: hidden;
+
+    h1 {
+      text-align: center;
+      border-bottom: 1px solid grey;
+      padding: 1rem;
+    }
+  }
+  .address {
+    width: 100%;
+  }
+
+  .card-contents {
+    padding: 1.5rem 2rem 2rem;
+    line-height: 2rem;
+    margin: 0;
+  }
+}
+
+//title general
+.title {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+.subtitle {
+  font-size: 1.4rem;
+}
+
+//hero section
+.hero {
+  background: url("../imgs/zdenek-machacek-eqXiLNfZDc0-unsplash.jpg") no-repeat
+    center / cover;
+  background-position: 100% 20%;
+  height: 20rem;
+  width: 100%;
+  h1 {
+    text-align: center;
+    font-family: "Secular One", sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    color: white;
+    line-height: 20rem;
+  }
+}
+.addresscontainer {
+  margin-top: 5rem;
+}
+.hoursandRate {
+  margin-top: 5rem;
+  width: 100%;
+  .buyticketsBtn {
+    background-color: #fdd36a;
+    color: black;
+    display: inline-block;
+    width: 80%;
+    margin: 0 auto 2rem;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    border-radius: 10px;
+    &:hover {
+      background-color: #c5a553;
+      transition: all 0.5s ease-in-out;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+.how-to-get {
+  margin-top: 4rem;
+}
+
+.parking-info {
+  max-width: 1000px;
+  width: 80%;
+  margin: 5rem auto 5rem;
+  #map {
+    height: 300px;
+    width: 100%;
+  }
+
+  .custom-map-control-button {
+    margin-top: 0.5rem;
+    padding: 0.7rem;
+    background-color: white;
+
+    font-size: 0.9rem;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 0px rgba(128, 128, 128, 0.53);
+  }
+
+  #map {
+    border-radius: 10px;
+  }
+}
+.FQ {
+  .card-contents {
+    border: 1px solid grey;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    font-weight: 400;
+  }
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1000px;
+
+  font-size: 1.2rem;
+}
+
+.form-section {
+  max-width: 1000px;
+  width: 80%;
+  margin: 5rem auto 5rem;
+  form {
+    margin-top: -1rem;
+  }
+  button {
+    background-color: #fdd36a !important;
+    border: none;
+    color: black;
+    border-radius: 8px;
+    &:hover {
+      background-color: #c5a553 !important;
+      transition: all 0.5s ease-in-out;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .form-control {
+    border: 1px solid grey;
+    border-radius: 10px;
+  }
+}
+
+.footer-container {
+  width: 100%;
+  height: 25rem;
+  background-color: var.$footer-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+
+  .about-section,
+  .opening-section,
+  .socialmedia-navigation-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+    text-align: center;
+    width: 20rem;
+
+    .header-text {
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      padding: 30px 0;
+    }
+    .about-navbar,
+    .opening-navbar,
+    .socialmedia-navbar,
+    .app-navbar {
+      .socialmedia-navbar-elements,
+      .app-navbar-elements {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .navbar-links {
+          padding: 6px 0;
+
+          .text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+          }
+        }
+
+        .app-navbar-links {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          justify-items: center;
+          background-color: #6b728e;
+          border: 0.5px solid black;
+          width: 100px;
+          height: 40px;
+          margin: 0 10px;
+          .app-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .navbar-elements {
+        list-style-type: none;
+
+        .navbar-links {
+          padding: 8px 0;
+
+          .text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            letter-spacing: 1px;
+          }
+
+          .about-text-links {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+          }
+
+          .about-text-links:hover {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

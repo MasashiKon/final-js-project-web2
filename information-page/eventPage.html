@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>event page</title>
+    <!--bootstrap-->
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+    <!-- font-family from google -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./css/eventPage-style.css" />
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/58f4189fbb.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- javascript -->
+    <script defer src="eventPage-script.js"></script>
+  </head>
+  
+  <body>
+    <div class="body2">
+      
+   
+    <header>
+      <nav class="navbar-container">
+        <div class="navbar-logo">
+          <a class="logo" href="#">Vancouver <span>Zoo</span></a>
+        </div>
+        <ul class="navbar-container2">
+          <li class="navbar-item">
+            <a href="" class="navbar-link home">Home</a>
+          </li>
+          <li class="navbar-item visit">
+            <a href="" class="navbar-link">Visit</a>
+          </li>
+          <li class="navbar-item games">
+            <a href="" class="navbar-link">Games</a>
+          </li>
+          <li class="navbar-item gallery">
+            <a href="" class="navbar-link">Gallery</a>
+          </li>
+          <li class="navbar-item information">
+            <a href="" class="navbar-link">Information</a>
+          </li>
+          <li class="navbar-item contact">
+            <a href="" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-ticket">
+          <button class="ticket">
+            <i class="fa-solid fa-ticket"></i>Tickets
+          </button>
+        </div>
+      </nav>
+    </header>
+    <section class="eventHero">
+      <img class="popin-pic one" src="./imgs/bambi.jpg" alt="" />
+      <img class="popin-pic two" src="./imgs/giraff.jpg" alt="" />
+      <img class="popin-pic three" src="./imgs/cow.jpg" alt="" />
+      <img class="popin-pic four" src="./imgs/sheep.jpg" alt="" />
+      <img class="scrolldown" src="./imgs/scrolldown.jpg" alt="" />
+      <h1 class="eventTitle">Our Event</h1>
+   
+    </section>
+
+    <section class="eventDetails">
+      <h1>What is happening at the Zoo</h1>
+      <div class="eventCardsContainer">
+          <template>
+          <div class="eventCard">
+            <div class="imgContainer">
+             
+            </div><!-- /.imgcontainer -->
+            <div class="eDetailsContainer">
+              <h2 class="eTitle"></h2>
+              <p class="eDetails"></p>
+              <a>Learn more</a>
+            </div><!-- /.eventdetails -->   
+
+          </div>
+          
+          </template>
+        </div><!-- /.eventCardsContainer -->
+  
+      <div class="hostEvent">
+        <div class="hostdetails">
+          <h2>Want to host an Event?</h2>
+
+          <a href="#">Click for More Info here"</a>
+        </div>
+        <!-- /.hostdetails -->
+      </div>
+      <!-- /.hostEvent -->
+    </section>
+    <footer>
+      <div class="footer-container">
+        <div class="about-section">
+          <div class="header-text"><h3>About</h3></div>
+          <div class="about-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">About The Zoo</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Zoo Map</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Q&A</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Career</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Contact</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="about-text-links">Terms&Conditions</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="opening-section">
+          <div class="header-text"><h3>Opening Hours</h3></div>
+          <div class="opening-navbar">
+            <ul class="navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links">Sunday: 08:00 - 20:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Monday: 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Tuesday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Wednesday : 10:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Thursday : 09:00 - 19:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Friday : 09:00 - 18:00</a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links">Saturday : 08:00 - 20:00</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="socialmedia-navigation-section">
+          <div class="header-text"><h3>Social Media</h3></div>
+          <div class="socialmedia-navbar">
+            <ul class="socialmedia-navbar-elements">
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li class="navbar-links">
+                <a href="#" class="text-links"><i class="bi bi-twitter"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-text"><h3>Download Our App</h3></div>
+          <div class="app-navbar">
+            <ul class="app-navbar-elements">
+              <li class="app-navbar-links">
+                <a href="#" class="app-links"><i class="fa-brands fa-app-store-ios"></i></a>
+              </li>
+              <li class="app-navbar-links">
+                <a href="#" class="app-links"><i class="fa-brands fa-google-play"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </div><!-- /.body2 -->
+  </body>
+</html>
