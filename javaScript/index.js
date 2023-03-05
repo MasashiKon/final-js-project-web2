@@ -1,3 +1,4 @@
+
 window.addEventListener("DOMContentLoaded", () => {
   video.src = videos[0];
   // Header visibility Start
@@ -76,35 +77,62 @@ prevBtn.addEventListener("click", () => {
 // Slider Clip End
 
 // Animation
-// gsap.registerPlugin(scrollTrigger);
-let Animation = gsap.timeline({ repeatDelay: 1 });
-Animation.from(".navbar-logo", { x: -200, duration: 2, autoAlpha: 0 });
-Animation.from(".navbar-container2", { x: -200, duration: 1, autoAlpha: 0 });
-Animation.from(".navbar-item", {
+let AnimationHeader = gsap.timeline({ repeatDelay: 1 });
+AnimationHeader.from(".navbar-logo", { x: -200, duration: 2, autoAlpha: 0 });
+AnimationHeader.from(".navbar-container2", { x: -200, duration: 1, autoAlpha: 0 });
+AnimationHeader.from(".navbar-item", {
   x: -200,
   duration: 1,
   autoAlpha: 0,
   stagger: { each: 0.3 },
 });
-Animation.from(".navbar-ticket", {
+AnimationHeader.from(".navbar-ticket", {
   x: 200,
   duration: 1,
   autoAlpha: 0,
 });
-Animation.from(".ticket", { scale: 1.2 });
+AnimationHeader.from(".ticket", { scale: 1.2 });
 
-gsap.from(".video-container", { y: -200, duration: 3, autoAlpha: 0 });
-
-gsap.from(".events-nightTour-competition-container", {
-  scrollTrigger: {
-    trigger: ".events-nightTour-competition-container",
-    each: 0.5,
-    start: "top center",
-    toggleAction: "restart pause reverse pause",
-    
-  },
-  y: 400,
-  duration: 5,
+let AnimationBody = gsap.timeline({ repeatDelay: 1 });
+AnimationBody.from(".video-container", { y: -200, duration: 4, autoAlpha: 0 });
+AnimationBody.from(".events-container", {x:-200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".nightTour-container", {y:200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".competition-container", {x:200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".subscribe-container", {x:-200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".giftcard-container", {x:200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".footer-container", {y:200,duration:1,autoAlpha:0,scale:0.8, })
+AnimationBody.from(".navbar-elements", { x: -200, duration: 1, autoAlpha: 0 });
+AnimationBody.from(".header-text", {
+  x: -200,
+  duration: 1,
   autoAlpha: 0,
-  scale: 0.5,
+  stagger: { each: 0.3 },
 });
+
+
+AnimationBody.from(".navbar-links,.app-navbar-links", {
+  x: -200,
+  duration: 1,
+  autoAlpha: 0,
+  stagger: { each: 0.3 },
+});
+
+
+
+
+
+
+
+    // y: 100,
+    // duration: 1,
+    // autoAlpha: 0,
+    // scale: 0.5,
+    // scrollTrigger: {
+    //   trigger: ".box",
+    //   start: "top 80%",
+    //   end: "bottom top",
+    //   toggleAction: "restart pause reverse pause",
+    //   scrub: true
+    // },
+
+  // });
