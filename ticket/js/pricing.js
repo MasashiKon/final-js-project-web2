@@ -25,28 +25,10 @@ async function fetchData(){
 
 window.addEventListener("DOMContentLoaded",fetchData)
 
-
-window.addEventListener("DOMContentLoaded", () => {
-    // Header visibility Start
-    const header = document.querySelector(".navbar-container");
-    // const headerText = document.querySelectorAll("navbar-links");
-  
-    let scrollTrigger = 100;
-    window.onscroll = function () {
-      if (
-        scrollTrigger >= window.scrollY ||
-        scrollTrigger >= window.pageYOffset
-      ) {
-        header.style.backgroundColor = "rgba(255, 255,255, 0.5)";
-      } else {
-        header.style.backgroundColor = "rgba(255, 255, 255)";
-      }
-    };
-})
-
+const cartList = document.querySelector('.cartList')
 const cartItemEl = document.querySelector('.cart-item')
-const costTotalEl = document.querySelector(".subtotal")
-let costTotal = 0
+const subTotalEl = document.querySelector(".subtotal")
+let subTotal = 0
 cartItemEl.textContent = 0
 let cart = []
 let showCart
@@ -54,8 +36,8 @@ let cartItemNum = 0
 function addCart(responseData) {
   const addBtns = document.querySelector('.btn-addCart')
 
-  addBtns.forEach(addBtn){
-    addBtn.addEventListener('click',function()){
+  addBtns.forEach(function(addBtn){
+    addBtn.addEventListener('click',function(){
       let qty_general = Number(this.previousSibling.firstchild.lastchild)
       let qty_citizen = Number(this.previousSibling.lastchild.lastchild)
       const thisId = this.parentNode.id
@@ -64,16 +46,82 @@ function addCart(responseData) {
 
       if (cart.length == 0) {
         for (const ticket of responseData) {
-          if (thisId == ticket.id && ) {
+          if (thisId == ticket.id) {
             ticket['quantity'] = qty_general
             cart.push(ticket)
           }
-          
         }
         makeEl(thisId)
         cartItemNum += qty_general
 
+        subTotal += total_gen
+        subTotalEl.textContent = subTotal.toFixed(2)
+        deleteAll()
+        return
       }
+      while (cartList.firstChild) {
+        cartList.removeChild(cartList.firstChild)
+      }
+
+      if (checkSame(cart, thisId)) {
+        console.log('true Exist')
+
+        for (const ticket of cart) {
+          if (thisId == ticket.id) {
+            let newGenQty = ticket.qty_general+qty_general
+            ticket.qty_general = newGenQty
+            updateEl(newQ, thisId)
+          }
+        }
+
+        subTotal += total_gen
+        subTotalEl.textContent = subTotal.toFixed(2)
+      } else {
+        console.log('not exist')
+        for (const product of products) {
+          if (thisId == product.id) {
+            product['quantity'] = qty_general
+            cart.push(ticket)
+          }
+        }
+        makeEl(thisId)
+
+        subTotal += total_gen
+        subTotalEl.textContent = subTotal.toFixed(2)
+      }
+    })
+  })
+}
+
+function checkSame(myCart, thisId) {
+  let isExist = false
+  showMyCart = new Set(myCart)
+  showMyCart.forEach((item) => {
+    if (item.id == thisId) {
+      isExist = true
+      return
     }
-  }
+  })
+  return isExist
+}
+
+function makeEl() {
+  cart.forEach((cartItem) => {
+    if (cartItem.qty_general != 0) {
+      const price = cartItem.price.toFixed(2)
+      const cartElClone = document.importNode(cartTemplate.content, true)
+      cartElClone.querySelector('.cart-box__item-name').textContent =
+        cartItem.title
+      cartElClone.querySelector('.cart-box__item-price span').textContent =
+        price
+      cartElClone.querySelector('.cart-box__item-quantity span').textContent =
+        cartItem.quantity
+      cartElClone
+        .querySelector('.cart-box__img')
+        .setAttribute('src', cartItem.image)
+      cartElClone.querySelector('.cart-box__item-info')
+      cartElClone.querySelector('.cart-box__item').id = cartItem.id
+      cartList.appendChild(cartElClone)
+    }
+  })
 }

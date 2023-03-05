@@ -13,7 +13,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="ticketpage.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer type="module" src="./js/pricing.js"></script>
+    <script defer type="module" src="./js/ticketpage.js"></script>
 </head>
 <body>
     <!--ticket price template-->
@@ -23,36 +23,9 @@
          <h3 class="category"></h3>
          <p class="description"></p>
         </div>
-        
-         <div class="price">
-             <div class="choice general">
-                 <label class="tickets-normal">General Price</label>
-                 <p class="generalPrice"></p>
-                 <select name="quantity" class="tickets-qty">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-             </div>
-             <div class="choice discount">
-                 <label class="tickets-citizen">Citizenship ID holder Price</label>
-                  <p class="citizenPrice"></p>
-                 <select name="quantity" class="tickets-qty">
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-             </div>
-         
-         
-
-         </div>
+        <label class="tickets-normal">Price</label>
+        <p class="price"></p>
+        <input type="number" class="quantity" value="0">
 
          <button class="btn btn-addCart">Add to Cart</button>
          
@@ -61,41 +34,7 @@
         </li>
 
       </template>
-      <!--Order Summary-->
-      <template id="cart-tmp">
-        <li class="cart-item">
-          <h3 class="incart-category"></h3>
-          <div class="incart-general">
-            <label class="ticket-general">General Price</label>
-            <p class="generalPrice"></p>
-            <select name="quantity" class="incart-qty general">
-               <option value="0">0</option>
-               <option value="1">1</option>
-               <option value="2">2</option>
-               <option value="3">3</option>
-               <option value="4">4</option>
-               <option value="5">5</option>
-           </select>
-        </div>
-        <div class="incart-citizen">
-            <label class="tickets-citizen">Citizenship ID holder Price</label>
-             <p class="citizenPrice"></p>
-            <select name="quantity" class="incart-qty citizen">
-               <option value="0">0</option>
-               <option value="1">1</option>
-               <option value="2">2</option>
-               <option value="3">3</option>
-               <option value="4">4</option>
-               <option value="5">5</option>
-           </select>
-        <a class="cart-delite"><i class="fa-solid fa-trash-can"></i></a>
-        </div>
-  
-
-        </li>
-       
-
-      </template>
+     
       <header>
         <nav class="navbar-container">
           <div class="navbar-logo"><a class="logo" href="#">Vancouver <span>Zoo</span></a></div>
@@ -151,7 +90,23 @@
          <div class="detail-box">
           
             <h3 class="detail-title">Order Detail</h3>
-            <ul class="cart-list"></ul>
+            <ul class="cart-list">
+               <!--Order Summary-->
+      <!-- <template id="cart-tmp">
+        <li class="cart-item">
+          <h3 class="incart-category"></h3>
+          <div class="incart-general">
+            <label class="ticket-general">Price</label>
+            <p class="price"></p>
+              <input type="number" class="quantity incart">
+           
+         </div>
+         <button class="cart-delete"><i class="fa-solid fa-trash-can"></i></button>
+
+        </li>
+      </template> -->
+        <button class="clear">Delete all tickets</button>
+            </ul>
             
           </div>
         </div>
