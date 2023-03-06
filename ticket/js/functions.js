@@ -66,11 +66,13 @@ function incart(){
 
  function purchaseClicked() {
   const cartItems = document.getElementsByClassName('cart-list')[0]
-  alert('Thank you for booking the tickets')
+alert("Thank you for booking our Tickets!!")
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild)
   }
   updateCartTotal()
+  
+
  }
 
 function removeFromCart(event) {
@@ -102,6 +104,9 @@ var category = buyTicket.getElementsByClassName('category')[0].innerText
 var price = buyTicket.getElementsByClassName('price')[0].innerText
 var quantity = buyTicket.querySelector("input").value
 // console.log("Add to cart: "+category,+" "+price+" "+quantity);
+if (quantity <= 0) {
+  return
+}
 addItemToCart(category, price,quantity)
 updateCartTotal()
   let cartInAnimation = gsap.timeline({repeatDelay:1})
@@ -150,10 +155,11 @@ for (var i = 0; i < cartRows.length; i++) {
   var cartRow = cartRows[i]
   var priceEl = cartRow.getElementsByClassName('price-value')[0]
   var qtyEl = cartRow.getElementsByClassName('quantity-incart')[0]
+  console.log(priceEl);
   var price = parseFloat(priceEl.innerText.replace('$','')).toFixed(2)
   var quantity = qtyEl.value
-  console.log(price, quantity);
       total = total + (price*quantity)
+  
 }
 total = Math.round(total * 100) /100
  document.getElementsByClassName('total-price')[0].innerText = total
