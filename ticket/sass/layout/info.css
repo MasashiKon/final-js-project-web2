@@ -1,0 +1,29 @@
+.info-container {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.info-container .address {
+  margin: auto;
+  width: 500px;
+  max-width: 50%;
+  height: 420px;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.info-container .address h3 {
+  font-size: 1.5rem;
+}
+.info-container .note {
+  margin: auto;
+  width: 450px;
+  max-width: 45%;
+  height: 420px;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.info-container .note span {
+  color: #e34343;
+}/*# sourceMappingURL=info.css.map */

@@ -1,0 +1,86 @@
+.ticket-container {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+}
+.ticket-container h2 {
+  background-color: #7B8fa1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.ticket-container .tickts-list {
+  list-style: none;
+}
+.ticket-container .ticket-item {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.ticket-container .ticket-item .age-grouping {
+  width: 60%;
+}
+.ticket-container .ticket-item .age-grouping p {
+  text-align: center;
+}
+.ticket-container .ticket-item .price {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.ticket-container .ticket-item .price .choice {
+  padding: 10px;
+  width: 100%;
+}
+.ticket-container .ticket-item .price .choice label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.ticket-container .ticket-item .price .discount {
+  color: #e34343;
+}
+.ticket-container .ticket-item .price .discount label {
+  font-size: 1rem;
+}
+
+.orderDetail {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+}
+.orderDetail .detail-title {
+  background-color: #7B8fa1;
+  color: white;
+}
+.orderDetail .cart-list {
+  list-style: none;
+}
+.orderDetail .cart-list .cart-item {
+  background-color: white;
+  color: rgb(12, 11, 11);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.orderDetail .cart-list .cart-item label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.orderDetail .cart-list .cart-item label .tickets-citizen {
+  font-size: 1rem;
+}
+.orderDetail .cart-list .cart-item .incart-citizen {
+  color: #e34343;
+}
+
+.subtotal, .toInfo {
+  margin: 1rem auto;
+  width: 75%;
+  text-align: center;
+}/*# sourceMappingURL=ticketing.css.map */
