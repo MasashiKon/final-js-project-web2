@@ -18,11 +18,7 @@ tl.from(".two", { xPercent: -100 })
       y: -10,
     },
     "<"
-  )
-  .from(".eventDetails", {
-    y: 50,
-    autoAlpha: 0,
-  });
+  );
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.defaults({ ease: "none", duration: 3 });
