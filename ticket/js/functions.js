@@ -155,10 +155,11 @@ for (var i = 0; i < cartRows.length; i++) {
   var cartRow = cartRows[i]
   var priceEl = cartRow.getElementsByClassName('price-value')[0]
   var qtyEl = cartRow.getElementsByClassName('quantity-incart')[0]
+  console.log(priceEl);
   var price = parseFloat(priceEl.innerText.replace('$','')).toFixed(2)
   var quantity = qtyEl.value
-  console.log(price, quantity);
       total = total + (price*quantity)
+  
 }
 total = Math.round(total * 100) /100
  document.getElementsByClassName('total-price')[0].innerText = total
