@@ -5,11 +5,12 @@
 #title-hero .hero-container {
   background: url("assets/img/bird.jpg") no-repeat center/cover;
   width: 100%;
-  height: 25rem;
+  height: 20rem;
 }
 #title-hero .hero-container h1 {
   text-align: center;
   color: white;
   line-height: 20rem;
   letter-spacing: 1rem;
+  font-family: "Secular One", sans-serif;
 }/*# sourceMappingURL=hero.css.map */

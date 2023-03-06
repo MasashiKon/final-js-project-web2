@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-      
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-      <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-      <script defer src="/javaScript/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="/javaScript/index.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
@@ -33,19 +29,29 @@
     <header>
       <nav class="navbar-container">
         <div class="navbar-logo">
-          <a class="logo" href="#">Vancouver <span>Zoo</span></a>
+          <a class="logo" href="./index.html">Vancouver <span>Zoo</span></a>
         </div>
         <ul class="navbar-container2">
           <li class="navbar-item"><a href="/index.html" class="navbar-link home" id="home">Home</a></li>
           <li class="navbar-item visit"><a href="" class="navbar-link visit" id="visit">Visit</a></li>
-          <li class="navbar-item games"><a href="/game-page.html" class="navbar-link games">Matching Game</a></li>
-          <li class="navbar-item gallery"><a href="/gallery.html" class="navbar-link gallery">Gallery</a></li>
-          <li class="navbar-item gallery"><a href="/eventPage.html" class="navbar-link events">Events</a></li>
-          <li class="navbar-item gallery"><a href="" class="navbar-link pricing">Pricing</a></li>
-          <li class="navbar-item information"><a href="/infoPage.html" class="navbar-link information">Information</a></li>
+          <li class="navbar-item games">
+            <a href="./game-page/game-page.html" class="navbar-link games">Matching Game</a>
+          </li>
+          <li class="navbar-item gallery"><a href="./gallery/gallery.html" class="navbar-link gallery">Gallery</a></li>
+          <li class="navbar-item gallery">
+            <a href="./information-page/eventPage.html" class="navbar-link events">Events</a>
+          </li>
+          <li class="navbar-item gallery">
+            <a href="./ticket/ticketpage.html" class="navbar-link pricing">Pricing</a>
+          </li>
+          <li class="navbar-item information">
+            <a href="./information-page/infoPage.html" class="navbar-link information">Information</a>
+          </li>
         </ul>
         <div class="navbar-ticket">
-          <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
+          <a href="./ticket/ticketpage.html">
+            <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button></a
+          >
         </div>
       </nav>
     </header>
@@ -75,7 +81,6 @@
     </div>
     <div class="subscribe-giftcard-container">
       <div class="subscribe-container">
-
         <div class="header-text"><h3>Subscribe To Our News Letter</h3></div>
         <div class="email-input-subscribe"><input type="email" placeholder="Email@example.com" /></div>
         <div class="name-input-subscribe"><input type="text" placeholder="Full name" /></div>

@@ -101,6 +101,10 @@ body {
   padding: 0 5px;
   transform: rotate(-45deg);
 }
+.navbar-container .navbar-container2 .navbar-ticket .ticket a {
+  text-decoration: none;
+  color: black;
+}
 .navbar-container .navbar-container2 .navbar-ticket .ticket:hover {
   background-color: #c5a553;
   transition: 0.5s ease-in-out all;

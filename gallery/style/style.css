@@ -16,9 +16,16 @@ body.modal-open {
 .gallery .hero {
   position: relative;
 }
+.gallery .hero h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  line-height: 20rem;
+}
 .gallery .hero img {
   width: 100%;
-  height: 600px;
+  height: 20rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 100% 45%;
@@ -31,7 +38,8 @@ body.modal-open {
   transform: translate(-50%, -50%);
   padding: 0;
   margin: 0;
-  font-size: 200px;
+  font-size: 7rem;
+  font-family: "Secular One", sans-serif;
   color: white;
 }
 .gallery .desc {
