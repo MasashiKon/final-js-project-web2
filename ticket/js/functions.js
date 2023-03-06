@@ -66,11 +66,13 @@ function incart(){
 
  function purchaseClicked() {
   const cartItems = document.getElementsByClassName('cart-list')[0]
+alert("Thank you for booking our Tickets!!")
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild)
   }
   updateCartTotal()
-  window.location.href("orderConfirmed.html")
+  
+
  }
 
 function removeFromCart(event) {
@@ -102,6 +104,9 @@ var category = buyTicket.getElementsByClassName('category')[0].innerText
 var price = buyTicket.getElementsByClassName('price')[0].innerText
 var quantity = buyTicket.querySelector("input").value
 // console.log("Add to cart: "+category,+" "+price+" "+quantity);
+if (quantity <= 0) {
+  return
+}
 addItemToCart(category, price,quantity)
 updateCartTotal()
   let cartInAnimation = gsap.timeline({repeatDelay:1})
