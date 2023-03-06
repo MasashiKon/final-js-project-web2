@@ -2,16 +2,16 @@
 
 #title-hero{
     width: 100%;
-    height: 25rem;
+    height: 600px;
     .hero-container{
         
         background:url("assets/img/bird.jpg") no-repeat center/cover;
         width: 100%;
-        height: 25rem;
+        height: 100%;
         h1{
+            padding: 250px 0;
             text-align: center;
             color: var.$text-white;
-            line-height: 20rem;
             letter-spacing: 1rem;
         }
     }    

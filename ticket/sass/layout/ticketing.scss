@@ -20,7 +20,7 @@
         .ticket-item{
             margin: 0;
             padding: 0.5rem 1rem;
-            border-bottom: 1px solid var.$frame;
+            border-top: 1px solid var.$frame;
             display: flex;
            flex-direction: row;
            .age-grouping{
@@ -31,35 +31,30 @@
             }
            }
            .price{
+            margin: auto;
             width: 40%;
             display: flex;
             flex-direction: row;
-
-           
-            .choice{
-                padding: 10px;
-                width: 100%;
-                label{
-                    font-size: 1.5rem;
-                    font-weight: bold;
-                }
-                input{
-                    font-size: 1rem;
-                    height: auto;
-                    margin: 1rem;
-                }
-    
-                
-            }
-            .discount{
-                color: var.$important;
-                label{
-                    font-size: 1rem;
-                }
-            }
-    
+            font-size: 2rem;
            }
-        }
+           .amount{
+            margin: 1rem;
+            input{
+                width: 4rem;
+                font-size: 1.5rem;
+                height: auto;
+                &:hover {
+                    transition: all 0.1s ease-in-out;
+                    box-shadow: 0 5px 10px #404258;
+                    box-shadow: 0 -5px -10px #404258;
+            
+                  }
+                
+               }
+            }
+            
+           }
+           
 
       
         
@@ -80,22 +75,46 @@
                 color: var.$text-black;
                 margin: 0;
                 padding: 0.5rem 1rem;
-                border-bottom: 1px solid var.$frame;
+                border-top: 1px solid var.$frame;
                 display: flex;
                flex-direction: row;
-               label{
-                font-size: 1.5rem;
-                font-weight: bold;
-                .tickets-citizen{
-                    font-size: 1rem;
+               h3{
+                margin: auto;
+                width: 20%;
                 }
-               }
+                .price{
+                    margin: auto;
+                    width: 40%;
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 2rem;
+                   }
+                   .amount-incart{
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 1rem;
+                    input{
+                        width: 4rem;
+                        font-size: 1.5rem;
+                        height: auto;
+                        &:hover {
+                    transition: all 0.1s ease-in-out;
+                    box-shadow: 0 5px 10px #404258;
+                    box-shadow: 0 -5px -10px #404258;
+            
+                  }
+                       }
 
-                .incart-citizen{
-                    color: var.$important;
-                }
+                   }
                 .cart-delete{
                     display: block;
+                    background-color: inherit;
+                    width: 10%;
+                    height: auto;
+                    a:hover{
+                        color: var.$important;
+                    }
                 }
             }
         }
@@ -106,5 +125,17 @@
             margin: 1rem auto;
             width: 75%;
             text-align: center;
+            
+        }
+        .subtotal{
+            transition: all 0.15s ease-in-out;
+        }
+        .toInfo{
+            a:hover {
+                transition: all 0.1s ease-in-out;
+                box-shadow: 0 1px 2px #404258;
+               color: orange;
+        
+              }
         }
 

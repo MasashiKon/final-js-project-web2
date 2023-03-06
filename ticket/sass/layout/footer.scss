@@ -1,7 +1,9 @@
+@use "../variable/variable.scss" as var;
+
 .footer-container {
     width: 100%;
     height: 25rem;
-    background-color: $footer-color;
+    background-color: var.$footer-color;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;

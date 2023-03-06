@@ -17,7 +17,7 @@ const animation = () => {
       }
     };
     let AnimationHeader = gsap.timeline({ repeatDelay: 1 });
-AnimationHeader.from(".navbar-logo", { x: -200, duration: 2, autoAlpha: 0 });
+AnimationHeader.from(".navbar-logo", { x: -200, duration: 1, autoAlpha: 0 });
 AnimationHeader.from(".navbar-container2", { x: -200, duration: 1, autoAlpha: 0 });
 AnimationHeader.from(".navbar-item", {
   x: -200,
@@ -32,32 +32,20 @@ AnimationHeader.from(".navbar-ticket", {
 });
 AnimationHeader.from(".ticket", { scale: 1.2 });
 
-let AnimationBody = gsap.timeline({ repeatDelay: 1 });
-AnimationBody.from(".video-container", { y: -200, duration: 4, autoAlpha: 0 });
-AnimationBody.from(".events-container", {x:-200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".nightTour-container", {y:200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".competition-container", {x:200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".subscribe-container", {x:-200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".giftcard-container", {x:200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".footer-container", {y:200,duration:1,autoAlpha:0,scale:0.8, })
-AnimationBody.from(".navbar-elements", { x: -200, duration: 1, autoAlpha: 0 });
-AnimationBody.from(".header-text", {
-  x: -200,
-  duration: 1,
-  autoAlpha: 0,
-  stagger: { each: 0.3 },
-});
 
 
-AnimationBody.from(".navbar-links,.app-navbar-links", {
-  x: -200,
-  duration: 1,
-  autoAlpha: 0,
-  stagger: { each: 0.3 },
-});
 
-
+let ticketbodyAnimation = gsap.timeline({repeatDelay:0.5});
+ticketbodyAnimation.from(".hero-container h1",{y:-500,duration:1,autoalpha:0})
+ticketbodyAnimation.from(".address", { x: -1000, duration: 0.75, autoAlpha: 0 });
+ticketbodyAnimation.from(".note", { x: 200, duration: 0.5, autoAlpha: 0 });
+ticketbodyAnimation.from(".ticket-container",{y:-1000,duration:1,autoAlpha:0})
+ticketbodyAnimation.from(".orderDetail",{y:1000,duration:0.25,autoalpha:0})
+ticketbodyAnimation.from(".around-book-button",{y:1000,duration:0.25,autoalpha:0,stagger:{each:0.25}})
   })
+
+ 
+
 }
 export {animation}
 
