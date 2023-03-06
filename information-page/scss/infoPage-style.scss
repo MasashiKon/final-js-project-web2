@@ -11,22 +11,25 @@
   a {
     text-decoration: underline;
   }
-  font-family: "Times New Roman", Times, serif;
+  font-family: sans-serif;
 }
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
-  max-width: 100%;
+  width: 100%;
+  font-family: "Courgette", cursive;
 }
 .navbar-container {
-  background-color: rgb(255, 255, 255);
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   color: black;
-
+  font-family: "Courgette", cursive;
+  width: 100%;
   .navbar-logo {
     padding: 20px;
 
@@ -36,9 +39,11 @@ header {
       letter-spacing: 1px;
       padding: 30px 0;
       text-decoration: none;
+      font-family: "Courgette", cursive;
       span {
         color: #fdd36a;
         font-size: 2.5rem;
+        font-family: "Courgette", cursive;
       }
     }
   }
@@ -68,6 +73,8 @@ header {
   }
 
   .navbar-container2-change {
+    width: 100%;
+    align-items: center;
     display: none;
 
     .navbar-item {
@@ -78,13 +85,14 @@ header {
     }
   }
   .navbar-container2 {
+    font-family: "Courgette", cursive;
     padding: 20px 0;
     position: relative;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    justify-items: center;
+    align-items: center;
     list-style-type: none;
     width: 55%;
 
@@ -97,11 +105,12 @@ header {
         letter-spacing: 1px;
         font-weight: lighter;
         text-decoration: none;
+        font-family: "Courgette", cursive;
       }
 
       .navbar-link:hover {
-        color: white;
-        text-shadow: 2px 2px 5px black;
+        color: #fdd36a;
+
         transition: all 0.5s ease-in-out;
       }
     }
@@ -151,6 +160,7 @@ header {
   text-align: center;
   font-size: 1.7rem;
   margin-bottom: 2rem;
+  font-family: "Courgette", cursive;
 }
 .subtitle {
   font-size: 1.4rem;
@@ -158,14 +168,15 @@ header {
 
 //hero section
 .hero {
+  padding-top: 3rem;
   background: url("../imgs/zdenek-machacek-eqXiLNfZDc0-unsplash.jpg") no-repeat
     center / cover;
-  background-position: 100% 20%;
-  height: 20rem;
+  background-position: 100% 5%;
+  height: 25rem;
   width: 100%;
   h1 {
     text-align: center;
-    font-family: "Secular One", sans-serif;
+    font-family: "Courgette", cursive;
     font-weight: 600;
     font-size: 4rem;
     color: white;
