@@ -66,11 +66,11 @@ function incart(){
 
  function purchaseClicked() {
   const cartItems = document.getElementsByClassName('cart-list')[0]
-  alert('Thank you for booking the tickets')
   while (cartItems.hasChildNodes()) {
     cartItems.removeChild(cartItems.firstChild)
   }
   updateCartTotal()
+  window.location.href("orderConfirmed.html")
  }
 
 function removeFromCart(event) {
