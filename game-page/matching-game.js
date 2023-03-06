@@ -3,7 +3,6 @@ let cardWidth = 100;
 let cardHeight = 150;
 const padding = 20;
 const defaultGap = 20;
-const headerHeight = document.querySelector("header").getBoundingClientRect().height;
 const frameThickness = 10;
 let numOfAnimals = 5;
 let patternIndex = "1";
@@ -11,6 +10,14 @@ let cardDealTimeline = null;
 let easy = "#317714";
 let medium = "#967D00";
 let hard = "#BB3318";
+let headerHeight = null;
+let regendHeight = null;
+let playFieldHeight = null;
+let colNum = 5;
+let rowNum = 2;
+let betweenCard = 20;
+
+const cardsPositions = [];
 
 const animals = [
     {
@@ -93,6 +100,9 @@ let timerFunc;
 window.addEventListener('DOMContentLoaded',function () {
 
     const header = document.querySelector(".navbar-container");
+    headerHeight = header.offsetHeight;
+    regendHeight = document.querySelector("#game-regend").offsetHeight;
+    playFieldHeight = playField.offsetHeight
   
     let scrollTrigger = 100;
     window.onscroll = function () {
@@ -105,6 +115,13 @@ window.addEventListener('DOMContentLoaded',function () {
         header.style.backgroundColor = "rgba(255, 255, 255)";
       }
     };
+
+    window.addEventListener("resize", function() {
+        if(!gameState.isStart) {
+            resetGame();
+        }   
+        
+    });
     
     rangeInput.addEventListener("change", changeNumOfAnimals);
     patternInput.addEventListener("change", changeBackPattern);
@@ -135,6 +152,26 @@ function setGame() {
 
         playField.style.columnGap = "5px";
         playField.style.rowGap = "5px";
+        betweenCard = 15;
+
+        neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+        neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+    } else {
+        
+        if(numOfAnimals === 6) {
+            cardWidth = 80;
+            cardHeight = 120;
+            matchedCardsField.style.height = `${cardHeight}px`;
+            betweenCard = 18;
+        } else {
+            cardWidth = 100;
+            cardHeight = 150;
+            matchedCardsField.style.height = `${cardHeight}px`;
+            betweenCard = 15;
+        }
+ 
+        playField.style.columnGap = "15px";
+        playField.style.rowGap = "15px";
 
         neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
         neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
@@ -150,6 +187,25 @@ function setGame() {
 
         playField.style.columnGap = "5px";
         playField.style.rowGap = "5px";
+        betweenCard = 20;
+
+        neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
+        neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
+    } else {
+        if(numOfAnimals === 6) {
+            cardWidth = 80;
+            cardHeight = 120;
+            matchedCardsField.style.height = `${cardHeight}px`;
+            betweenCard = 17;
+        } else {
+            cardWidth = 100;
+            cardHeight = 150;
+            matchedCardsField.style.height = `${cardHeight}px`;
+            betweenCard = 17;
+        }
+ 
+        playField.style.columnGap = "15px";
+        playField.style.rowGap = "15px";
 
         neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
         neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
@@ -169,6 +225,7 @@ function setGame() {
  
         playField.style.columnGap = "15px";
         playField.style.rowGap = "15px";
+        betweenCard = 17;
 
         neededWidth = numOfCol * cardWidth + (numOfCol - 1) * defaultGap + padding;
         neededHeight = numOfRow * cardHeight + (numOfRow - 1) * defaultGap + padding;
@@ -176,6 +233,7 @@ function setGame() {
 
     playField.style.width = `${neededWidth}px`;
     playField.style.height = `${neededHeight}px`;
+    playFieldHeight = neededHeight
 
     cardDealTimeline = gsap.timeline({
         paused: true,
@@ -239,7 +297,11 @@ function setGame() {
     const containerWidth = playField.clientWidth;
     const containerHeight = playField.clientHeight;
 
-    const cardsPositions = [];
+    // console.log(playField.offsetHeight, containerHeight);
+
+    while(cardsPositions.length > 0) {
+        cardsPositions.pop();
+    }
 
     for(let ele of cardElements) {
         const cardPosition = ele.getBoundingClientRect();
@@ -253,14 +315,15 @@ function setGame() {
     }
 
     for(let i = 0; i < cardElements.length; i++) {
+        const rowCardOn = Math.floor(i / numOfCol);
         cardDealTimeline.fromTo(`#card${i + 1}`, 
         {
             left: window.innerWidth / 2 - cardWidth / 2,
-            top: headerHeight + containerHeight / 2 - cardHeight / 4,
+            top: headerHeight + containerHeight / 2 ,
         },
         {
             left: cardsPositions[i].left,
-            top: cardsPositions[i].top,
+            top: numOfAnimals === 9 || numOfAnimals === 10 ? headerHeight + regendHeight + rowCardOn  * cardHeight + rowCardOn * betweenCard + cardHeight / 4 + 15: headerHeight + regendHeight + rowCardOn  * cardHeight + rowCardOn * betweenCard + cardHeight / 4,
         }, i * 0.05);
     }
 
@@ -516,6 +579,9 @@ function startBtnFunc() {
         startTimebar.style.display = "block";
         timebar.style.backgroundColor = easy;
         timebar.style.display = "block";
+        gameState.isStart = "pending";
+        // document.querySelectorAll(".card").forEach(ele => console.log(ele.getBoundingClientRect()));
+        resetGame();
         dealCard();
 
         timerFunc = setInterval(() => {
