@@ -15,9 +15,9 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-      <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <link rel="stylesheet" href="ticketpage.css">
+<link rel="stylesheet" href="ticketpage.css">     
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script defer type="module" src="./js/ticketpage.js"></script>
 </head>
@@ -29,9 +29,12 @@
          <h3 class="category"></h3>
          <p class="description"></p>
         </div>
-        <label class="tickets-normal">Price</label>
+        
         <p class="price">$ <span class="price-value"></span></p>
-        <input type="number" class="quantity" value="0">
+        <div class="amount"><label class="tickets-normal">Amount</label>
+          <input type="number" class="quantity" value="0">
+        </div>
+        
 
          <button class="btn btn-addCart">Add to Cart</button>
          
@@ -119,7 +122,6 @@
 
         </li>
       </template> -->
-        <button class="clear">Delete all tickets</button>
             </ul>
             
           </div>
@@ -128,10 +130,12 @@
 
        </div>
 
-
-       <h3 class="subtotal">Subtotal: $ <span class="total-price"></span> </h3>
-       <button type="button" class="btn btn-book">Book Tickets</button>
-       <p class="toInfo">Do you have anything unclear? <a href="../information-page/infoPage.html">Check Information & Contact us here</a> </p>
+       <div class="around-book-button">
+        <h3 class="subtotal">Subtotal: $ <span class="total-price"></span> </h3>
+        <button type="button" class="btn btn-book">Book Tickets</button>
+        <p class="toInfo">Do you have anything unclear? <a href="../information-page/infoPage.html">Check Information & Contact us here</a> </p>
+       </div>
+       
 
        
   
