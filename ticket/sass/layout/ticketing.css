@@ -39,6 +39,11 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+.ticket-container .ticket-item .price .choice input {
+  font-size: 1rem;
+  height: auto;
+  margin: 1rem;
+}
 .ticket-container .ticket-item .price .discount {
   color: #e34343;
 }
@@ -77,6 +82,9 @@
 }
 .orderDetail .cart-list .cart-item .incart-citizen {
   color: #e34343;
+}
+.orderDetail .cart-list .cart-item .cart-delete {
+  display: block;
 }
 
 .subtotal, .toInfo {

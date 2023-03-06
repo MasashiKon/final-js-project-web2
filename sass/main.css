@@ -201,7 +201,8 @@ body {
   background-position: center;
   background-size: cover;
 }
-.subscribe-giftcard-container .subscribe-container, .subscribe-giftcard-container .giftcard-container {
+.subscribe-giftcard-container .subscribe-container,
+.subscribe-giftcard-container .giftcard-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -212,17 +213,26 @@ body {
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
 }
-.subscribe-giftcard-container .subscribe-container .header-text, .subscribe-giftcard-container .giftcard-container .header-text {
+.subscribe-giftcard-container .subscribe-container .subscribe-header-text,
+.subscribe-giftcard-container .subscribe-container .subscribe-body-text,
+.subscribe-giftcard-container .giftcard-container .subscribe-header-text,
+.subscribe-giftcard-container .giftcard-container .subscribe-body-text {
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 30px 0;
   font-family: "Courgette", cursive;
 }
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe, .subscribe-giftcard-container .subscribe-container .name-input-subscribe, .subscribe-giftcard-container .giftcard-container .email-input-subscribe, .subscribe-giftcard-container .giftcard-container .name-input-subscribe {
+.subscribe-giftcard-container .subscribe-container .email-input-subscribe,
+.subscribe-giftcard-container .subscribe-container .name-input-subscribe,
+.subscribe-giftcard-container .giftcard-container .email-input-subscribe,
+.subscribe-giftcard-container .giftcard-container .name-input-subscribe {
   padding: 5px 0;
 }
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe input, .subscribe-giftcard-container .subscribe-container .name-input-subscribe input, .subscribe-giftcard-container .giftcard-container .email-input-subscribe input, .subscribe-giftcard-container .giftcard-container .name-input-subscribe input {
+.subscribe-giftcard-container .subscribe-container .email-input-subscribe input,
+.subscribe-giftcard-container .subscribe-container .name-input-subscribe input,
+.subscribe-giftcard-container .giftcard-container .email-input-subscribe input,
+.subscribe-giftcard-container .giftcard-container .name-input-subscribe input {
   width: 30rem;
   height: 2rem;
   border: 0.5px solid black;
@@ -232,10 +242,12 @@ body {
   font-weight: 200;
   padding: 0 10px;
 }
-.subscribe-giftcard-container .subscribe-container .button-subscribe, .subscribe-giftcard-container .giftcard-container .button-subscribe {
+.subscribe-giftcard-container .subscribe-container .button-subscribe,
+.subscribe-giftcard-container .giftcard-container .button-subscribe {
   padding: 30px 0;
 }
-.subscribe-giftcard-container .subscribe-container .button-subscribe button, .subscribe-giftcard-container .giftcard-container .button-subscribe button {
+.subscribe-giftcard-container .subscribe-container .button-subscribe button,
+.subscribe-giftcard-container .giftcard-container .button-subscribe button {
   width: 200px;
   height: 40px;
   border: 0.5px solid black;
@@ -244,38 +256,57 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
 }
-.subscribe-giftcard-container .subscribe-container .button-subscribe button:hover, .subscribe-giftcard-container .giftcard-container .button-subscribe button:hover {
+.subscribe-giftcard-container .subscribe-container .button-subscribe button:hover,
+.subscribe-giftcard-container .giftcard-container .button-subscribe button:hover {
   background-color: #c5a553;
   transition: all 0.5s ease-in-out;
   color: white;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-header-text, .subscribe-giftcard-container .giftcard-container .giftcard-header-text {
+.subscribe-giftcard-container .subscribe-container .giftcard-header-text,
+.subscribe-giftcard-container .giftcard-container .giftcard-header-text {
   color: #ffffff;
   font-size: 2rem;
   letter-spacing: 1px;
   padding: 20px 0;
   font-family: "Courgette", cursive;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-body-text, .subscribe-giftcard-container .subscribe-container .giftcard-details-text, .subscribe-giftcard-container .giftcard-container .giftcard-body-text, .subscribe-giftcard-container .giftcard-container .giftcard-details-text {
+.subscribe-giftcard-container .subscribe-container .giftcard-body-text,
+.subscribe-giftcard-container .subscribe-container .giftcard-details-text,
+.subscribe-giftcard-container .giftcard-container .giftcard-body-text,
+.subscribe-giftcard-container .giftcard-container .giftcard-details-text {
   color: #ffffff;
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-family: "Courgette", cursive;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .subscribe-container .giftcard-details-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-details-text .fa-gift {
+.subscribe-giftcard-container .subscribe-container .giftcard-body-text .fa-gift,
+.subscribe-giftcard-container .subscribe-container .giftcard-details-text .fa-gift,
+.subscribe-giftcard-container .giftcard-container .giftcard-body-text .fa-gift,
+.subscribe-giftcard-container .giftcard-container .giftcard-details-text .fa-gift {
   font-size: 5rem;
   padding: 20px 0;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-buy, .subscribe-giftcard-container .giftcard-container .giftcard-buy {
+.subscribe-giftcard-container .subscribe-container .giftcard-buy,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy {
   display: flex;
   flex-direction: row;
   justify-content: center;
   justify-items: center;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus {
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus {
   padding: 20px 10px;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount input, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus input, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus input {
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount input,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus input,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus input,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount input,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus input,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus input {
   width: 40px;
   height: 20px;
   border: none;
@@ -283,13 +314,26 @@ body {
   text-align: center;
   border: 0.5px solid black;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-plus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-plus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-plus {
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-minus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-plus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-minus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-plus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-minus,
+.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-plus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-minus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-plus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-minus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-plus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-minus,
+.subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-plus {
   font-size: 1.2rem;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-button, .subscribe-giftcard-container .giftcard-container .giftcard-button {
+.subscribe-giftcard-container .subscribe-container .giftcard-button,
+.subscribe-giftcard-container .giftcard-container .giftcard-button {
   padding: 10px 0;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-button button, .subscribe-giftcard-container .giftcard-container .giftcard-button button {
+.subscribe-giftcard-container .subscribe-container .giftcard-button button,
+.subscribe-giftcard-container .giftcard-container .giftcard-button button {
   width: 200px;
   height: 40px;
   border: 0.5px solid black;
@@ -298,19 +342,22 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-button button:hover, .subscribe-giftcard-container .giftcard-container .giftcard-button button:hover {
+.subscribe-giftcard-container .subscribe-container .giftcard-button button:hover,
+.subscribe-giftcard-container .giftcard-container .giftcard-button button:hover {
   background-color: #c5a553;
   transition: all 0.5s ease-in-out;
   color: white;
 }
-.subscribe-giftcard-container .subscribe-container .giftcard-container-details, .subscribe-giftcard-container .giftcard-container .giftcard-container-details {
+.subscribe-giftcard-container .subscribe-container .giftcard-container-details,
+.subscribe-giftcard-container .giftcard-container .giftcard-container-details {
   padding: 10px 0;
   color: #ffffff;
   font-size: 1rem;
   letter-spacing: 1px;
   font-family: "Courgette", cursive;
 }
-.subscribe-giftcard-container .subscribe-container:hover, .subscribe-giftcard-container .giftcard-container:hover {
+.subscribe-giftcard-container .subscribe-container:hover,
+.subscribe-giftcard-container .giftcard-container:hover {
   transition: all 0.5s ease-in-out;
   box-shadow: 0 15px 25px #404258;
 }
