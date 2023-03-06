@@ -5,7 +5,63 @@
 }
 
 body {
-  background-color: #D8D8D8;
+  background-color: #DDDDDD;
+  font-family: "Tilt wrap", sanz-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p, a {
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.btn {
+  display: block;
+  margin: auto;
+  padding: 10px 15px;
+  font-family: inherit;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: background-color 1s;
+}
+.btn:hover {
+  opacity: 1;
+}
+
+.btn-book {
+  width: 40%;
+  height: auto;
+  background-color: #e34343;
+  opacity: 0.6;
+  color: white;
+  font-size: 2rem;
+}
+
+.btn-addCart {
+  width: 20%;
+  height: auto;
+  background-color: #7B8fa1;
+  opacity: 0.9;
+  color: white;
+  font-size: 1.25rem;
+}
+.btn-addCart:hover {
+  background-color: green;
 }
 
 .navbar-container {
@@ -30,7 +86,7 @@ body {
   text-decoration: none;
 }
 .navbar-container .navbar-logo .logo span {
-  color: #fdd36a;
+  color: #FDD36A;
   font-size: 2.5rem;
 }
 .navbar-container .navbar-ticket {
@@ -41,7 +97,7 @@ body {
   height: 40px;
   border: 0.5px solid black;
   border-radius: 5px;
-  background-color: #fdd36a;
+  background-color: #FDD36A;
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -65,353 +121,153 @@ body {
   justify-items: center;
   list-style-type: none;
   width: 55%;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
 }
-.navbar-container .navbar-container2 .navbar-logo {
-  padding: 20px;
-}
-.navbar-container .navbar-container2 .navbar-logo .logo {
-  color: rgb(0, 0, 0);
-  font-size: 2rem;
-  letter-spacing: 1px;
-  padding: 30px 0;
-  text-decoration: none;
-}
-.navbar-container .navbar-container2 .navbar-logo .logo span {
-  color: #fdd36a;
-  font-size: 2.5rem;
-  font-family: "Courgette", cursive;
-}
-.navbar-container .navbar-container2 .navbar-ticket {
-  padding: 20px;
-}
-.navbar-container .navbar-container2 .navbar-ticket .ticket {
-  width: 200px;
-  height: 40px;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  background-color: #fdd36a;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.navbar-container .navbar-container2 .navbar-ticket .ticket .fa-ticket {
-  padding: 0 5px;
-  transform: rotate(-45deg);
-}
-.navbar-container .navbar-container2 .navbar-ticket .ticket:hover {
-  background-color: #c5a553;
-  transition: 0.5s ease-in-out all;
-  cursor: pointer;
-  color: white;
-}
-.navbar-container .navbar-container2 .navbar-container2 {
-  padding: 20px 0;
-  position: relative;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  justify-items: center;
-  list-style-type: none;
-  width: 55%;
-}
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item {
+.navbar-container .navbar-container2 .navbar-item {
   padding: 5px 0;
 }
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item .navbar-link {
-  color: rgb(0, 0, 0);
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-weight: lighter;
-  text-decoration: none;
-  font-family: "Courgette", cursive;
-}
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item .navbar-link:hover {
-  color: #fdd36a;
-  transition: all 0.5s ease-in-out;
-}
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item {
-  padding: 5px 0;
-}
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item .navbar-link {
+.navbar-container .navbar-container2 .navbar-item .navbar-link {
   color: rgb(0, 0, 0);
   font-size: 1.2rem;
   letter-spacing: 1px;
   font-weight: lighter;
   text-decoration: none;
 }
-.navbar-container .navbar-container2 .navbar-container2 .navbar-item .navbar-link:hover {
-  color: #fdd36a;
-  transition: all 0.5s ease-in-out;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 115vh;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  overflow: hidden;
-  box-shadow: 0 15px 25px #404258;
-}
-.video-container .left-btn {
-  position: absolute;
-  top: 40%;
-  left: 1%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.video-container .left-btn .bi-chevron-left {
-  font-size: 1.2rem;
-  color: rgb(255, 255, 255);
-}
-.video-container .right-btn {
-  position: absolute;
-  top: 40%;
-  right: 1%;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-.video-container .right-btn .bi-chevron-right {
-  font-size: 1.2rem;
-  color: white;
-}
-
-.subscribe-giftcard-container {
-  height: 400px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  justify-items: center;
-  margin: 20px 10px;
-}
-.subscribe-giftcard-container .giftcard-container {
-  background-image: url("/Assets/images/giftShop.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.subscribe-giftcard-container .subscribe-container, .subscribe-giftcard-container .giftcard-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  width: 50%;
-  text-align: center;
-  margin: 0 20px;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-}
-.subscribe-giftcard-container .subscribe-container .header-text, .subscribe-giftcard-container .giftcard-container .header-text {
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  padding: 30px 0;
-  font-family: "Courgette", cursive;
-}
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe, .subscribe-giftcard-container .subscribe-container .name-input-subscribe, .subscribe-giftcard-container .giftcard-container .email-input-subscribe, .subscribe-giftcard-container .giftcard-container .name-input-subscribe {
-  padding: 5px 0;
-}
-.subscribe-giftcard-container .subscribe-container .email-input-subscribe input, .subscribe-giftcard-container .subscribe-container .name-input-subscribe input, .subscribe-giftcard-container .giftcard-container .email-input-subscribe input, .subscribe-giftcard-container .giftcard-container .name-input-subscribe input {
-  width: 30rem;
-  height: 2rem;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  text-align: left;
-  font-size: 0.8rem;
-  font-weight: 200;
-  padding: 0 10px;
-}
-.subscribe-giftcard-container .subscribe-container .button-subscribe, .subscribe-giftcard-container .giftcard-container .button-subscribe {
-  padding: 30px 0;
-}
-.subscribe-giftcard-container .subscribe-container .button-subscribe button, .subscribe-giftcard-container .giftcard-container .button-subscribe button {
-  width: 200px;
-  height: 40px;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  background-color: #FDD36A;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.subscribe-giftcard-container .subscribe-container .button-subscribe button:hover, .subscribe-giftcard-container .giftcard-container .button-subscribe button:hover {
-  background-color: #c5a553;
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-header-text, .subscribe-giftcard-container .giftcard-container .giftcard-header-text {
-  color: #ffffff;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  padding: 20px 0;
-  font-family: "Courgette", cursive;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-body-text, .subscribe-giftcard-container .subscribe-container .giftcard-details-text, .subscribe-giftcard-container .giftcard-container .giftcard-body-text, .subscribe-giftcard-container .giftcard-container .giftcard-details-text {
-  color: #ffffff;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  font-family: "Courgette", cursive;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .subscribe-container .giftcard-details-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-body-text .fa-gift, .subscribe-giftcard-container .giftcard-container .giftcard-details-text .fa-gift {
-  font-size: 5rem;
-  padding: 20px 0;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-buy, .subscribe-giftcard-container .giftcard-container .giftcard-buy {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus {
-  padding: 20px 10px;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount input, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus input, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus input, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus input {
-  width: 40px;
-  height: 20px;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  border: 0.5px solid black;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-amount .fa-square-plus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-minus .fa-square-plus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-minus, .subscribe-giftcard-container .subscribe-container .giftcard-buy .giftcard-plus .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-amount .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-minus .fa-square-plus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-minus, .subscribe-giftcard-container .giftcard-container .giftcard-buy .giftcard-plus .fa-square-plus {
-  font-size: 1.2rem;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-button, .subscribe-giftcard-container .giftcard-container .giftcard-button {
-  padding: 10px 0;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-button button, .subscribe-giftcard-container .giftcard-container .giftcard-button button {
-  width: 200px;
-  height: 40px;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  background-color: #FDD36A;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-button button:hover, .subscribe-giftcard-container .giftcard-container .giftcard-button button:hover {
-  background-color: #c5a553;
-  transition: all 0.5s ease-in-out;
-  color: white;
-}
-.subscribe-giftcard-container .subscribe-container .giftcard-container-details, .subscribe-giftcard-container .giftcard-container .giftcard-container-details {
-  padding: 10px 0;
-  color: #ffffff;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  font-family: "Courgette", cursive;
-}
-.subscribe-giftcard-container .subscribe-container:hover, .subscribe-giftcard-container .giftcard-container:hover {
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0 15px 25px #404258;
-}
-
-.events-nightTour-competition-container {
-  height: 500px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  margin: 30px 0;
-}
-.events-nightTour-competition-container .events-container, .events-nightTour-competition-container .nightTour-container, .events-nightTour-competition-container .competition-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: flex-end;
-  width: 30%;
-  text-align: center;
-  border-radius: 5px;
-  background-color: rgb(255, 255, 255);
-}
-.events-nightTour-competition-container .events-container .events-text, .events-nightTour-competition-container .events-container .nightTour-text, .events-nightTour-competition-container .events-container .giftcard-text, .events-nightTour-competition-container .nightTour-container .events-text, .events-nightTour-competition-container .nightTour-container .nightTour-text, .events-nightTour-competition-container .nightTour-container .giftcard-text, .events-nightTour-competition-container .competition-container .events-text, .events-nightTour-competition-container .competition-container .nightTour-text, .events-nightTour-competition-container .competition-container .giftcard-text {
-  color: rgb(255, 255, 255);
-  font-size: 2rem;
-  letter-spacing: 3px;
-  margin-bottom: 60%;
-  text-align: center;
-  font-family: "Courgette", cursive;
-}
-.events-nightTour-competition-container .events-container .body-text, .events-nightTour-competition-container .events-container .slogen-text, .events-nightTour-competition-container .nightTour-container .body-text, .events-nightTour-competition-container .nightTour-container .slogen-text, .events-nightTour-competition-container .competition-container .body-text, .events-nightTour-competition-container .competition-container .slogen-text {
-  color: rgb(255, 255, 255);
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 10px 0;
-  text-align: center;
-  font-family: "Courgette", cursive;
-}
-.events-nightTour-competition-container .events-container .fa-calendar-days, .events-nightTour-competition-container .nightTour-container .fa-calendar-days, .events-nightTour-competition-container .competition-container .fa-calendar-days {
-  font-size: 3rem;
+.navbar-container .navbar-container2 .navbar-item .navbar-link:hover {
   color: #FDD36A;
-}
-.events-nightTour-competition-container .events-container .button-events button, .events-nightTour-competition-container .events-container .button-nightTour button, .events-nightTour-competition-container .events-container .giftcard-button button, .events-nightTour-competition-container .nightTour-container .button-events button, .events-nightTour-competition-container .nightTour-container .button-nightTour button, .events-nightTour-competition-container .nightTour-container .giftcard-button button, .events-nightTour-competition-container .competition-container .button-events button, .events-nightTour-competition-container .competition-container .button-nightTour button, .events-nightTour-competition-container .competition-container .giftcard-button button {
-  width: 200px;
-  height: 40px;
-  border: 0.5px solid black;
-  border-radius: 5px;
-  background-color: #FDD36A;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-.events-nightTour-competition-container .events-container .button-events button:hover, .events-nightTour-competition-container .events-container .button-nightTour button:hover, .events-nightTour-competition-container .events-container .giftcard-button button:hover, .events-nightTour-competition-container .nightTour-container .button-events button:hover, .events-nightTour-competition-container .nightTour-container .button-nightTour button:hover, .events-nightTour-competition-container .nightTour-container .giftcard-button button:hover, .events-nightTour-competition-container .competition-container .button-events button:hover, .events-nightTour-competition-container .competition-container .button-nightTour button:hover, .events-nightTour-competition-container .competition-container .giftcard-button button:hover {
-  background-color: #c5a553;
   transition: all 0.5s ease-in-out;
-  color: white;
-}
-.events-nightTour-competition-container .events-container {
-  background-image: url("/Assets/images/events.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.events-nightTour-competition-container .nightTour-container {
-  background-image: url("/Assets/images/night-tour.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.events-nightTour-competition-container .competition-container {
-  background-image: url("/Assets/images/competition.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-.events-nightTour-competition-container .events-container:hover, .events-nightTour-competition-container .nightTour-container:hover, .events-nightTour-competition-container .competition-container:hover {
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0 15px 25px #404258;
-  transform: scale(1.1);
 }
 
-.chat-container {
-  background-color: antiquewhite;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  justify-items: center;
-  background-color: #D8D8D8;
-  border: 0.5px solid black;
+#title-hero {
+  width: 100%;
+  height: 25rem;
 }
-.chat-container .bi-whatsapp {
+#title-hero .hero-container {
+  background: url("assets/img/bird.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 25rem;
+}
+#title-hero .hero-container h1 {
   text-align: center;
-  font-size: 2rem;
-  color: #404258;
-  cursor: pointer;
+  color: white;
+  line-height: 20rem;
+  letter-spacing: 1rem;
+}
+
+.info-container {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+.info-container .address {
+  margin: auto;
+  width: 500px;
+  max-width: 50%;
+  height: 420px;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.info-container .address h3 {
+  font-size: 1.5rem;
+}
+.info-container .note {
+  margin: auto;
+  width: 450px;
+  max-width: 45%;
+  height: 420px;
+  padding: 2rem;
+  border: 1px solid black;
+}
+.info-container .note span {
+  color: #e34343;
+}
+
+.ticket-container {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+}
+.ticket-container h2 {
+  background-color: #7B8fa1;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.ticket-container .tickts-list {
+  list-style: none;
+}
+.ticket-container .ticket-item {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.ticket-container .ticket-item .age-grouping {
+  width: 60%;
+}
+.ticket-container .ticket-item .age-grouping p {
+  text-align: center;
+}
+.ticket-container .ticket-item .price {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+}
+.ticket-container .ticket-item .price .choice {
+  padding: 10px;
+  width: 100%;
+}
+.ticket-container .ticket-item .price .choice label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.ticket-container .ticket-item .price .discount {
+  color: #e34343;
+}
+.ticket-container .ticket-item .price .discount label {
+  font-size: 1rem;
+}
+
+.orderDetail {
+  margin: 4rem auto;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+}
+.orderDetail .detail-title {
+  background-color: #7B8fa1;
+  color: white;
+}
+.orderDetail .cart-list {
+  list-style: none;
+}
+.orderDetail .cart-list .cart-item {
+  background-color: white;
+  color: rgb(12, 11, 11);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+}
+.orderDetail .cart-list .cart-item label {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.orderDetail .cart-list .cart-item label .tickets-citizen {
+  font-size: 1rem;
+}
+.orderDetail .cart-list .cart-item .incart-citizen {
+  color: #e34343;
+}
+
+.subtotal, .toInfo {
+  margin: 1rem auto;
+  width: 75%;
+  text-align: center;
 }
 
 .footer-container {
@@ -423,6 +279,7 @@ body {
   justify-content: space-evenly;
   justify-items: center;
 }
+
 .footer-container .about-section, .footer-container .opening-section, .footer-container .socialmedia-navigation-section {
   display: flex;
   flex-direction: column;
@@ -431,27 +288,31 @@ body {
   text-align: center;
   width: 20rem;
 }
+
 .footer-container .about-section .header-text, .footer-container .opening-section .header-text, .footer-container .socialmedia-navigation-section .header-text {
   color: white;
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 30px 0;
-  font-family: "Courgette", cursive;
 }
+
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements, .footer-container .about-section .about-navbar .app-navbar-elements, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements, .footer-container .about-section .opening-navbar .app-navbar-elements, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .about-section .socialmedia-navbar .app-navbar-elements, .footer-container .about-section .app-navbar .socialmedia-navbar-elements, .footer-container .about-section .app-navbar .app-navbar-elements, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements, .footer-container .opening-section .about-navbar .app-navbar-elements, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements, .footer-container .opening-section .opening-navbar .app-navbar-elements, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements, .footer-container .opening-section .app-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .about-section .about-navbar .app-navbar-elements .navbar-links, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .about-section .opening-navbar .app-navbar-elements .navbar-links, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .about-section .socialmedia-navbar .app-navbar-elements .navbar-links, .footer-container .about-section .app-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .about-section .app-navbar .app-navbar-elements .navbar-links, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .opening-section .about-navbar .app-navbar-elements .navbar-links, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .opening-section .opening-navbar .app-navbar-elements .navbar-links, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements .navbar-links, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .opening-section .app-navbar .app-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .navbar-links {
   padding: 6px 0;
 }
+
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .about-section .about-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .about-section .opening-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .about-section .socialmedia-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .about-section .app-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .about-section .app-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .opening-section .about-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .opening-section .opening-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .opening-section .app-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .navbar-links .text-links {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
 }
+
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .about-section .about-navbar .app-navbar-elements .app-navbar-links, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .about-section .opening-navbar .app-navbar-elements .app-navbar-links, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .about-section .socialmedia-navbar .app-navbar-elements .app-navbar-links, .footer-container .about-section .app-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .about-section .app-navbar .app-navbar-elements .app-navbar-links, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .opening-section .about-navbar .app-navbar-elements .app-navbar-links, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .opening-section .opening-navbar .app-navbar-elements .app-navbar-links, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements .app-navbar-links, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .opening-section .app-navbar .app-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .app-navbar-links, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .app-navbar-links {
   display: flex;
   flex-direction: column;
@@ -463,30 +324,34 @@ body {
   height: 40px;
   margin: 0 10px;
 }
+
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .about-section .app-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .opening-section .app-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .about-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .opening-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .opening-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .app-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .app-navbar-links .app-links, .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .app-navbar-links .app-links {
   text-decoration: none;
   color: white;
   font-size: 0.9rem;
 }
+
 .footer-container .about-section .about-navbar .navbar-elements, .footer-container .about-section .opening-navbar .navbar-elements, .footer-container .about-section .socialmedia-navbar .navbar-elements, .footer-container .about-section .app-navbar .navbar-elements, .footer-container .opening-section .about-navbar .navbar-elements, .footer-container .opening-section .opening-navbar .navbar-elements, .footer-container .opening-section .socialmedia-navbar .navbar-elements, .footer-container .opening-section .app-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements {
   list-style-type: none;
 }
+
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links, .footer-container .about-section .app-navbar .navbar-elements .navbar-links, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links {
   padding: 8px 0;
 }
+
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .text-links, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .text-links, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .text-links, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .text-links, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .text-links, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .text-links, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .text-links, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .text-links, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .text-links {
   text-decoration: none;
   color: white;
   font-size: 1rem;
   letter-spacing: 1px;
-  font-family: "Courgette", cursive;
 }
+
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .about-text-links {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  font-family: "Courgette", cursive;
 }
+
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .about-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .opening-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links .about-text-links:hover, .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links .about-text-links:hover {
   text-decoration: none;
   color: #FDD36A;
