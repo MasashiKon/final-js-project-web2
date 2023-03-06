@@ -17,6 +17,7 @@
         h3{
             font-size: 1.5rem;
         }
+       
     }
     .note{
         margin: auto;
@@ -26,9 +27,10 @@
         padding: 2rem;
         border: 1px solid var.$frame;
 
-        span{
-            color:var.$important;
+        .notes li{ 
+        line-height: 1rem;
         }
    
     }
+
 }

@@ -24,7 +24,7 @@
          <p class="description"></p>
         </div>
         <label class="tickets-normal">Price</label>
-        <p class="price"></p>
+        <p class="price">$ <span class="price-value"></span></p>
         <input type="number" class="quantity" value="0">
 
          <button class="btn btn-addCart">Add to Cart</button>
@@ -37,17 +37,17 @@
      
       <header>
         <nav class="navbar-container">
-          <div class="navbar-logo"><a class="logo" href="#">Vancouver <span>Zoo</span></a></div>
+          <div class="navbar-logo"><a class="logo" href="../index.html">Vancouver <span>Zoo</span></a></div>
           <ul class="navbar-container2">
-            <li class="navbar-item"><a href="" class="navbar-link home" id="home">Home</a></li>
+            <li class="navbar-item"><a href="../index.html" class="navbar-link home" id="home">Home</a></li>
             <li class="navbar-item visit"><a href="" class="navbar-link visit" id="visit">Visit</a></li>
-            <li class="navbar-item games"><a href="" class="navbar-link games">Games</a></li>
-            <li class="navbar-item gallery"><a href="" class="navbar-link gallery">Gallery</a></li>
-            <li class="navbar-item information"><a href="" class="navbar-link information">Information</a></li>
+            <li class="navbar-item games"><a href="../game-page/game-page.html" class="navbar-link games">Games</a></li>
+            <li class="navbar-item gallery"><a href="../gallery/gallery.html" class="navbar-link gallery">Gallery</a></li>
+            <li class="navbar-item information"><a href="../information-page/infoPage.html" class="navbar-link information">Information</a></li>
             <li class="navbar-item contact"><a href="" class="navbar-link contact">Contact</a></li>
           </ul>
           <div class="navbar-ticket">
-            <button class="ticket"><i class="fa-solid fa-ticket"></i>Tickets</button>
+            <button class="ticket"><a href="../ticket/ticketpage.html"></a><i class="fa-solid fa-ticket"></i>Tickets</button>
           </div>
         </nav>
       </header>
@@ -63,15 +63,20 @@
       <section id="info">
        <div class="info-container">
         <div class="address">
-         <h3> <span>Address: </span>816 Granville St, Vancouver, BC V6Z 1K3</h3>
+         <h3> <span>Address: </span>5048 264 St, Aldergrove, BC V4W 1J2, Canada</h3>
           <!--change the address at final-->
-         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155227.57452351012!2d125.60202450505268!3d39.02932114867989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357e02dae64f4337%3A0xd40677e21771aa95!2sPyongyang%2C%20North%20Korea!5e1!3m2!1sen!2sca!4v1677756447656!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         <p>You don't know how to get here? <a href="#">Check here</a> </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.6172584874057!2d-122.49420908499653!3d49.09391309204933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5485cc66b0b13bd3%3A0xa7107df962635d8!2s5048%20264%20St%2C%20Aldergrove%2C%20BC%20V4W%201J2%2C%20Canada!5e0!3m2!1sen!2sjp!4v1678026213729!5m2!1sen!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <p>You don't know how to get here? <a href="../information-page/infoPage.html">Check at Info Page</a> </p>
 
         </div>
         <div class="note">
           <h3>Before Coming our zoo</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident voluptate unde incidunt veritatis sint sapiente quia quo soluta vero totam a recusandae accusantium tempore, voluptas omnis sit optio! Dolorem, repellendus? <span>You can get 10% discount if you have citizenship ID. Please bring a certification when you come to our zoo!</span> </p>
+           <ul class="notes">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus id porro, dolore inventore cupiditate fugit autem voluptate eaque quae earum omnis recusandae nobis asperiores sed suscipit quis dicta cum!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus id porro, dolore inventore cupiditate fugit autem voluptate eaque quae earum omnis recusandae nobis asperiores sed suscipit quis dicta cum!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus id porro, dolore inventore cupiditate fugit autem voluptate eaque quae earum omnis recusandae nobis asperiores sed suscipit quis dicta cum!</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel doloribus id porro, dolore inventore cupiditate fugit autem voluptate eaque quae earum omnis recusandae nobis asperiores sed suscipit quis dicta cum!</li>
+           </ul>
           
         </div>
        </div>
@@ -115,9 +120,9 @@
        </div>
 
 
-       <h3 class="subtotal">Subtotal: $ <span></span> </h3>
+       <h3 class="subtotal">Subtotal: $ <span class="total-price"></span> </h3>
        <button type="button" class="btn btn-book">Book Tickets</button>
-       <p class="toInfo">Do you have anything unclear? <a href="#">Check Information & Contact us here</a> </p>
+       <p class="toInfo">Do you have anything unclear? <a href="../information-page/infoPage.html">Check Information & Contact us here</a> </p>
 
        
   
