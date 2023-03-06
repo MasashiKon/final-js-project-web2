@@ -13,9 +13,10 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
+  font-family: "Courgette", cursive;
 }
 .navbar-container {
-  background-color: rgba(255, 255, 255, 0.578);
+  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -94,7 +95,7 @@ header {
     }
 
     .navbar-link:hover {
-      color: white;
+      color: #fdd36a;
       transition: all 0.5s ease-in-out;
     }
   }
@@ -115,7 +116,7 @@ header {
   .eventTitle {
     width: 100%;
     text-align: center;
-    font-family: var.$titlefont;
+    font-family: "Courgette", cursive;
 
     font-size: 6rem;
 
@@ -176,6 +177,9 @@ header {
   margin: 0 auto;
   padding-top: 7rem;
   padding-bottom: 8rem;
+  h1 {
+    font-family: "Courgette", cursive;
+  }
   .eventCardsContainer {
     width: 100%;
     margin: 0 auto;
@@ -275,6 +279,7 @@ header {
         font-size: 2.5rem;
         text-shadow: 2px 2px 5px white;
         color: black;
+        font-family: "Courgette", cursive;
       }
       a {
         color: black;
@@ -295,6 +300,7 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   justify-items: center;
+  font-family: "Courgette", cursive;
 
   .about-section,
   .opening-section,
@@ -305,12 +311,14 @@ header {
     justify-items: center;
     text-align: center;
     width: 20rem;
+    font-family: "Courgette", cursive;
 
     .header-text {
       color: white;
       font-size: 1.5rem;
       letter-spacing: 1px;
       padding: 30px 0;
+      font-family: "Courgette", cursive;
     }
     .about-navbar,
     .opening-navbar,
@@ -322,14 +330,17 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        font-family: "Courgette", cursive;
 
         .navbar-links {
           padding: 6px 0;
+          font-family: "Courgette", cursive;
 
           .text-links {
             text-decoration: none;
             color: white;
             font-size: 1.5rem;
+            font-family: "Courgette", cursive;
           }
         }
 
@@ -343,37 +354,44 @@ header {
           width: 100px;
           height: 40px;
           margin: 0 10px;
+          font-family: "Courgette", cursive;
           .app-links {
             text-decoration: none;
             color: white;
             font-size: 1.5rem;
+            font-family: "Courgette", cursive;
           }
         }
       }
 
       .navbar-elements {
         list-style-type: none;
+        font-family: "Courgette", cursive;
 
         .navbar-links {
           padding: 8px 0;
+          font-family: "Courgette", cursive;
 
           .text-links {
             text-decoration: none;
             color: white;
             font-size: 1rem;
             letter-spacing: 1px;
+            font-family: "Courgette", cursive;
           }
 
           .about-text-links {
             text-decoration: none;
             color: white;
             font-size: 1rem;
+            font-family: "Courgette", cursive;
           }
 
           .about-text-links:hover {
             text-decoration: none;
             color: white;
             font-weight: 600;
+            font-family: "Courgette", cursive;
           }
         }
       }

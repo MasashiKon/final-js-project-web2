@@ -134,3 +134,13 @@ tl.from(".hoursandRate", {
       end: "center 80%",
     },
   });
+
+const nav = document.querySelector("header");
+let scrollTrigger = document.querySelector(".hero").offsetHeight;
+window.onscroll = function () {
+  if (scrollTrigger >= window.scrollY || scrollTrigger >= window.pageYOffset) {
+    nav.style.backgroundColor = "rgba(255, 255, 255, 0.5)";
+  } else {
+    nav.style.backgroundColor = "rgb(255, 255, 255)";
+  }
+};

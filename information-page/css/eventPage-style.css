@@ -12,10 +12,11 @@ header {
   position: fixed;
   z-index: 999;
   width: 100%;
+  font-family: "Courgette", cursive;
 }
 
 .navbar-container {
-  background-color: rgba(255, 255, 255, 0.578);
+  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -88,7 +89,7 @@ header {
   text-decoration: none;
 }
 .navbar-container2 .navbar-item .navbar-link:hover {
-  color: white;
+  color: #fdd36a;
   transition: all 0.5s ease-in-out;
 }
 
@@ -101,7 +102,7 @@ header {
 .eventHero .eventTitle {
   width: 100%;
   text-align: center;
-  font-family: "Secular One", sans-serif;
+  font-family: "Courgette", cursive;
   font-size: 6rem;
   position: absolute;
   top: 50%;
@@ -154,6 +155,9 @@ header {
   margin: 0 auto;
   padding-top: 7rem;
   padding-bottom: 8rem;
+}
+.eventDetails h1 {
+  font-family: "Courgette", cursive;
 }
 .eventDetails .eventCardsContainer {
   width: 100%;
@@ -248,6 +252,7 @@ header {
   font-size: 2.5rem;
   text-shadow: 2px 2px 5px white;
   color: black;
+  font-family: "Courgette", cursive;
 }
 .eventDetails .hostEvent .hostdetails a {
   color: black;
@@ -265,6 +270,7 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   justify-items: center;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section,
 .footer-container .opening-section,
@@ -275,6 +281,7 @@ header {
   justify-items: center;
   text-align: center;
   width: 20rem;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .header-text,
 .footer-container .opening-section .header-text,
@@ -283,6 +290,7 @@ header {
   font-size: 1.5rem;
   letter-spacing: 1px;
   padding: 30px 0;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements,
 .footer-container .about-section .about-navbar .app-navbar-elements,
@@ -312,6 +320,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .navbar-links,
 .footer-container .about-section .about-navbar .app-navbar-elements .navbar-links,
@@ -338,6 +347,7 @@ header {
 .footer-container .socialmedia-navigation-section .app-navbar .socialmedia-navbar-elements .navbar-links,
 .footer-container .socialmedia-navigation-section .app-navbar .app-navbar-elements .navbar-links {
   padding: 6px 0;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .navbar-links .text-links,
 .footer-container .about-section .about-navbar .app-navbar-elements .navbar-links .text-links,
@@ -366,6 +376,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .app-navbar-links,
 .footer-container .about-section .about-navbar .app-navbar-elements .app-navbar-links,
@@ -400,6 +411,7 @@ header {
   width: 100px;
   height: 40px;
   margin: 0 10px;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .socialmedia-navbar-elements .app-navbar-links .app-links,
 .footer-container .about-section .about-navbar .app-navbar-elements .app-navbar-links .app-links,
@@ -428,6 +440,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements,
 .footer-container .about-section .opening-navbar .navbar-elements,
@@ -442,6 +455,7 @@ header {
 .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements,
 .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements {
   list-style-type: none;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links,
 .footer-container .about-section .opening-navbar .navbar-elements .navbar-links,
@@ -456,6 +470,7 @@ header {
 .footer-container .socialmedia-navigation-section .socialmedia-navbar .navbar-elements .navbar-links,
 .footer-container .socialmedia-navigation-section .app-navbar .navbar-elements .navbar-links {
   padding: 8px 0;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .text-links,
 .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .text-links,
@@ -473,6 +488,7 @@ header {
   color: white;
   font-size: 1rem;
   letter-spacing: 1px;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links,
 .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links,
@@ -489,6 +505,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  font-family: "Courgette", cursive;
 }
 .footer-container .about-section .about-navbar .navbar-elements .navbar-links .about-text-links:hover,
 .footer-container .about-section .opening-navbar .navbar-elements .navbar-links .about-text-links:hover,
@@ -505,6 +522,7 @@ header {
   text-decoration: none;
   color: white;
   font-weight: 600;
+  font-family: "Courgette", cursive;
 }
 
 /*# sourceMappingURL=eventPage-style.css.map */

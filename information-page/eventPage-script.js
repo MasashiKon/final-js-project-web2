@@ -15,7 +15,7 @@ tl.from(".two", { xPercent: -100 })
     ".eventTitle",
     {
       autoAlpha: 0,
-      yPercent: -10,
+      y: -10,
     },
     "<"
   );
@@ -27,7 +27,7 @@ ScrollTrigger.create({
   animation: tl,
   trigger: ".body2",
   start: "top, top",
-  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 4,
+  end: () => "+=" + document.querySelector(".eventHero").offsetHeight * 5,
   scrub: 1,
 
   pin: true,
@@ -74,3 +74,8 @@ const header = document.querySelector("header");
 const body = document.querySelector("body");
 
 body.prepend(header);
+
+let tl2 = gsap.timeline({ defaults: { y: 50, autoAlpha: 0 } });
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({ scrub: 1 });
