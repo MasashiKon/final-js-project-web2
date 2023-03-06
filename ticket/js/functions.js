@@ -24,7 +24,7 @@ const ticketing = () => {
             const ticketElClone = document.importNode(ticketsTemp.content,true)
             ticketElClone.querySelector(".category").innerText = ticket.category
             ticketElClone.querySelector(".description").innerText = ticket.description
-            ticketElClone.querySelector(".price").innerText = "$ " +price
+            ticketElClone.querySelector(".price-value").innerText =price
             ticketElClone.querySelector(".ticket-item").id = ticket.id
             ticketsList.appendChild(ticketElClone)
         }
@@ -42,11 +42,18 @@ const ticketing = () => {
       const deleteButton = deleteButtons[i]
       deleteButton.addEventListener('click',removeFromCart)
     }
+    const qtyOnTicket = document.querySelectorAll('.quantity')
+    for (let i = 0; i < qtyOnTicket.length; i++) {
+      const input = qtyOnTicket[i];
+      input.addEventListener('change',avoidBelowZero)
+    }
+ 
+    
     const quantityInputs = document.querySelectorAll('.quantity-incart')
     for (var i = 0; i < quantityInputs.length; i++) {
       const input = quantityInputs[i];
       input.addEventListener('change',quantityChange)
-      
+
     }
     const addToCartButtons = document.querySelectorAll('.btn-addCart')
     for (let i = 0; i < addToCartButtons.length; i++) {
@@ -72,6 +79,14 @@ const ticketing = () => {
     updateCartTotal()
 }
 
+function avoidBelowZero(event) {
+  var input = event.target
+  if (isNaN(input.value) || input.value < 0) {
+      input.value = 0
+  }
+  updateCartTotal()
+ }
+
  function quantityChange(event) {
   var input = event.target
   if (isNaN(input.value) || input.value <= 0) {
@@ -85,50 +100,57 @@ const ticketing = () => {
   var buyTicket = button.parentElement
   var category = buyTicket.getElementsByClassName('category')[0].innerText
   var price = buyTicket.getElementsByClassName('price')[0].innerText
-  var quantity = buyTicket.getElementsByClassName('quantity').value
+  var quantity = buyTicket.querySelector("input").value
+  // console.log("Add to cart: "+category,+" "+price+" "+quantity);
   addItemToCart(category, price,quantity)
   updateCartTotal()
 }
 
  function addItemToCart(category, price,quantity) {
-  console.log(category,price,quantity);
-  const cartContainer = document.createElement('div')
-  cartContainer.classList.add('cart-container')
+  const cartRow = document.createElement('div')
+  cartRow.classList.add('cart-container')
   const cartItems = document.getElementsByClassName('cart-list')[0]
-  // const cartItemCategories = document.getElementsByClassName('incart-category')
+  const cartItemCategories = document.getElementsByClassName('incart-category')
+  for (var i = 0; i < cartItemCategories.length; i++) {
+    if (cartItemCategories[i].innerText == category) {
+      alert("You already put "+category+" tickets in the cart. Please select the amount on Order Detail section")
+      return
+    }
+    
+  }
   const itemRawContents = `
         <li class="cart-item">
           <h3 class="incart-category">${category}</h3>
           <div class="incart-general">
             <label class="ticket-general">Price</label>
-            <p class="price">${price}</p>
+            <p class="price">$ <span class="price-value">${price}</span></p>
               <input type="number" class="quantity-incart" value="${quantity}">
            
          </div>
          <button class="cart-delete"><i class="fa-solid fa-trash-can"></i></button>
         </li> `
-        cartContainer.innerHTML = itemRawContents
-        cartItems.append(cartContainer)
-        cartContainer.getElementsByClassName('cart-delete')[0].addEventListener('click',removeFromCart)
-        cartContainer.getElementsByClassName('quantity-incart')[0].addEventListener('change',quantityChange)
+        cartRow.innerHTML = itemRawContents
+        cartItems.append(cartRow)
+        cartRow.getElementsByClassName('cart-delete')[0].addEventListener('click',removeFromCart)
+        cartRow.getElementsByClassName('quantity-incart')[0].addEventListener('change',quantityChange)
  }
 
  function updateCartTotal() {
   const cartListContainer = document.getElementsByClassName('cart-list')[0]
-  const cartRows = cartListContainer.querySelector('.cart-container');
+  const cartRows = cartListContainer.getElementsByClassName('cart-container')
   var total = 0 ;
-  for (let i = 0; i < cartRows.length; i++) {
-    const cartRow = cartRows[i];
-    const priceEl = cartRow.getElementsByClassName('price')
-    const qtyEl = cartRow.getElementsByClassName('quantity-incart')
-    const price = parseFloat(priceEl.innerText.replace('$',' '))
-    const quantity = qtyEl.value
-    total = total+ (price*quantity)
+  for (var i = 0; i < cartRows.length; i++) {
+    var cartRow = cartRows[i]
+    var priceEl = cartRow.getElementsByClassName('price-value')[0]
+    var qtyEl = cartRow.getElementsByClassName('quantity-incart')[0]
+    var price = parseFloat(priceEl.innerText.replace('$','')).toFixed(2)
+    var quantity = qtyEl.value
+    console.log(price, quantity);
+        total = total + (price*quantity)
   }
-  total = Math.round(total*100)/100
-   document.querySelectorAll('.subtotal span')[0].innerText = total
+  total = Math.round(total * 100) /100
+   document.getElementsByClassName('total-price')[0].innerText = total
  }
 
- 
-}
+} 
 export {ticketing}
